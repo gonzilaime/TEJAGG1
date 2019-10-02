@@ -1,0 +1,2 @@
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\Tejag\obj\Debug\Tejag.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\Tejag\obj\Debug\Tejag.csproj.CoreCompileInputs.cache
