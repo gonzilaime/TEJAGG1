@@ -20,9 +20,9 @@ namespace CL
             try
             {
                 
-                servidor = "DESKTOP-EUK7NSA";
+                servidor = "EQUIPO-01";
                 databaseName = "TEJAGG";
-                usuario = "DESKTOP-EUK7NSA\\Agustin" +
+                usuario = "EQUIPO-01\\Usuario" +
                     "";
             }
             catch (Exception e)

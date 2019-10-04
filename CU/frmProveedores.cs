@@ -36,7 +36,7 @@ namespace CU
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string textoCelda = listaProveedor.SelectedCells[0].Value.ToString();
+           // string textoCelda = listaProveedor.SelectedCells[0].Value.ToString();
         }
 
         private void FrmProveedores_Load(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace CU
             _proveedor.Tel1 = listaProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
             _proveedor.Tel2 = listaProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
             _proveedor.Email = listaProveedor.Rows[e.RowIndex].Cells[8].Value.ToString();
-           // _proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
+           _proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
 
             
             FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);

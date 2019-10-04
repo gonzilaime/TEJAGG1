@@ -30,12 +30,12 @@ namespace CL
 
         public Provincia provincia;
 
-        public EstadoProv Estado;
+        public Estado Estado;
 
         public Proveedor()
         {
             provincia = new Provincia();
-            Estado = new EstadoProv();
+            Estado = new Estado();
         }
 
         /***************************************************
@@ -119,7 +119,7 @@ namespace CL
                                 + " INNER JOIN Estado as t3 "
                                 + " ON t1.IdEstado = t3.IdEstado "
                                 + " WHERE t1.RazonSocial like '%" + cadena + "%'"
-                                + "ORDER BY t1.RazonSocial";
+                                + "ORDER BY t1.IdProveedor ";
                 var registroObtenido = cmd.ExecuteReader();
                 while(registroObtenido != null && registroObtenido.Read())
                 {

@@ -34,3 +34,9 @@ C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.csprojAssembl
 C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
 C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.dll
 C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\obj\Debug\CL.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\obj\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\obj\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\bin\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\bin\Debug\CL.pdb
