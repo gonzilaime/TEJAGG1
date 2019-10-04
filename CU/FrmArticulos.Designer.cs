@@ -45,13 +45,13 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.listaProveedor = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.DescripcionEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -209,7 +209,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(296, 22);
             this.txtBuscar.TabIndex = 5;
-            this.txtBuscar.Text = "Buscar...";
             this.txtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
             this.txtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
             // 
@@ -273,19 +272,9 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaProveedor.RowHeadersWidth = 51;
+            this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaProveedor.Size = new System.Drawing.Size(736, 316);
             this.listaProveedor.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(15, 107);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 352);
-            this.panel4.TabIndex = 10;
             // 
             // DescripcionEstado
             // 
@@ -325,6 +314,17 @@
             this.Proveedor.HeaderText = "Prov";
             this.Proveedor.Name = "Proveedor";
             this.Proveedor.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Location = new System.Drawing.Point(15, 107);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(740, 352);
+            this.panel4.TabIndex = 10;
             // 
             // FrmArticulos
             // 

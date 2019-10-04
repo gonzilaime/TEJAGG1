@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.listaProveedor = new System.Windows.Forms.DataGridView();
+            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuitCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblProveedores = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,16 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
-            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CuitCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,14 +74,14 @@
             this.listaProveedor.BackgroundColor = System.Drawing.Color.LightGray;
             this.listaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.listaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProveedor,
@@ -94,33 +94,106 @@
             this.Tel2,
             this.Email,
             this.DescripcionEstado});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaProveedor.EnableHeadersVisualStyles = false;
             this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaProveedor.Location = new System.Drawing.Point(17, 141);
             this.listaProveedor.Name = "listaProveedor";
             this.listaProveedor.ReadOnly = true;
             this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaProveedor.RowHeadersWidth = 51;
+            this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaProveedor.Size = new System.Drawing.Size(736, 316);
             this.listaProveedor.TabIndex = 0;
             this.listaProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             this.listaProveedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaProveedor_CellDoubleClick);
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.HeaderText = "Código Proveedor";
+            this.IdProveedor.MinimumWidth = 6;
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            // 
+            // CuitCuil
+            // 
+            this.CuitCuil.HeaderText = "CUIT/CUIL";
+            this.CuitCuil.MinimumWidth = 6;
+            this.CuitCuil.Name = "CuitCuil";
+            this.CuitCuil.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razón Social";
+            this.RazonSocial.MinimumWidth = 6;
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Dirección";
+            this.Direccion.MinimumWidth = 6;
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Localidad
+            // 
+            this.Localidad.HeaderText = "Localidad";
+            this.Localidad.MinimumWidth = 6;
+            this.Localidad.Name = "Localidad";
+            this.Localidad.ReadOnly = true;
+            // 
+            // DescripcionProvincia
+            // 
+            this.DescripcionProvincia.HeaderText = "Provincia";
+            this.DescripcionProvincia.MinimumWidth = 6;
+            this.DescripcionProvincia.Name = "DescripcionProvincia";
+            this.DescripcionProvincia.ReadOnly = true;
+            this.DescripcionProvincia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DescripcionProvincia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Tel1
+            // 
+            this.Tel1.HeaderText = "Teléfono1";
+            this.Tel1.MinimumWidth = 6;
+            this.Tel1.Name = "Tel1";
+            this.Tel1.ReadOnly = true;
+            // 
+            // Tel2
+            // 
+            this.Tel2.HeaderText = "Teléfono2";
+            this.Tel2.MinimumWidth = 6;
+            this.Tel2.Name = "Tel2";
+            this.Tel2.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // DescripcionEstado
+            // 
+            this.DescripcionEstado.HeaderText = "Estado";
+            this.DescripcionEstado.MinimumWidth = 6;
+            this.DescripcionEstado.Name = "DescripcionEstado";
+            this.DescripcionEstado.ReadOnly = true;
             // 
             // panel1
             // 
@@ -287,78 +360,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(740, 352);
             this.panel4.TabIndex = 7;
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.HeaderText = "Código Proveedor";
-            this.IdProveedor.MinimumWidth = 6;
-            this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
-            // 
-            // CuitCuil
-            // 
-            this.CuitCuil.HeaderText = "CUIT/CUIL";
-            this.CuitCuil.MinimumWidth = 6;
-            this.CuitCuil.Name = "CuitCuil";
-            this.CuitCuil.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razón Social";
-            this.RazonSocial.MinimumWidth = 6;
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Dirección";
-            this.Direccion.MinimumWidth = 6;
-            this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
-            // 
-            // Localidad
-            // 
-            this.Localidad.HeaderText = "Localidad";
-            this.Localidad.MinimumWidth = 6;
-            this.Localidad.Name = "Localidad";
-            this.Localidad.ReadOnly = true;
-            // 
-            // DescripcionProvincia
-            // 
-            this.DescripcionProvincia.HeaderText = "Provincia";
-            this.DescripcionProvincia.MinimumWidth = 6;
-            this.DescripcionProvincia.Name = "DescripcionProvincia";
-            this.DescripcionProvincia.ReadOnly = true;
-            this.DescripcionProvincia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DescripcionProvincia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Tel1
-            // 
-            this.Tel1.HeaderText = "Teléfono1";
-            this.Tel1.MinimumWidth = 6;
-            this.Tel1.Name = "Tel1";
-            this.Tel1.ReadOnly = true;
-            // 
-            // Tel2
-            // 
-            this.Tel2.HeaderText = "Teléfono2";
-            this.Tel2.MinimumWidth = 6;
-            this.Tel2.Name = "Tel2";
-            this.Tel2.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // DescripcionEstado
-            // 
-            this.DescripcionEstado.HeaderText = "Estado";
-            this.DescripcionEstado.MinimumWidth = 6;
-            this.DescripcionEstado.Name = "DescripcionEstado";
-            this.DescripcionEstado.ReadOnly = true;
             // 
             // frmProveedores
             // 
