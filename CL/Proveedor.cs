@@ -16,26 +16,26 @@ namespace CL
         public string RazonSocial { get; set; }
 
         public string Direccion { get; set; }
-
         public string Localidad { get; set; }
-        public int IdProvincia { get; set; }
         
+        public int IdProvincia { get; set; }
 
-        public int Tel1 { get; set; }
-        public int Tel2 { get; set; }
+        public string Tel1 { get; set; }
+
+        public string Tel2 { get; set; }
 
         public string Email { get; set; }
-        public int Bonificacion { get; set; }
+
         public int IdEstado { get; set; }
-       
 
         public Provincia provincia;
-        public EstadoProveedor EstadoProv;
+
+        public EstadoProv Estado;
 
         public Proveedor()
         {
-            EstadoProv = new EstadoProveedor();
             provincia = new Provincia();
+            Estado = new EstadoProv();
         }
 
         /***************************************************
@@ -55,33 +55,34 @@ namespace CL
             {
                 conn= database.Abrir();
                 cmd.Connection = conn;
-                
 
                 if (ejecutar == "ALTA")
                 {
-                    cmd.CommandText = "INSERT INTO Proveedores (CuitCuil, RazonSocial, Direccion, Localidad, IdProvincia, Tel1, Tel2, Bonificacion, Email, IdEstado) " +
-                                       "VALUES " + "('" + proveedor.CuitCuil + "', '" + proveedor.RazonSocial + "' , '" + proveedor.Direccion + "', '"
-                                        + proveedor.Localidad + "', " + proveedor.provincia.IdProvincia + ", " + proveedor.Tel1 + ", " + proveedor.Tel2 + ", "
-                                        + proveedor.Bonificacion + ", '" + proveedor.Email + "' , " + proveedor.EstadoProv.IdEstadoProveedor + ")";
+                    cmd.CommandText = "INSERT INTO Proveedores "
+                        + "VALUES " + "('" + proveedor.CuitCuil + "','" + proveedor.RazonSocial + "','" + proveedor.Direccion + "','"
+                        + proveedor.Localidad + "'," + proveedor.provincia.IdProvincia + ",'" + proveedor.Tel1 + "','" + proveedor.Tel2 + "','"
+                        + proveedor.Email + "," + proveedor.Estado.IdEstado + ")";
 
                 }
 
-                        /***************
-                        **MODIFICACION**
-                        ***************/
-
+                 /***************
+                 **MODIFICACION**
+                 ***************/
+                 
                 else if (ejecutar == "MODIFICAR")
                 {
-                    cmd.CommandText = "UPDATE Proveedores SET CuitCuil = '" + proveedor.CuitCuil + "'," + " RazonSocial = '" + proveedor.RazonSocial + "'," + " Direccion = '" + proveedor.Direccion +
-                                      " Localidad = '," + proveedor.Localidad + "'," + " IdProvincia = '" + proveedor.provincia.IdProvincia + "', " + " Tel1 = " + proveedor.Tel1 + "," + " Tel2 = "
-                                      + proveedor.Tel2 + ", " + " Bonificacion = " + proveedor.Bonificacion + "," + " Email = '" + proveedor.Email + "'," + " IdEstado = " + proveedor.EstadoProv.IdEstadoProveedor 
-                                      +" WHERE IdProveedor =" + proveedor.IdProveedor;
+                    cmd.CommandText = "UPDATE Proveedores SET CuitCuil = '" + proveedor.CuitCuil + "',"
+                        + " RazonSocial = '" + proveedor.RazonSocial + "', " + "Direccion = '" + proveedor.Direccion + "',"
+                        + " Localidad = '" + proveedor.Localidad + "', " + " IdProvincia = " + proveedor.provincia.IdProvincia + ", "
+                        + " Tel1 = '" + proveedor.Tel1 + "'," + " Tel2 = '" + proveedor.Tel2 + "' ," + " Email = '" + proveedor.Email 
+                        + "'," + " IdEstado = " + proveedor.Estado.IdEstado  
+                        + " WHERE IdProveedor = " + proveedor.IdProveedor;
                 }
 
-                        cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 rta = true;
             }//try
-            catch (Exception e)
+            catch(Exception e)
             {
                 MessageBox.Show(string.Concat(e.Message, e.StackTrace), "");
                 rta = false;
@@ -101,7 +102,7 @@ namespace CL
         //====================================================
         //Método para llenar ListBox con registros de la BBDD
         //====================================================
-        public List<Proveedor> obtenerProveedores()
+        public List<Proveedor> obtenerProveedores(string cadena)
         {
             var conn = new SqlConnection();
             var cmd = new SqlCommand();
@@ -112,11 +113,12 @@ namespace CL
             {
                 conn = baseDatos.Abrir();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT t1.*, t2.DescripcionProvincia FROM Proveedores as t1"
+                cmd.CommandText = "SELECT t1.*,t2.DescripcionProvincia, t3.DescripcionEstado FROM Proveedores as t1"
                                 + " INNER JOIN Provincia as t2 " 
                                 + "ON t1.IdProvincia=t2.IdProvincia "
-                                + "INNER JOIN EstadoProv as t3 "
-                                + "ON t1.IdEstado = t3.IdEstadoProveedor "
+                                + " INNER JOIN Estado as t3 "
+                                + " ON t1.IdEstado = t3.IdEstado "
+                                + " WHERE t1.RazonSocial like '%" + cadena + "%'"
                                 + "ORDER BY t1.RazonSocial";
                 var registroObtenido = cmd.ExecuteReader();
                 while(registroObtenido != null && registroObtenido.Read())
@@ -128,12 +130,12 @@ namespace CL
                     proveedor.Direccion = (string)registroObtenido["Direccion"];
                     proveedor.Localidad = (string)registroObtenido["Localidad"];
                     proveedor.provincia.IdProvincia = (int)registroObtenido["IdProvincia"];
-                    proveedor.Tel1 = (int)registroObtenido["Tel1"];
-                    proveedor.Tel2 = (int)registroObtenido["Tel2"];
-                    proveedor.Email = (string)registroObtenido["Email"];
-                    proveedor.Bonificacion = (int)registroObtenido["Bonificacion"];
-                    proveedor.EstadoProv.IdEstadoProveedor = (int)registroObtenido["IdEstado"];
                     proveedor.provincia.DescripcionProvincia = (string)registroObtenido["DescripcionProvincia"];
+                    proveedor.Tel1 = (string)registroObtenido["Tel1"];
+                    proveedor.Tel2 = (string)registroObtenido["Tel2"];
+                    proveedor.Email = (string)registroObtenido["Email"];
+                    proveedor.Estado.IdEstado = (int)registroObtenido["IdEstado"];
+                    proveedor.Estado.DescripcionEstado = (string)registroObtenido["DescripcionEstado"];
 
                     listaProveedores.Add(proveedor);
 
@@ -156,6 +158,50 @@ namespace CL
 
             return listaProveedores;
         }//obtenerProveedores
+        public static bool combo2campos(ComboBox combo, string campo1, string campo2, string tabla)
+        {
+            bool rta;
+            var conn = new SqlConnection();
+            var cmd = new SqlCommand();
+            var conectar = new Conectar();
+            var sql = "SELECT " + campo1 + " , " + campo2 + " FROM " + tabla + " ORDER BY '" + campo1 + "'";
+
+            try
+            {
+                conn = conectar.Abrir();
+                cmd.Connection = conn;
+                var comando = new SqlCommand(sql, conn);
+
+                var da = new SqlDataAdapter(comando);
+                var ds = new DataSet();
+
+                da.Fill(ds);
+
+                combo.DataSource = ds.Tables[0];
+                combo.DisplayMember = ds.Tables[0].Columns[0].Caption;
+
+                rta = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se lleno el ComboBox: " + ex.ToString());
+                rta = false;
+            }
+
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+
+            }
+
+            return rta;
+
+        }
 
     }
 }

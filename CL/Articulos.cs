@@ -8,6 +8,6 @@ namespace CL
     public class Articulos
     {
         public int IdArticulo { get; set; }
-        public string Descripcion { get; set; }
+        public string DescripcionArticulo { get; set; }
     }
 }

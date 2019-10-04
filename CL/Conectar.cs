@@ -19,6 +19,7 @@ namespace CL
 
             try
             {
+                
                 servidor = "EQUIPO-01";
                 databaseName = "TEJAGG";
                 usuario = "EQUIPO-01\\Usuario";

@@ -22,30 +22,26 @@ namespace CU
             InitializeComponent();
             _proveedor = new Proveedor();
             _provincia = new Provincia();
-            Provincia.combo(cboProv, "Descripcion", "IdProvincia", "Provincia");
-            Provincia.combo(cboEstadoProv, "Descripcion", "IdEstadoProveedor", "EstadoProv");
+            Proveedor.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
+            Proveedor.combo2campos(cboEstadoProv, "DescripcionEstado", "IdEstado", "Estado");
 
             if (proveedor != null)
             {
-                btnAlta.Visible = false;
-                btnAlta.Enabled = false;
-
+                btnGuardar.Visible = false;
+                btnGuardar.Enabled = false;
+                txtCodigoProveedor.Enabled = false;
+                txtCodigoProveedor.Text = Convert.ToInt32(proveedor.IdProveedor.ToString()).ToString();
                 txtCuit.Text = proveedor.CuitCuil;
                 txtRazonSocial.Text = proveedor.RazonSocial;
                 txtDireccion.Text = proveedor.Direccion;
                 txtLocalidad.Text = proveedor.Localidad;
                 cboProv.Text = proveedor.provincia.DescripcionProvincia;
-                txtTel1.Text = Convert.ToInt32(proveedor.Tel1.ToString()).ToString();
-                txtTel2.Text = Convert.ToInt32(proveedor.Tel2.ToString()).ToString();
+                txtTel1.Text = proveedor.Tel1;
+                txtTel2.Text = proveedor.Tel2;
                 TxtEmail.Text = proveedor.Email;
-                txtBonificacion.Text = Convert.ToInt32(proveedor.Bonificacion.ToString()).ToString();
-                cboEstadoProv.Text = proveedor.EstadoProv.Descripcion;
-
+                cboEstadoProv.Text = proveedor.Estado.DescripcionEstado;
                 Accion = "MODIFICAR";
-
-
-
-
+                
             }//end-if
             else
             {
@@ -53,7 +49,6 @@ namespace CU
                 btnModificar.Visible = false;
                 Accion = "ALTA";
             }
-
         }//constuctor
 
 
@@ -98,24 +93,23 @@ namespace CU
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-      
             if (Accion == "ALTA")
             {
+                txtCodigoProveedor.Visible = false;
+                lblCodigoProveedor.Visible = false;
                 _proveedor.CuitCuil = txtCuit.Text;
                 _proveedor.RazonSocial = txtRazonSocial.Text;
                 _proveedor.Direccion = txtDireccion.Text;
                 _proveedor.Localidad = txtLocalidad.Text;
                 _proveedor.provincia.IdProvincia = Convert.ToInt32(((DataRowView)cboProv.SelectedItem)["IdProvincia"]);
-                _proveedor.Tel1 = Convert.ToInt32(txtTel1.Text.ToString());
-                _proveedor.Tel2 = Convert.ToInt32(txtTel2.Text.ToString());
-                _proveedor.Email = TxtEmail.Text;
-                _proveedor.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
-                //_proveedor.EstadoProv.IdEstadoProveedor = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstadoProveedor"]);
-
+                _proveedor.Tel1 = txtTel1.Text.ToString();
+                _proveedor.Tel2 = txtTel2.Text.ToString();
+                _proveedor.Email = TxtEmail.Text.ToString();
+                _proveedor.Estado.IdEstado = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstado"]);
 
                 _proveedor.Accion(_proveedor, "ALTA");
                 this.Hide();
-                MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -126,23 +120,27 @@ namespace CU
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            if (Accion == "MODIFICAR ")
-            {
+
+            Accion = "MODIFICAR";
+
+            if (Accion == "MODIFICAR") {
+
+                _proveedor.IdProveedor = Convert.ToInt32(txtCodigoProveedor.Text.ToString());
                 _proveedor.CuitCuil = txtCuit.Text;
                 _proveedor.RazonSocial = txtRazonSocial.Text;
                 _proveedor.Direccion = txtDireccion.Text;
                 _proveedor.Localidad = txtLocalidad.Text;
                 _proveedor.provincia.IdProvincia = Convert.ToInt32(((DataRowView)cboProv.SelectedItem)["IdProvincia"]);
-                _proveedor.Tel1 = Convert.ToInt32(txtTel1.Text.ToString());
-                _proveedor.Tel2 = Convert.ToInt32(txtTel2.Text.ToString());
-                _proveedor.Email = TxtEmail.Text;
-                _proveedor.EstadoProv.IdEstadoProveedor = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstadoProveedor"]);
+                _proveedor.Tel1 = txtTel1.Text.ToString();
+                _proveedor.Tel2 = txtTel2.Text.ToString();
+                _proveedor.Email = TxtEmail.Text.ToString();
+                _proveedor.Estado.IdEstado = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstado"]);
 
                 _proveedor.Accion(_proveedor, "MODIFICAR");
                 this.Hide();
-                MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido modificado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido modificado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
+            }//end-if
         }
     }
 }

@@ -50,37 +50,54 @@ C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CU\obj\Debug\CU.csproj.C
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CU\obj\Debug\CU.exe
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CU\obj\Debug\CU.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.FrmMenu.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.FrmNewProvCli.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.frmProveedores.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.Login.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.FormMenu.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.exe
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\bin\Debug\CU.exe
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\bin\Debug\CU.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\bin\Debug\CL.dll
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\bin\Debug\CL.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.FrmMenu.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.FrmNewProvCli.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.frmProveedores.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.Login.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.FormMenu.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.exe
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.pdb
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\bin\Debug\CU.exe
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\bin\Debug\CU.pdb
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\bin\Debug\CL.dll
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\bin\Debug\CL.pdb
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\bin\Debug\CU.exe
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\bin\Debug\CU.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\bin\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\bin\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.FrmMenu.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.FrmNewProv.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.frmProveedores.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.Login.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.FormMenu.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.exe
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CU\obj\Debug\CU.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmMenu.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmNewProvCli.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.frmProveedores.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.Login.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.FormMenu.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.exe
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\bin\Debug\CU.exe
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\bin\Debug\CU.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\bin\Debug\CL.dll
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\bin\Debug\CL.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\bin\Debug\CU.exe
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\bin\Debug\CU.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\bin\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\bin\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmMenu.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmNewProvCli.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.frmProveedores.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.Login.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.FormMenu.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.exe
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.pdb

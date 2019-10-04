@@ -10,15 +10,21 @@ C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CL\obj\Debug\CL.dll
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CL\obj\Debug\CL.pdb
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CL\bin\Debug\CL.dll
 C:\Desarrollos\Programacion\Ultimo de gonza\Tejag\Tejag\CL\bin\Debug\CL.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\bin\Debug\CL.dll
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\bin\Debug\CL.pdb
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\obj\Debug\CL.dll
-C:\Users\tomas\OneDrive\Desktop\asdasdasd\Tejag\Tejag\CL\obj\Debug\CL.pdb
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\bin\Debug\CL.dll
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\bin\Debug\CL.pdb
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\obj\Debug\CL.dll
-D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.4\Tejag\CL\obj\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\bin\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\bin\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\obj\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.2\Tejag\CL\obj\Debug\CL.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\bin\Debug\CL.dll
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\bin\Debug\CL.pdb
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\obj\Debug\CL.dll
+C:\Users\tomas\OneDrive\Desktop\asdasdasd\gggggg\Tejag (2)\Tejag\CL\obj\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\bin\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\bin\Debug\CL.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.dll
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.pdb
