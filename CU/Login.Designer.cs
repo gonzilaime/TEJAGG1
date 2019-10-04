@@ -115,6 +115,7 @@
             this.txtUser.Size = new System.Drawing.Size(250, 20);
             this.txtUser.TabIndex = 3;
             this.txtUser.Text = "USUARIO";
+            this.txtUser.TextChanged += new System.EventHandler(this.TxtUser_TextChanged);
             this.txtUser.Enter += new System.EventHandler(this.TxtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.TxtUser_Leave);
             // 
@@ -146,6 +147,7 @@
             this.btnIniciar.TabStop = false;
             this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Click += new System.EventHandler(this.BtnIniciar_Click);
             // 
             // pictureBox2
             // 

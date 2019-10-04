@@ -28,3 +28,9 @@ D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.dll
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CL\obj\Debug\CL.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\bin\Debug\CL.dll
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\bin\Debug\CL.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.csprojAssemblyReference.cache
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.dll
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CL\obj\Debug\CL.pdb

@@ -67,6 +67,16 @@ namespace CU
         {
 
         }
+
+        private void TxtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnIniciar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        

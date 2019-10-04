@@ -101,3 +101,25 @@ D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.exe
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\TEJAGG 1.5\Tejag (2)\Tejag\CU\obj\Debug\CU.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\CU.exe
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\CU.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\CL.dll
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\CL.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.csprojAssemblyReference.cache
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmMenu.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmNewProvCli.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.frmProveedores.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.Login.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FormMenu.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.Properties.Resources.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.GenerateResource.cache
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.csproj.CopyComplete
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.exe
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.pdb
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmClientes.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmNewModClientes.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmArticulos.resources
+C:\Users\Agustin\Desktop\Tejag (2)\Tejag (2)\Tejag\CU\obj\Debug\CU.FrmNewModArt.resources

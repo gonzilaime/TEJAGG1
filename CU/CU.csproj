@@ -50,11 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmArticulos.Designer.cs">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewModArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewModArt.Designer.cs">
+      <DependentUpon>FrmNewModArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewModClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewModClientes.Designer.cs">
+      <DependentUpon>FrmNewModClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNewProvCli.cs">
       <SubType>Form</SubType>
@@ -82,8 +106,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmArticulos.resx">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewModArt.resx">
+      <DependentUpon>FrmNewModArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewModClientes.resx">
+      <DependentUpon>FrmNewModClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNewProvCli.resx">
       <DependentUpon>FrmNewProvCli.cs</DependentUpon>
@@ -233,6 +269,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\multi-tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

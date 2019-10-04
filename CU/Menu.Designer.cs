@@ -38,10 +38,10 @@
             this.panelClientes = new System.Windows.Forms.Panel();
             this.panelArticulos = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnCli = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCom = new System.Windows.Forms.Button();
             this.btnArt = new System.Windows.Forms.Button();
-            this.btnCli = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnIni = new System.Windows.Forms.Button();
             this.btnProv = new System.Windows.Forms.Button();
@@ -79,12 +79,12 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelMenu.Controls.Add(this.btnArt);
+            this.panelMenu.Controls.Add(this.btnCli);
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.lblBienvenido);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.btnCom);
-            this.panelMenu.Controls.Add(this.btnArt);
-            this.panelMenu.Controls.Add(this.btnCli);
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.btnIni);
             this.panelMenu.Controls.Add(this.btnProv);
@@ -184,6 +184,26 @@
             this.panelContenedor.TabIndex = 3;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
+            // btnCli
+            // 
+            this.btnCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCli.FlatAppearance.BorderSize = 0;
+            this.btnCli.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCli.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCli.ForeColor = System.Drawing.Color.Black;
+            this.btnCli.Image = global::CU.Properties.Resources.RojoGrupo;
+            this.btnCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCli.Location = new System.Drawing.Point(12, 223);
+            this.btnCli.Name = "btnCli";
+            this.btnCli.Size = new System.Drawing.Size(184, 42);
+            this.btnCli.TabIndex = 10;
+            this.btnCli.TabStop = false;
+            this.btnCli.Text = "Clientes";
+            this.btnCli.UseVisualStyleBackColor = false;
+            this.btnCli.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -233,26 +253,6 @@
             this.btnArt.Text = "Articulos";
             this.btnArt.UseVisualStyleBackColor = false;
             this.btnArt.Visible = false;
-            // 
-            // btnCli
-            // 
-            this.btnCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCli.FlatAppearance.BorderSize = 0;
-            this.btnCli.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCli.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCli.ForeColor = System.Drawing.Color.Black;
-            this.btnCli.Image = global::CU.Properties.Resources.RojoGrupo;
-            this.btnCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCli.Location = new System.Drawing.Point(12, 223);
-            this.btnCli.Name = "btnCli";
-            this.btnCli.Size = new System.Drawing.Size(184, 42);
-            this.btnCli.TabIndex = 10;
-            this.btnCli.TabStop = false;
-            this.btnCli.Text = "Clientes";
-            this.btnCli.UseVisualStyleBackColor = false;
-            this.btnCli.Visible = false;
             // 
             // btnInicio
             // 

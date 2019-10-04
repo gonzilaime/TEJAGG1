@@ -61,7 +61,7 @@ namespace CL
                     cmd.CommandText = "INSERT INTO Proveedores "
                         + "VALUES " + "('" + proveedor.CuitCuil + "','" + proveedor.RazonSocial + "','" + proveedor.Direccion + "','"
                         + proveedor.Localidad + "'," + proveedor.provincia.IdProvincia + ",'" + proveedor.Tel1 + "','" + proveedor.Tel2 + "','"
-                        + proveedor.Email + "," + proveedor.Estado.IdEstado + ")";
+                        + proveedor.Email + "'," + proveedor.Estado.IdEstado + ")";
 
                 }
 

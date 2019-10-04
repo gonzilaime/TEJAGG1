@@ -20,14 +20,15 @@ namespace CL
             try
             {
                 
-                servidor = "EQUIPO-01";
+                servidor = "DESKTOP-EUK7NSA";
                 databaseName = "TEJAGG";
-                usuario = "EQUIPO-01\\Usuario";
+                usuario = "DESKTOP-EUK7NSA\\Agustin" +
+                    "";
             }
             catch (Exception e)
             {
                 MessageBox.Show(string.Concat(e.Message, e.StackTrace), "");
-                MessageBox.Show("Fallo de la conexión");
+                MessageBox.Show("Falló de la conexión");
             }
 
         }
