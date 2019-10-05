@@ -144,3 +144,25 @@ D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.csproj.CopyComplete
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.exe
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.pdb
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\CU.exe
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\CU.pdb
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\CL.dll
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\CL.pdb
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.csprojAssemblyReference.cache
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmArticulos.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmClientes.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmMenu.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmNewModArt.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmNewModClientes.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FrmNewProvCli.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.frmProveedores.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.Login.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.FormMenu.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.Properties.Resources.resources
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.csproj.GenerateResource.cache
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.csproj.CopyComplete
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.exe
+C:\Desarrollos\Git tejagg\TEJAGG1\CU\obj\Debug\CU.pdb

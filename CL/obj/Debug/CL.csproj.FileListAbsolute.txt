@@ -40,3 +40,9 @@ D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\obj\Debug\CL.pdb
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\bin\Debug\CL.dll
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CL\bin\Debug\CL.pdb
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\bin\Debug\CL.dll
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\bin\Debug\CL.pdb
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\obj\Debug\CL.csprojAssemblyReference.cache
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\obj\Debug\CL.dll
+C:\Desarrollos\Git tejagg\TEJAGG1\CL\obj\Debug\CL.pdb
