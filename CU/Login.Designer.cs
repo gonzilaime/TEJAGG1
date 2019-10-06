@@ -55,17 +55,19 @@
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 25);
+            this.panel1.Size = new System.Drawing.Size(600, 31);
             this.panel1.TabIndex = 0;
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::CU.Properties.Resources.minus_horizontal_straight_line;
-            this.btnMinimizar.Location = new System.Drawing.Point(394, 5);
+            this.btnMinimizar.Location = new System.Drawing.Point(525, 6);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 18);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.TabStop = false;
@@ -75,9 +77,10 @@
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::CU.Properties.Resources.cross;
-            this.btnCerrar.Location = new System.Drawing.Point(423, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(564, 6);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.Size = new System.Drawing.Size(20, 18);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
@@ -87,9 +90,10 @@
             // 
             this.lblTejag.AutoSize = true;
             this.lblTejag.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTejag.Location = new System.Drawing.Point(130, 119);
+            this.lblTejag.Location = new System.Drawing.Point(173, 146);
+            this.lblTejag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTejag.Name = "lblTejag";
-            this.lblTejag.Size = new System.Drawing.Size(151, 38);
+            this.lblTejag.Size = new System.Drawing.Size(186, 48);
             this.lblTejag.TabIndex = 1;
             this.lblTejag.Text = "TEJAG ";
             this.lblTejag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,9 +102,10 @@
             // 
             this.lblGestion.AutoSize = true;
             this.lblGestion.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestion.Location = new System.Drawing.Point(256, 134);
+            this.lblGestion.Location = new System.Drawing.Point(341, 165);
+            this.lblGestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGestion.Name = "lblGestion";
-            this.lblGestion.Size = new System.Drawing.Size(64, 18);
+            this.lblGestion.Size = new System.Drawing.Size(77, 22);
             this.lblGestion.TabIndex = 2;
             this.lblGestion.Text = "Gestión";
             // 
@@ -109,10 +114,11 @@
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(121, 212);
+            this.txtUser.Location = new System.Drawing.Point(161, 261);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.Name = "txtUser";
             this.txtUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtUser.Size = new System.Drawing.Size(250, 20);
+            this.txtUser.Size = new System.Drawing.Size(333, 25);
             this.txtUser.TabIndex = 3;
             this.txtUser.Text = "USUARIO";
             this.txtUser.TextChanged += new System.EventHandler(this.TxtUser_TextChanged);
@@ -124,10 +130,11 @@
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(121, 264);
+            this.txtPass.Location = new System.Drawing.Point(161, 325);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPass.Size = new System.Drawing.Size(250, 20);
+            this.txtPass.Size = new System.Drawing.Size(333, 25);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "CONTRASEÑA";
             this.txtPass.Enter += new System.EventHandler(this.TxtPass_Enter);
@@ -140,9 +147,10 @@
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(80, 326);
+            this.btnIniciar.Location = new System.Drawing.Point(107, 401);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(291, 35);
+            this.btnIniciar.Size = new System.Drawing.Size(388, 43);
             this.btnIniciar.TabIndex = 5;
             this.btnIniciar.TabStop = false;
             this.btnIniciar.Text = "Iniciar Sesión";
@@ -152,18 +160,20 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CU.Properties.Resources.lock1;
-            this.pictureBox2.Location = new System.Drawing.Point(80, 255);
+            this.pictureBox2.Location = new System.Drawing.Point(107, 314);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 31);
+            this.pictureBox2.Size = new System.Drawing.Size(47, 38);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CU.Properties.Resources.businessman;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 203);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 250);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 38);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -175,7 +185,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(450, 475);
+            this.shapeContainer1.Size = new System.Drawing.Size(600, 585);
             this.shapeContainer1.TabIndex = 8;
             this.shapeContainer1.TabStop = false;
             // 
@@ -201,11 +211,11 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(450, 475);
+            this.ClientSize = new System.Drawing.Size(600, 585);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -217,6 +227,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
@@ -224,6 +235,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();

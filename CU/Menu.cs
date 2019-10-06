@@ -6,16 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CL;
 
 namespace CU
 {
     public partial class FormMenu : Form
     {
+        public TipoPerfil _tipoPerfil;
+        public Usuario usuario;
 
-        
-        public FormMenu()
+
+        public FormMenu(int _perfil)
         {
             InitializeComponent();
+            _tipoPerfil = new TipoPerfil();
+            _tipoPerfil.IdPerfil = _perfil;
+
         }
 
 
@@ -64,7 +70,7 @@ namespace CU
 
         private void BtnProveedores_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmProveedores());
+            AbrirFormHijo(new frmProveedores(_tipoPerfil.IdPerfil));
             panelArticulos.Visible = false;
             panelClientes.Visible = false;
             panelProveedores.Visible = true;
@@ -160,7 +166,7 @@ namespace CU
 
         private void BtnIni_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmMenu());
+            AbrirFormHijo(new FrmMenu(_tipoPerfil.IdPerfil));
 
             panelInicio.Visible = true;
             btnInicio.Visible = true;

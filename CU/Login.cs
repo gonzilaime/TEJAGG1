@@ -5,15 +5,23 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using CL;
 using System.Windows.Forms;
 
 namespace CU
 {
     public partial class Login : Form
     {
+
+        public Usuario usuario;
+        public FrmMenu menu;
+        public FormMenu formMenu;
+        public Menu _menu;
+              
         public Login()
         {
             InitializeComponent();
+            usuario = new Usuario();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -74,6 +82,32 @@ namespace CU
         }
 
         private void BtnIniciar_Click(object sender, EventArgs e)
+        {
+            if(txtPass.Text == "" || txtUser.Text == "")
+            {
+                MessageBox.Show("Ingresar usuario y contraeseña", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }else
+            {
+                if (usuario.login(this.txtUser.Text, this.txtPass.Text))
+                {
+                    this.Hide();
+                    FrmMenu menu = new FrmMenu(usuario.NroPerfil);
+                    menu.Show();
+                    FormMenu formMenu = new FormMenu(usuario.NroPerfil);
+                    formMenu.Show();
+
+                }
+                else
+                {
+                    txtUser.Text = "";
+                    txtPass.Text = "";
+                    return;
+                }
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
