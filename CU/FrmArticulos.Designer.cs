@@ -209,8 +209,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(296, 22);
             this.txtBuscar.TabIndex = 5;
-            this.txtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
-            this.txtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
             // 
             // lblBuscar
             // 

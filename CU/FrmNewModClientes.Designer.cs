@@ -37,7 +37,7 @@
             this.lblRazonSocialObligatorio = new System.Windows.Forms.Label();
             this.lblCuitObligatorio = new System.Windows.Forms.Label();
             this.txtCodigoClientes = new System.Windows.Forms.TextBox();
-            this.lblCodigoProveedor = new System.Windows.Forms.Label();
+            this.lblCodigoCliente = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -160,15 +160,15 @@
             this.txtCodigoClientes.Size = new System.Drawing.Size(185, 23);
             this.txtCodigoClientes.TabIndex = 71;
             // 
-            // lblCodigoProveedor
+            // lblCodigoCliente
             // 
-            this.lblCodigoProveedor.AutoSize = true;
-            this.lblCodigoProveedor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoProveedor.Location = new System.Drawing.Point(335, 242);
-            this.lblCodigoProveedor.Name = "lblCodigoProveedor";
-            this.lblCodigoProveedor.Size = new System.Drawing.Size(127, 19);
-            this.lblCodigoProveedor.TabIndex = 84;
-            this.lblCodigoProveedor.Text = "Código de cliente";
+            this.lblCodigoCliente.AutoSize = true;
+            this.lblCodigoCliente.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoCliente.Location = new System.Drawing.Point(335, 242);
+            this.lblCodigoCliente.Name = "lblCodigoCliente";
+            this.lblCodigoCliente.Size = new System.Drawing.Size(127, 19);
+            this.lblCodigoCliente.TabIndex = 84;
+            this.lblCodigoCliente.Text = "Código de cliente";
             // 
             // TxtEmail
             // 
@@ -364,6 +364,7 @@
             this.btnModificar.TabIndex = 73;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -379,6 +380,7 @@
             this.btnCancelar.TabIndex = 74;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -396,6 +398,7 @@
             this.btnGuardar.TabIndex = 75;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // panel1
             // 
@@ -417,6 +420,7 @@
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnMinimizar.TabIndex = 9;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // btnCerrar
             // 
@@ -427,6 +431,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnCerrar.TabIndex = 8;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // FrmNewModClientes
             // 
@@ -441,7 +446,7 @@
             this.Controls.Add(this.lblRazonSocialObligatorio);
             this.Controls.Add(this.lblCuitObligatorio);
             this.Controls.Add(this.txtCodigoClientes);
-            this.Controls.Add(this.lblCodigoProveedor);
+            this.Controls.Add(this.lblCodigoCliente);
             this.Controls.Add(this.TxtEmail);
             this.Controls.Add(this.lblCuit);
             this.Controls.Add(this.txtDireccion);
@@ -467,6 +472,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNewModClientes";
             this.Text = "FrmNewModClientes";
+            this.Load += new System.EventHandler(this.FrmNewModClientes_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -485,7 +491,7 @@
         private System.Windows.Forms.Label lblRazonSocialObligatorio;
         private System.Windows.Forms.Label lblCuitObligatorio;
         private System.Windows.Forms.TextBox txtCodigoClientes;
-        private System.Windows.Forms.Label lblCodigoProveedor;
+        private System.Windows.Forms.Label lblCodigoCliente;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label lblCuit;
         private System.Windows.Forms.TextBox txtDireccion;

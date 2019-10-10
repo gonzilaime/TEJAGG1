@@ -273,5 +273,11 @@
   <ItemGroup>
     <None Include="Resources\magnifying-glass.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tejag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PATO2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

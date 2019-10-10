@@ -44,7 +44,7 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblProveedores = new System.Windows.Forms.Label();
-            this.listaProveedor = new System.Windows.Forms.DataGridView();
+            this.listaCliente = new System.Windows.Forms.DataGridView();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CuitCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -81,6 +81,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(271, 20);
             this.txtBuscar.TabIndex = 5;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -139,6 +140,7 @@
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar Proveedor";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -157,6 +159,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // shapeContainer3
             // 
@@ -210,17 +213,17 @@
             this.lblProveedores.TabIndex = 0;
             this.lblProveedores.Text = "Clientes";
             // 
-            // listaProveedor
+            // listaCliente
             // 
-            this.listaProveedor.AllowUserToAddRows = false;
-            this.listaProveedor.AllowUserToDeleteRows = false;
-            this.listaProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listaCliente.AllowUserToAddRows = false;
+            this.listaCliente.AllowUserToDeleteRows = false;
+            this.listaCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.listaProveedor.BackgroundColor = System.Drawing.Color.LightGray;
-            this.listaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listaProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.listaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.listaCliente.BackgroundColor = System.Drawing.Color.LightGray;
+            this.listaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listaCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,9 +231,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.listaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.listaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
             this.CuitCuil,
             this.RazonSocial,
@@ -248,13 +251,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle2;
-            this.listaProveedor.EnableHeadersVisualStyles = false;
-            this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaProveedor.Location = new System.Drawing.Point(17, 141);
-            this.listaProveedor.Name = "listaProveedor";
-            this.listaProveedor.ReadOnly = true;
-            this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.listaCliente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.listaCliente.EnableHeadersVisualStyles = false;
+            this.listaCliente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.listaCliente.Location = new System.Drawing.Point(17, 141);
+            this.listaCliente.Name = "listaCliente";
+            this.listaCliente.ReadOnly = true;
+            this.listaCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,11 +265,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.listaProveedor.RowHeadersWidth = 51;
-            this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaProveedor.Size = new System.Drawing.Size(736, 316);
-            this.listaProveedor.TabIndex = 8;
+            this.listaCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.listaCliente.RowHeadersWidth = 51;
+            this.listaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.listaCliente.Size = new System.Drawing.Size(736, 316);
+            this.listaCliente.TabIndex = 8;
+            this.listaCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaCliente_CellDoubleClick);
             // 
             // IdCliente
             // 
@@ -365,17 +369,18 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listaProveedor);
+            this.Controls.Add(this.listaCliente);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,7 +399,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblProveedores;
-        private System.Windows.Forms.DataGridView listaProveedor;
+        private System.Windows.Forms.DataGridView listaCliente;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn CuitCuil;
