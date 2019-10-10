@@ -22,8 +22,8 @@ namespace CU
             InitializeComponent();
             _proveedor = new Proveedor();
             _provincia = new Provincia();
-            Proveedor.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
-            Proveedor.combo2campos(cboEstadoProv, "DescripcionEstado", "IdEstado", "Estado");
+            Validacion.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
+            Validacion.combo2campos(cboEstadoProv, "DescripcionEstado", "IdEstado", "Estado");
 
             if (proveedor != null)
             {
@@ -47,6 +47,8 @@ namespace CU
             {
                 btnModificar.Enabled = false;
                 btnModificar.Visible = false;
+                txtCodigoProveedor.Visible = false;
+                lblCodigoProveedor.Visible = false;
                 Accion = "ALTA";
             }
         }//constuctor
@@ -83,7 +85,7 @@ namespace CU
 
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void LblCodProv_Click(object sender, EventArgs e)
@@ -95,8 +97,7 @@ namespace CU
         {
             if (Accion == "ALTA")
             {
-                txtCodigoProveedor.Visible = false;
-                lblCodigoProveedor.Visible = false;
+               
                 _proveedor.CuitCuil = txtCuit.Text;
                 _proveedor.RazonSocial = txtRazonSocial.Text;
                 _proveedor.Direccion = txtDireccion.Text;
@@ -115,7 +116,7 @@ namespace CU
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)

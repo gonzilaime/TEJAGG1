@@ -403,6 +403,16 @@ namespace CU.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PATO2 {
+            get {
+                object obj = ResourceManager.GetObject("PATO2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rojoArticulo {
             get {
                 object obj = ResourceManager.GetObject("rojoArticulo", resourceCulture);
@@ -446,6 +456,16 @@ namespace CU.Properties {
         internal static System.Drawing.Bitmap rojoOrdenDeCompra1 {
             get {
                 object obj = ResourceManager.GetObject("rojoOrdenDeCompra1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tejag {
+            get {
+                object obj = ResourceManager.GetObject("tejag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
