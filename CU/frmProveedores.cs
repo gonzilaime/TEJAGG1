@@ -17,11 +17,15 @@ namespace CU
         public Conectar conexion;
         public Proveedor _proveedor;
         public Provincia _provincia;
+        public TipoPerfil _tipoPerfil;
+        public Usuario usuario;
 
-        public frmProveedores()
+        public frmProveedores(int _perfil)
         {
 
             InitializeComponent();
+            _tipoPerfil = new TipoPerfil();
+            _tipoPerfil.IdPerfil = _perfil;
             conexion = new Conectar();
             _proveedor = new Proveedor();
             _provincia = new Provincia();
@@ -29,9 +33,14 @@ namespace CU
 
         private void BtnNewProveedor_Click(object sender, EventArgs e)
         {
+            if (_tipoPerfil.IdPerfil == 1) { 
             FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
             formulario.ShowDialog();
-
+            }
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,25 +69,33 @@ namespace CU
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.CurrentRow.Cells[0].Value.ToString());
-            _proveedor.CuitCuil = listaProveedor.CurrentRow.Cells[1].Value.ToString();
-            _proveedor.RazonSocial = listaProveedor.CurrentRow.Cells[2].Value.ToString();
-            _proveedor.Direccion = listaProveedor.CurrentRow.Cells[3].Value.ToString();
-            _proveedor.Localidad = listaProveedor.CurrentRow.Cells[4].Value.ToString();
-            _proveedor.provincia.DescripcionProvincia = listaProveedor.CurrentRow.Cells[5].Value.ToString();
-            _proveedor.Tel1 = listaProveedor.CurrentRow.Cells[6].Value.ToString();
-            _proveedor.Tel2 = listaProveedor.CurrentRow.Cells[7].Value.ToString();
-            _proveedor.Email = listaProveedor.CurrentRow.Cells[8].Value.ToString();
-            _proveedor.Estado.DescripcionEstado = listaProveedor.CurrentRow.Cells[9].Value.ToString();
+            if (_tipoPerfil.IdPerfil == 1)
+            {
+                _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.CurrentRow.Cells[0].Value.ToString());
+                _proveedor.CuitCuil = listaProveedor.CurrentRow.Cells[1].Value.ToString();
+                _proveedor.RazonSocial = listaProveedor.CurrentRow.Cells[2].Value.ToString();
+                _proveedor.Direccion = listaProveedor.CurrentRow.Cells[3].Value.ToString();
+                _proveedor.Localidad = listaProveedor.CurrentRow.Cells[4].Value.ToString();
+                _proveedor.provincia.DescripcionProvincia = listaProveedor.CurrentRow.Cells[5].Value.ToString();
+                _proveedor.Tel1 = listaProveedor.CurrentRow.Cells[6].Value.ToString();
+                _proveedor.Tel2 = listaProveedor.CurrentRow.Cells[7].Value.ToString();
+                _proveedor.Email = listaProveedor.CurrentRow.Cells[8].Value.ToString();
+                _proveedor.Estado.DescripcionEstado = listaProveedor.CurrentRow.Cells[9].Value.ToString();
 
 
-            Form formProveedor = new FrmNewProvCli(_proveedor);
-            formProveedor.ShowDialog();
+                Form formProveedor = new FrmNewProvCli(_proveedor);
+                formProveedor.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         private void ListaProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (_tipoPerfil.IdPerfil == 1) { 
             _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.Rows[e.RowIndex].Cells[0].Value.ToString());
             _proveedor.CuitCuil = listaProveedor.Rows[e.RowIndex].Cells[1].Value.ToString();
             _proveedor.RazonSocial = listaProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -93,6 +110,12 @@ namespace CU
             
             FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
             formProveedor.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)

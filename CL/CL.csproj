@@ -47,6 +47,7 @@
     <Compile Include="Estado.cs" />
     <Compile Include="Proveedor.cs" />
     <Compile Include="Provincia.cs" />
+    <Compile Include="TipoPerfil.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -54,6 +55,7 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Validacion.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
