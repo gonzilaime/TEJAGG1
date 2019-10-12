@@ -78,7 +78,7 @@ namespace CU
 
                 _cliente.Accion(_cliente, "ALTA");
                 this.Hide();
-                MessageBox.Show("El proveedor " + _cliente.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El cliente " + _cliente.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

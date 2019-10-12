@@ -31,18 +31,18 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.cboEstadoArt = new System.Windows.Forms.ComboBox();
+            this.cboProveedor = new System.Windows.Forms.ComboBox();
             this.lblEstadoArt = new System.Windows.Forms.Label();
             this.lblProdObligatorio = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtNombreProd = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtIdArticulo = new System.Windows.Forms.TextBox();
             this.lblIdArt = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBonificacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(160, 286);
+            this.btnModificar.Location = new System.Drawing.Point(59, 286);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(95, 29);
             this.btnModificar.TabIndex = 76;
@@ -95,15 +95,16 @@
             this.btnGuardar.TabIndex = 78;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // cboEstadoArt
+            // cboProveedor
             // 
-            this.cboEstadoArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstadoArt.FormattingEnabled = true;
-            this.cboEstadoArt.Location = new System.Drawing.Point(170, 21);
-            this.cboEstadoArt.Name = "cboEstadoArt";
-            this.cboEstadoArt.Size = new System.Drawing.Size(197, 24);
-            this.cboEstadoArt.TabIndex = 79;
+            this.cboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProveedor.FormattingEnabled = true;
+            this.cboProveedor.Location = new System.Drawing.Point(170, 21);
+            this.cboProveedor.Name = "cboProveedor";
+            this.cboProveedor.Size = new System.Drawing.Size(197, 24);
+            this.cboProveedor.TabIndex = 79;
             // 
             // lblEstadoArt
             // 
@@ -111,9 +112,9 @@
             this.lblEstadoArt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoArt.Location = new System.Drawing.Point(17, 25);
             this.lblEstadoArt.Name = "lblEstadoArt";
-            this.lblEstadoArt.Size = new System.Drawing.Size(147, 19);
+            this.lblEstadoArt.Size = new System.Drawing.Size(83, 19);
             this.lblEstadoArt.TabIndex = 80;
-            this.lblEstadoArt.Text = "Estado del Artículo*";
+            this.lblEstadoArt.Text = "Proveedor";
             // 
             // lblProdObligatorio
             // 
@@ -128,15 +129,15 @@
             this.lblProdObligatorio.Text = "Este campo es obligatorio.";
             this.lblProdObligatorio.Visible = false;
             // 
-            // txtProducto
+            // txtNombreProd
             // 
-            this.txtProducto.BackColor = System.Drawing.Color.LightGray;
-            this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProducto.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(107, 121);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(260, 23);
-            this.txtProducto.TabIndex = 87;
+            this.txtNombreProd.BackColor = System.Drawing.Color.LightGray;
+            this.txtNombreProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreProd.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProd.Location = new System.Drawing.Point(107, 121);
+            this.txtNombreProd.Name = "txtNombreProd";
+            this.txtNombreProd.Size = new System.Drawing.Size(260, 23);
+            this.txtNombreProd.TabIndex = 87;
             // 
             // lblProducto
             // 
@@ -161,15 +162,15 @@
             this.label1.Text = "Este campo es obligatorio.";
             this.label1.Visible = false;
             // 
-            // txtId
+            // txtIdArticulo
             // 
-            this.txtId.BackColor = System.Drawing.Color.LightGray;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(125, 71);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(242, 23);
-            this.txtId.TabIndex = 90;
+            this.txtIdArticulo.BackColor = System.Drawing.Color.LightGray;
+            this.txtIdArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdArticulo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdArticulo.Location = new System.Drawing.Point(125, 71);
+            this.txtIdArticulo.Name = "txtIdArticulo";
+            this.txtIdArticulo.Size = new System.Drawing.Size(242, 23);
+            this.txtIdArticulo.TabIndex = 90;
             // 
             // lblIdArt
             // 
@@ -194,15 +195,15 @@
             this.label2.Text = "Este campo es obligatorio.";
             this.label2.Visible = false;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(87, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 23);
-            this.textBox2.TabIndex = 93;
+            this.txtPrecio.BackColor = System.Drawing.Color.LightGray;
+            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecio.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(87, 221);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(280, 23);
+            this.txtPrecio.TabIndex = 93;
             // 
             // lblPrecio
             // 
@@ -214,15 +215,15 @@
             this.lblPrecio.TabIndex = 94;
             this.lblPrecio.Text = "Precio *";
             // 
-            // textBox1
+            // txtBonificacion
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(128, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 23);
-            this.textBox1.TabIndex = 97;
+            this.txtBonificacion.BackColor = System.Drawing.Color.LightGray;
+            this.txtBonificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBonificacion.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBonificacion.Location = new System.Drawing.Point(128, 171);
+            this.txtBonificacion.Name = "txtBonificacion";
+            this.txtBonificacion.Size = new System.Drawing.Size(239, 23);
+            this.txtBonificacion.TabIndex = 97;
             // 
             // label3
             // 
@@ -255,17 +256,17 @@
             this.ClientSize = new System.Drawing.Size(386, 343);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBonificacion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtIdArticulo);
             this.Controls.Add(this.lblIdArt);
             this.Controls.Add(this.lblProdObligatorio);
-            this.Controls.Add(this.txtProducto);
+            this.Controls.Add(this.txtNombreProd);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.cboEstadoArt);
+            this.Controls.Add(this.cboProveedor);
             this.Controls.Add(this.lblEstadoArt);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelar);
@@ -283,18 +284,18 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ComboBox cboEstadoArt;
+        private System.Windows.Forms.ComboBox cboProveedor;
         private System.Windows.Forms.Label lblEstadoArt;
         private System.Windows.Forms.Label lblProdObligatorio;
-        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtNombreProd;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIdArticulo;
         private System.Windows.Forms.Label lblIdArt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBonificacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
