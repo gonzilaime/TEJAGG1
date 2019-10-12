@@ -8,6 +8,11 @@ namespace CL
     public class Articulos
     {
         public int IdArticulo { get; set; }
-        public string DescripcionArticulo { get; set; }
+        public string NombreArticulo { get; set; }
+        public int Bonificacion { get; set; }
+        public decimal Precio { get; set; }
+        public int IdProveedor {get; set;}
     }
+
+
 }

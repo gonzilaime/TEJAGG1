@@ -43,12 +43,8 @@
             this.lblGestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGestion.AutoSize = true;
             this.lblGestion.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.lblGestion.Location = new System.Drawing.Point(436, 315);
-=======
             this.lblGestion.Location = new System.Drawing.Point(557, 117);
             this.lblGestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.lblGestion.Name = "lblGestion";
             this.lblGestion.Size = new System.Drawing.Size(111, 31);
             this.lblGestion.TabIndex = 5;
@@ -59,12 +55,9 @@
             this.lblTejag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTejag.AutoSize = true;
             this.lblTejag.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.lblTejag.Location = new System.Drawing.Point(277, 295);
-=======
             this.lblTejag.Location = new System.Drawing.Point(345, 92);
             this.lblTejag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.lblTejag.Name = "lblTejag";
             this.lblTejag.Size = new System.Drawing.Size(236, 62);
             this.lblTejag.TabIndex = 4;
@@ -76,12 +69,9 @@
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.lblFecha.Location = new System.Drawing.Point(406, 511);
-=======
             this.lblFecha.Location = new System.Drawing.Point(436, 629);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(102, 41);
             this.lblFecha.TabIndex = 7;
@@ -93,12 +83,9 @@
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.lblHora.Location = new System.Drawing.Point(469, 426);
-=======
             this.lblHora.Location = new System.Drawing.Point(520, 524);
             this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(239, 97);
             this.lblHora.TabIndex = 6;
@@ -125,16 +112,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.ClientSize = new System.Drawing.Size(768, 557);
             this.Controls.Add(this.pictureBox1);
-=======
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1024, 686);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.Controls.Add(this.lblGestion);
             this.Controls.Add(this.lblTejag);
             this.Controls.Add(this.lblFecha);
@@ -143,11 +127,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-=======
             this.Load += new System.EventHandler(this.FrmMenu_Load);
->>>>>>> 8f169695fc58658d6a16061e0d4a566d5e24c5f0
             this.ResumeLayout(false);
             this.PerformLayout();
 
