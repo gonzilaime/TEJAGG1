@@ -63,7 +63,9 @@ namespace CU
 
             foreach (var reg in proveedorObtenido)
             {
-                listaProveedor.Rows.Add(reg.IdProveedor, reg.CuitCuil, reg.RazonSocial, reg.Direccion, reg.Localidad, reg.provincia.DescripcionProvincia, reg.Tel1, reg.Tel2, reg.Email, reg.Estado.DescripcionEstado);
+                listaProveedor.Rows.Add(reg.IdProveedor, reg.CuitCuil, reg.RazonSocial, reg.Direccion,
+                    reg.Localidad, reg.provincia.DescripcionProvincia, reg.Tel1, reg.Tel2, reg.Email,
+                    reg.Estado.DescripcionEstado);
             }
         }
 

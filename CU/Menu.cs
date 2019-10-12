@@ -28,7 +28,7 @@ namespace CU
 
         private void BtnArticulos_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmArticulos());
+            AbrirFormHijo(new FrmArticulos(_tipoPerfil.IdPerfil));
             panelArticulos.Visible = true;
             panelClientes.Visible = false;
             panelProveedores.Visible = false;
@@ -49,7 +49,7 @@ namespace CU
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmClientes());
+            AbrirFormHijo(new FrmClientes(_tipoPerfil.IdPerfil));
             panelArticulos.Visible = false;
             panelClientes.Visible = true;
             panelProveedores.Visible = false;
