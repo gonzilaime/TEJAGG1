@@ -50,6 +50,8 @@ namespace CU
         {
             if (tipoPerfil.IdPerfil == 1)
             {
+                FrmNewModArt formulario = new FrmNewModArt(articulo = null);
+                formulario.ShowDialog();
             }//IF
             else
             {
@@ -58,22 +60,23 @@ namespace CU
             }//END-IF
         }
 
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            if (tipoPerfil.IdPerfil == 1)
-            {
-            }//IF
-            else
-            {
-                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador",
-                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }//END-IF
-        }
+        
 
         private void ListaArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tipoPerfil.IdPerfil == 1)
             {
+
+                articulo.IdArticulo = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                articulo.NombreArticulo = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                articulo.Bonificacion = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
+                articulo.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
+                articulo.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString());
+                articulo.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+
+                FrmNewModArt formulario = new FrmNewModArt(articulo);
+                formulario.ShowDialog();
             }//IF
             else
             {
@@ -90,6 +93,42 @@ namespace CU
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             listarArticulos();
+        }
+
+        private void ListaArticulos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tipoPerfil.IdPerfil == 1)
+            {
+            }//IF
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador",
+                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }//END-IF
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+
+            if (tipoPerfil.IdPerfil == 1)
+            {
+
+                articulo.IdArticulo = Convert.ToInt32(listaArticulos.CurrentRow.Cells[0].Value.ToString());
+                articulo.NombreArticulo = listaArticulos.CurrentRow.Cells[1].Value.ToString();
+                articulo.Bonificacion = Convert.ToInt32(listaArticulos.CurrentRow.Cells[2].Value.ToString());
+                articulo.Precio = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
+                articulo.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.CurrentRow.Cells[4].Value.ToString());
+                articulo.proveedor.RazonSocial = listaArticulos.CurrentRow.Cells[5].Value.ToString();
+
+
+                FrmNewModArt formulario = new FrmNewModArt(articulo);
+                formulario.ShowDialog();
+            }//IF
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador",
+                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }//END-IF
         }
     }
 }

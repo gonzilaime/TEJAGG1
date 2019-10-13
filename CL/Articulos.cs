@@ -45,7 +45,7 @@ namespace CL
                 if (ejecutar == "ALTA")
                 {
                     query.CommandText = "INSERT INTO Articulo "
-                        + "VALUES " + "('" + articulo.NombreArticulo + "'," + articulo.Bonificacion + "," + articulo.Precio + articulo.proveedor.IdProveedor + ")";
+                        + "VALUES " + "('" + articulo.NombreArticulo + "'," + articulo.Bonificacion + "," + articulo.Precio + "," + articulo.proveedor.IdProveedor + ")";
 
                 }//IF
 
@@ -60,7 +60,7 @@ namespace CL
                         + " Bonificacion = " + articulo.Bonificacion + ","
                         + " Precio = " + articulo.Precio + ","
                         + " IdProveedor = " + articulo.proveedor.IdProveedor
-                        + " WHERE IdProveedor = " + articulo.IdArticulo;
+                        + " WHERE IdArticulo = " + articulo.IdArticulo;
 
                 }
 
