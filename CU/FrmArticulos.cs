@@ -92,6 +92,8 @@ namespace CU
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
+            articulo = new Articulos();
+            proveedor = new Proveedor();
             listarArticulos();
         }
 
