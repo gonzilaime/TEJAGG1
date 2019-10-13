@@ -73,7 +73,7 @@ namespace CU
 
         private void BtnMinimizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void TxtUser_TextChanged(object sender, EventArgs e)
@@ -92,8 +92,8 @@ namespace CU
                 if (usuario.login(this.txtUser.Text, this.txtPass.Text))
                 {
                     this.Hide();
-                    FrmMenu menu = new FrmMenu(usuario.NroPerfil);
-                    menu.Show();
+                    //FrmMenu menu = new FrmMenu(usuario.NroPerfil);
+                    //menu.Show();
                     FormMenu formMenu = new FormMenu(usuario.NroPerfil);
                     formMenu.Show();
 
