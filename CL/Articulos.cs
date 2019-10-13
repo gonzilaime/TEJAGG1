@@ -13,6 +13,8 @@ namespace CL
         public int IdArticulo { get; set; }
         public string NombreArticulo { get; set; }
         public int Bonificacion { get; set; }
+        public int PrecioEntero { get; set; }
+        public int PrecioDecimal { get; set; }
         public decimal Precio { get; set; }
         public int IdProveedor {get; set;}
 
@@ -45,7 +47,7 @@ namespace CL
                 if (ejecutar == "ALTA")
                 {
                     query.CommandText = "INSERT INTO Articulo "
-                        + "VALUES " + "('" + articulo.NombreArticulo + "'," + articulo.Bonificacion + "," + articulo.Precio + "," + articulo.proveedor.IdProveedor + ")";
+                        + "VALUES " + "('" + articulo.NombreArticulo + "'," + articulo.Bonificacion + "," + articulo.PrecioEntero + "." + articulo.PrecioDecimal + "," + articulo.proveedor.IdProveedor + ")";
 
                 }//IF
 
@@ -58,7 +60,7 @@ namespace CL
                     query.CommandText = "UPDATE Articulo "
                         + "SET NombreArticulo = '" + articulo.NombreArticulo + "',"
                         + " Bonificacion = " + articulo.Bonificacion + ","
-                        + " Precio = " + articulo.Precio + ","
+                        + " Precio = " + articulo.PrecioEntero + "." + articulo.PrecioDecimal + ","
                         + " IdProveedor = " + articulo.proveedor.IdProveedor
                         + " WHERE IdArticulo = " + articulo.IdArticulo;
 

@@ -27,13 +27,15 @@ namespace CU
 
             if (articulos != null)
             {
+                lblPrecio.Text = "Precio nuevo";
                 btnGuardar.Visible = false;
                 btnGuardar.Enabled = false;
                 txtIdArticulo.Enabled = false;
+                txtPrecio.Enabled = false;
                 txtIdArticulo.Text = Convert.ToInt32(articulos.IdArticulo.ToString()).ToString();
                 txtNombreProd.Text = articulos.NombreArticulo;
                 txtBonificacion.Text = Convert.ToInt32(articulos.Bonificacion.ToString()).ToString();
-                txtPrecio.Text = Convert.ToDecimal(articulos.Bonificacion.ToString()).ToString();
+                txtPrecio.Text = Convert.ToDecimal(articulos.Precio.ToString()).ToString();
                 cboProveedor.Text = articulos.proveedor.RazonSocial;
 
                 AccionArticulo = "MODIFICAR";
@@ -44,6 +46,7 @@ namespace CU
                 btnModificar.Enabled = false;
                 btnModificar.Visible = false;
                 txtIdArticulo.Visible = false;
+                txtPrecio.Visible = false;
                 lblIdArt.Visible = false;
                 AccionArticulo = "ALTA";
             }
@@ -56,7 +59,8 @@ namespace CU
             {
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
                 articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
-                articulo.Precio = Convert.ToDecimal(txtPrecio.Text.ToString());
+                articulo.PrecioEntero = Convert.ToInt32(txtEntero.Text.ToString());
+                articulo.PrecioDecimal = Convert.ToInt32(txtDecimal.Text.ToString());
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
 
                 articulo.AccionArticulo(articulo, "ALTA");
@@ -74,7 +78,8 @@ namespace CU
                 articulo.IdArticulo = Convert.ToInt32(txtIdArticulo.Text.ToString());
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
                 articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
-                articulo.Precio = Convert.ToDecimal(txtPrecio.Text.ToString());
+                articulo.PrecioEntero = Convert.ToInt32(txtEntero.Text.ToString());
+                articulo.PrecioDecimal = Convert.ToInt32(txtDecimal.Text.ToString());
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
 
                 articulo.AccionArticulo(articulo, "MODIFICAR");
@@ -87,6 +92,13 @@ namespace CU
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void FrmNewModArt_Load(object sender, EventArgs e)
+        {
+            articulo = new Articulos();
+            _provincia = new Provincia();
+            _proveedor = new Proveedor();
         }
     }
 }
