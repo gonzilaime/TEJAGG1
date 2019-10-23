@@ -24,30 +24,35 @@ namespace CL
             perfil = new TipoPerfil();
 
         }
-
+        
         public bool login(string Nick, string Contraseña)
         {
             var conn = new SqlConnection();
             var comando = new SqlCommand();
             var baseDatos = new Conectar();
             bool rta;
+            
 
             try
             {
+               
                 conn = baseDatos.Abrir();
                 comando.Connection = conn;
                 SqlCommand cmd = new SqlCommand("SELECT Nick, Contraseña, IdPerfil FROM Usuario WHERE Nick = @Nick AND Contraseña = @Contraseña", conn);
                 cmd.Parameters.AddWithValue("Nick", Nick);
                 cmd.Parameters.AddWithValue("Contraseña", Contraseña);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 rta = true;
+               
                 if (dt.Rows.Count == 1)
                 {
                     if (Convert.ToInt32(dt.Rows[0][2]) == 1)
                     {
                         NroPerfil = 1;
+                        
                         rta = true;
                     }
                     else if (Convert.ToInt32(dt.Rows[0][2]) == 2)
@@ -55,6 +60,8 @@ namespace CL
                         NroPerfil = 2;
                         rta = true;
                     }
+                    
+                   
                 }
                 else
                 {

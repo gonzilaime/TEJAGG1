@@ -90,10 +90,7 @@ namespace CU
             listar();
         }
 
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            listar();
-        }
+     
 
         private void ListaCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,5 +118,12 @@ namespace CU
                     "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            listar();
+        }
+
+       
     }
 }

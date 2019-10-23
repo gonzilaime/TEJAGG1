@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,21 +51,23 @@
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listaProveedor
             // 
             this.listaProveedor.AllowUserToAddRows = false;
             this.listaProveedor.AllowUserToDeleteRows = false;
+            this.listaProveedor.AllowUserToResizeColumns = false;
+            this.listaProveedor.AllowUserToResizeRows = false;
             this.listaProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -106,7 +107,6 @@
             this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaProveedor.Location = new System.Drawing.Point(17, 141);
             this.listaProveedor.Name = "listaProveedor";
-            this.listaProveedor.ReadOnly = true;
             this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -117,6 +117,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaProveedor.RowHeadersWidth = 51;
+            this.listaProveedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaProveedor.Size = new System.Drawing.Size(736, 316);
             this.listaProveedor.TabIndex = 0;
@@ -128,42 +129,36 @@
             this.IdProveedor.HeaderText = "Código Proveedor";
             this.IdProveedor.MinimumWidth = 6;
             this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
             // 
             // CuitCuil
             // 
             this.CuitCuil.HeaderText = "CUIT/CUIL";
             this.CuitCuil.MinimumWidth = 6;
             this.CuitCuil.Name = "CuitCuil";
-            this.CuitCuil.ReadOnly = true;
             // 
             // RazonSocial
             // 
             this.RazonSocial.HeaderText = "Razón Social";
             this.RazonSocial.MinimumWidth = 6;
             this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Dirección";
             this.Direccion.MinimumWidth = 6;
             this.Direccion.Name = "Direccion";
-            this.Direccion.ReadOnly = true;
             // 
             // Localidad
             // 
             this.Localidad.HeaderText = "Localidad";
             this.Localidad.MinimumWidth = 6;
             this.Localidad.Name = "Localidad";
-            this.Localidad.ReadOnly = true;
             // 
             // DescripcionProvincia
             // 
             this.DescripcionProvincia.HeaderText = "Provincia";
             this.DescripcionProvincia.MinimumWidth = 6;
             this.DescripcionProvincia.Name = "DescripcionProvincia";
-            this.DescripcionProvincia.ReadOnly = true;
             this.DescripcionProvincia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DescripcionProvincia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -172,28 +167,24 @@
             this.Tel1.HeaderText = "Teléfono1";
             this.Tel1.MinimumWidth = 6;
             this.Tel1.Name = "Tel1";
-            this.Tel1.ReadOnly = true;
             // 
             // Tel2
             // 
             this.Tel2.HeaderText = "Teléfono2";
             this.Tel2.MinimumWidth = 6;
             this.Tel2.Name = "Tel2";
-            this.Tel2.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
             // 
             // DescripcionEstado
             // 
             this.DescripcionEstado.HeaderText = "Estado";
             this.DescripcionEstado.MinimumWidth = 6;
             this.DescripcionEstado.Name = "DescripcionEstado";
-            this.DescripcionEstado.ReadOnly = true;
             // 
             // panel1
             // 
@@ -315,40 +306,39 @@
             this.lineShape2.Y1 = -2;
             this.lineShape2.Y2 = 29;
             // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(24, 8);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(121, 17);
-            this.lblBuscar.TabIndex = 4;
-            this.lblBuscar.Text = "Buscar Proveedor";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(160, 6);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(271, 20);
-            this.txtBuscar.TabIndex = 5;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.txtBuscar);
-            this.panel3.Controls.Add(this.lblBuscar);
             this.panel3.Location = new System.Drawing.Point(17, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(736, 32);
             this.panel3.TabIndex = 6;
             // 
-            // bunifuElipse1
+            // pictureBox1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(37, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
+            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged_1);
             // 
             // panel4
             // 
@@ -374,6 +364,7 @@
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProveedores";
+            this.ShowIcon = false;
             this.Text = "frmAgregarModificar";
             this.Load += new System.EventHandler(this.FrmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).EndInit();
@@ -382,13 +373,12 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView listaProveedor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblProveedores;
         private System.Windows.Forms.Panel panel2;
@@ -398,11 +388,10 @@
         private System.Windows.Forms.Button btnModificar;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn CuitCuil;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
@@ -413,5 +402,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstado;
+        public System.Windows.Forms.DataGridView listaProveedor;
     }
 }

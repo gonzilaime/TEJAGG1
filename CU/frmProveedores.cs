@@ -19,6 +19,7 @@ namespace CU
         public Provincia _provincia;
         public TipoPerfil _tipoPerfil;
         public Usuario usuario;
+        
 
         public frmProveedores(int _perfil)
         {
@@ -55,7 +56,7 @@ namespace CU
            
         }
 
-        private void listar()
+        public void listar()
         {
             listaProveedor.Rows.Clear();
             var cadena = txtBuscar.Text.ToString();
@@ -97,21 +98,23 @@ namespace CU
 
         private void ListaProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (_tipoPerfil.IdPerfil == 1) { 
-            _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.Rows[e.RowIndex].Cells[0].Value.ToString());
-            _proveedor.CuitCuil = listaProveedor.Rows[e.RowIndex].Cells[1].Value.ToString();
-            _proveedor.RazonSocial = listaProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
-            _proveedor.Direccion = listaProveedor.Rows[e.RowIndex].Cells[3].Value.ToString();
-            _proveedor.Localidad = listaProveedor.Rows[e.RowIndex].Cells[4].Value.ToString();
-            _proveedor.provincia.DescripcionProvincia = listaProveedor.Rows[e.RowIndex].Cells[5].Value.ToString();
-            _proveedor.Tel1 = listaProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
-            _proveedor.Tel2 = listaProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
-            _proveedor.Email = listaProveedor.Rows[e.RowIndex].Cells[8].Value.ToString();
-           _proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
+            if (_tipoPerfil.IdPerfil == 1)
+            {
+                _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.Rows[e.RowIndex].Cells[0].Value.ToString());
+                _proveedor.CuitCuil = listaProveedor.Rows[e.RowIndex].Cells[1].Value.ToString();
+                _proveedor.RazonSocial = listaProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
+                _proveedor.Direccion = listaProveedor.Rows[e.RowIndex].Cells[3].Value.ToString();
+                _proveedor.Localidad = listaProveedor.Rows[e.RowIndex].Cells[4].Value.ToString();
+                _proveedor.provincia.DescripcionProvincia = listaProveedor.Rows[e.RowIndex].Cells[5].Value.ToString();
+                _proveedor.Tel1 = listaProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
+                _proveedor.Tel2 = listaProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
+                _proveedor.Email = listaProveedor.Rows[e.RowIndex].Cells[8].Value.ToString();
+                _proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-            
-            FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
-            formProveedor.ShowDialog();
+
+
+                FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
+                formProveedor.ShowDialog();
             }
             else
             {
@@ -120,7 +123,9 @@ namespace CU
 
         }
 
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+
+
+            private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
         {
             listar();
         }

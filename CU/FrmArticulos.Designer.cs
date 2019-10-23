@@ -43,15 +43,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
             this.listaArticulos = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -213,20 +212,12 @@
             this.txtBuscar.TabIndex = 5;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(621, 462);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(105, 17);
-            this.lblBuscar.TabIndex = 4;
-            this.lblBuscar.Text = "Buscar Artículo";
-            // 
             // listaArticulos
             // 
             this.listaArticulos.AllowUserToAddRows = false;
             this.listaArticulos.AllowUserToDeleteRows = false;
+            this.listaArticulos.AllowUserToResizeColumns = false;
+            this.listaArticulos.AllowUserToResizeRows = false;
             this.listaArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -273,22 +264,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.listaArticulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaArticulos.RowHeadersWidth = 51;
+            this.listaArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaArticulos.Size = new System.Drawing.Size(736, 316);
             this.listaArticulos.TabIndex = 8;
             this.listaArticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellContentDoubleClick);
             this.listaArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellDoubleClick);
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(15, 107);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 352);
-            this.panel4.TabIndex = 10;
             // 
             // IdArticulo
             // 
@@ -331,6 +312,17 @@
             this.RazonSocial.Name = "RazonSocial";
             this.RazonSocial.ReadOnly = true;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Location = new System.Drawing.Point(15, 107);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(740, 352);
+            this.panel4.TabIndex = 10;
+            // 
             // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +331,6 @@
             this.ClientSize = new System.Drawing.Size(768, 557);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.listaArticulos);
-            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -355,7 +346,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaArticulos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -372,7 +362,6 @@
         private System.Windows.Forms.Label lblProveedores;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridView listaArticulos;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;

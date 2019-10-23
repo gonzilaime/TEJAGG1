@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnModificar = new System.Windows.Forms.Button();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
@@ -62,49 +60,58 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(145)))));
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(666, 18);
+            this.panel1.Size = new System.Drawing.Size(666, 25);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.Image = global::CU.Properties.Resources.minus;
-            this.btnMinimizar.Location = new System.Drawing.Point(613, 2);
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(145)))));
+            this.btnMinimizar.BackgroundImage = global::CU.Properties.Resources.minimizar16;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(614, -1);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMinimizar.TabIndex = 9;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
+            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.TabIndex = 17;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Image = global::CU.Properties.Resources.cross;
-            this.btnCerrar.Location = new System.Drawing.Point(638, 2);
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(145)))));
+            this.btnCerrar.BackgroundImage = global::CU.Properties.Resources.cancel_16;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(640, -1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            this.btnCerrar.Size = new System.Drawing.Size(26, 26);
+            this.btnCerrar.TabIndex = 16;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.LightGray;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.BackColor = System.Drawing.Color.Gainsboro;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,8 +128,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightGray;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.BackColor = System.Drawing.Color.Gainsboro;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
@@ -135,15 +141,9 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.LightGray;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.BackColor = System.Drawing.Color.Gainsboro;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,19 +160,19 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.BackColor = System.Drawing.Color.LightGray;
+            this.TxtEmail.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(389, 188);
+            this.TxtEmail.Location = new System.Drawing.Point(389, 203);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(265, 23);
-            this.TxtEmail.TabIndex = 8;
+            this.TxtEmail.TabIndex = 9;
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuit.Location = new System.Drawing.Point(12, 92);
+            this.lblCuit.Location = new System.Drawing.Point(12, 107);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(94, 19);
             this.lblCuit.TabIndex = 0;
@@ -180,19 +180,19 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.BackColor = System.Drawing.Color.LightGray;
+            this.txtDireccion.BackColor = System.Drawing.Color.Gainsboro;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(431, 38);
+            this.txtDireccion.Location = new System.Drawing.Point(431, 53);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(223, 23);
-            this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.TabIndex = 6;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(336, 192);
+            this.lblEmail.Location = new System.Drawing.Point(336, 207);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(47, 19);
             this.lblEmail.TabIndex = 50;
@@ -202,25 +202,26 @@
             // 
             this.cboEstadoProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstadoProv.FormattingEnabled = true;
-            this.cboEstadoProv.Location = new System.Drawing.Point(178, 38);
+            this.cboEstadoProv.Location = new System.Drawing.Point(178, 53);
             this.cboEstadoProv.Name = "cboEstadoProv";
             this.cboEstadoProv.Size = new System.Drawing.Size(146, 24);
-            this.cboEstadoProv.TabIndex = 10;
+            this.cboEstadoProv.TabIndex = 1;
             // 
             // cboProv
             // 
+            this.cboProv.BackColor = System.Drawing.Color.White;
             this.cboProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProv.FormattingEnabled = true;
-            this.cboProv.Location = new System.Drawing.Point(103, 188);
+            this.cboProv.Location = new System.Drawing.Point(103, 203);
             this.cboProv.Name = "cboProv";
             this.cboProv.Size = new System.Drawing.Size(221, 24);
-            this.cboProv.TabIndex = 5;
+            this.cboProv.TabIndex = 4;
             // 
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvincia.Location = new System.Drawing.Point(12, 192);
+            this.lblProvincia.Location = new System.Drawing.Point(12, 207);
             this.lblProvincia.Name = "lblProvincia";
             this.lblProvincia.Size = new System.Drawing.Size(85, 19);
             this.lblProvincia.TabIndex = 47;
@@ -228,59 +229,60 @@
             // 
             // txtTel2
             // 
-            this.txtTel2.BackColor = System.Drawing.Color.LightGray;
+            this.txtTel2.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTel2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel2.Location = new System.Drawing.Point(424, 138);
+            this.txtTel2.Location = new System.Drawing.Point(424, 153);
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(230, 23);
-            this.txtTel2.TabIndex = 7;
+            this.txtTel2.TabIndex = 8;
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.BackColor = System.Drawing.Color.LightGray;
+            this.txtRazonSocial.BackColor = System.Drawing.Color.Gainsboro;
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRazonSocial.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(125, 138);
+            this.txtRazonSocial.Location = new System.Drawing.Point(125, 153);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(199, 23);
-            this.txtRazonSocial.TabIndex = 2;
+            this.txtRazonSocial.TabIndex = 3;
             // 
             // txtTel1
             // 
-            this.txtTel1.BackColor = System.Drawing.Color.LightGray;
+            this.txtTel1.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTel1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel1.Location = new System.Drawing.Point(435, 88);
+            this.txtTel1.Location = new System.Drawing.Point(435, 103);
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(219, 23);
-            this.txtTel1.TabIndex = 6;
+            this.txtTel1.TabIndex = 7;
             // 
             // txtLocalidad
             // 
-            this.txtLocalidad.BackColor = System.Drawing.Color.LightGray;
+            this.txtLocalidad.BackColor = System.Drawing.Color.Gainsboro;
             this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLocalidad.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalidad.Location = new System.Drawing.Point(105, 238);
+            this.txtLocalidad.Location = new System.Drawing.Point(105, 253);
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(219, 23);
-            this.txtLocalidad.TabIndex = 4;
+            this.txtLocalidad.TabIndex = 5;
             // 
             // txtCuit
             // 
-            this.txtCuit.BackColor = System.Drawing.Color.LightGray;
+            this.txtCuit.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCuit.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuit.Location = new System.Drawing.Point(112, 88);
+            this.txtCuit.Location = new System.Drawing.Point(112, 103);
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(212, 23);
-            this.txtCuit.TabIndex = 1;
+            this.txtCuit.TabIndex = 2;
+            this.txtCuit.TextChanged += new System.EventHandler(this.txtCuit_TextChanged);
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(12, 242);
+            this.lblLocalidad.Location = new System.Drawing.Point(12, 257);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(87, 19);
             this.lblLocalidad.TabIndex = 41;
@@ -290,7 +292,7 @@
             // 
             this.lblDomicilio.AutoSize = true;
             this.lblDomicilio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDomicilio.Location = new System.Drawing.Point(339, 42);
+            this.lblDomicilio.Location = new System.Drawing.Point(339, 57);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(86, 19);
             this.lblDomicilio.TabIndex = 40;
@@ -300,7 +302,7 @@
             // 
             this.lblTelefono2.AutoSize = true;
             this.lblTelefono2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono2.Location = new System.Drawing.Point(336, 142);
+            this.lblTelefono2.Location = new System.Drawing.Point(336, 157);
             this.lblTelefono2.Name = "lblTelefono2";
             this.lblTelefono2.Size = new System.Drawing.Size(82, 19);
             this.lblTelefono2.TabIndex = 39;
@@ -310,7 +312,7 @@
             // 
             this.lblTelefono1.AutoSize = true;
             this.lblTelefono1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono1.Location = new System.Drawing.Point(336, 92);
+            this.lblTelefono1.Location = new System.Drawing.Point(336, 107);
             this.lblTelefono1.Name = "lblTelefono1";
             this.lblTelefono1.Size = new System.Drawing.Size(93, 19);
             this.lblTelefono1.TabIndex = 38;
@@ -320,7 +322,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(12, 142);
+            this.lblNombre.Location = new System.Drawing.Point(12, 157);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(107, 19);
             this.lblNombre.TabIndex = 37;
@@ -330,7 +332,7 @@
             // 
             this.lblEstadoProveedor.AutoSize = true;
             this.lblEstadoProveedor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoProveedor.Location = new System.Drawing.Point(12, 42);
+            this.lblEstadoProveedor.Location = new System.Drawing.Point(12, 57);
             this.lblEstadoProveedor.Name = "lblEstadoProveedor";
             this.lblEstadoProveedor.Size = new System.Drawing.Size(166, 19);
             this.lblEstadoProveedor.TabIndex = 36;
@@ -340,7 +342,7 @@
             // 
             this.lblCodigoProveedor.AutoSize = true;
             this.lblCodigoProveedor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoProveedor.Location = new System.Drawing.Point(335, 242);
+            this.lblCodigoProveedor.Location = new System.Drawing.Point(335, 257);
             this.lblCodigoProveedor.Name = "lblCodigoProveedor";
             this.lblCodigoProveedor.Size = new System.Drawing.Size(156, 19);
             this.lblCodigoProveedor.TabIndex = 54;
@@ -348,10 +350,10 @@
             // 
             // txtCodigoProveedor
             // 
-            this.txtCodigoProveedor.BackColor = System.Drawing.Color.LightGray;
+            this.txtCodigoProveedor.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCodigoProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigoProveedor.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProveedor.Location = new System.Drawing.Point(497, 238);
+            this.txtCodigoProveedor.Location = new System.Drawing.Point(497, 253);
             this.txtCodigoProveedor.Name = "txtCodigoProveedor";
             this.txtCodigoProveedor.Size = new System.Drawing.Size(157, 23);
             this.txtCodigoProveedor.TabIndex = 9;
@@ -362,7 +364,7 @@
             this.lblCuitObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblCuitObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuitObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCuitObligatorio.Location = new System.Drawing.Point(138, 114);
+            this.lblCuitObligatorio.Location = new System.Drawing.Point(138, 129);
             this.lblCuitObligatorio.Name = "lblCuitObligatorio";
             this.lblCuitObligatorio.Size = new System.Drawing.Size(148, 16);
             this.lblCuitObligatorio.TabIndex = 55;
@@ -375,7 +377,7 @@
             this.lblRazonSocialObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblRazonSocialObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazonSocialObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblRazonSocialObligatorio.Location = new System.Drawing.Point(138, 164);
+            this.lblRazonSocialObligatorio.Location = new System.Drawing.Point(138, 179);
             this.lblRazonSocialObligatorio.Name = "lblRazonSocialObligatorio";
             this.lblRazonSocialObligatorio.Size = new System.Drawing.Size(148, 16);
             this.lblRazonSocialObligatorio.TabIndex = 56;
@@ -388,7 +390,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(138, 215);
+            this.label1.Location = new System.Drawing.Point(138, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 16);
             this.label1.TabIndex = 57;
@@ -401,7 +403,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(138, 264);
+            this.label2.Location = new System.Drawing.Point(138, 279);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 16);
             this.label2.TabIndex = 58;
@@ -414,7 +416,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(447, 64);
+            this.label3.Location = new System.Drawing.Point(447, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 16);
             this.label3.TabIndex = 59;
@@ -427,19 +429,38 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(447, 114);
+            this.label4.Location = new System.Drawing.Point(447, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 16);
             this.label4.TabIndex = 60;
             this.label4.Text = "Este campo es obligatorio.";
             this.label4.Visible = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(288, 304);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(275, 298);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(85, 27);
+            this.panel2.TabIndex = 61;
+            // 
             // FrmNewProvCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(666, 329);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -477,8 +498,6 @@
             this.Load += new System.EventHandler(this.FrmNewProv_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmNewProv_MouseDown);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,11 +506,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnMinimizar;
-        private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label lblCuit;
@@ -519,5 +535,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRazonSocialObligatorio;
         private System.Windows.Forms.Label lblCuitObligatorio;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

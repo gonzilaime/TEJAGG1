@@ -42,11 +42,10 @@
             // 
             this.lblGestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGestion.AutoSize = true;
-            this.lblGestion.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestion.Location = new System.Drawing.Point(557, 117);
-            this.lblGestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGestion.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestion.Location = new System.Drawing.Point(416, 286);
             this.lblGestion.Name = "lblGestion";
-            this.lblGestion.Size = new System.Drawing.Size(111, 31);
+            this.lblGestion.Size = new System.Drawing.Size(86, 25);
             this.lblGestion.TabIndex = 5;
             this.lblGestion.Text = "Gestión";
             // 
@@ -54,14 +53,12 @@
             // 
             this.lblTejag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTejag.AutoSize = true;
-            this.lblTejag.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTejag.Location = new System.Drawing.Point(277, 295);
-            this.lblTejag.Location = new System.Drawing.Point(345, 92);
-            this.lblTejag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTejag.Font = new System.Drawing.Font("Perpetua Titling MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTejag.Location = new System.Drawing.Point(254, 259);
             this.lblTejag.Name = "lblTejag";
-            this.lblTejag.Size = new System.Drawing.Size(236, 62);
+            this.lblTejag.Size = new System.Drawing.Size(182, 58);
             this.lblTejag.TabIndex = 4;
-            this.lblTejag.Text = "TEJAG ";
+            this.lblTejag.Text = "TEJAG";
             this.lblTejag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFecha
@@ -69,13 +66,11 @@
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(406, 511);
-            this.lblFecha.Location = new System.Drawing.Point(436, 629);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Location = new System.Drawing.Point(327, 511);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(102, 41);
+            this.lblFecha.Size = new System.Drawing.Size(78, 33);
             this.lblFecha.TabIndex = 7;
-            this.lblFecha.Text = "label1";
+            this.lblFecha.Text = "Fecha";
             this.lblFecha.Click += new System.EventHandler(this.LblFecha_Click);
             // 
             // lblHora
@@ -83,13 +78,11 @@
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(469, 426);
-            this.lblHora.Location = new System.Drawing.Point(520, 524);
-            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHora.Location = new System.Drawing.Point(390, 426);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(239, 97);
+            this.lblHora.Size = new System.Drawing.Size(159, 78);
             this.lblHora.TabIndex = 6;
-            this.lblHora.Text = "label1";
+            this.lblHora.Text = "Hora";
             this.lblHora.Click += new System.EventHandler(this.LblHora_Click);
             // 
             // timerHoraYFecha
@@ -101,34 +94,30 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::CU.Properties.Resources.PATO2;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(218, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(412, 233);
+            this.pictureBox1.Size = new System.Drawing.Size(309, 189);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(768, 557);
             this.Controls.Add(this.pictureBox1);
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1024, 686);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblGestion);
             this.Controls.Add(this.lblTejag);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Load += new System.EventHandler(this.FrmMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

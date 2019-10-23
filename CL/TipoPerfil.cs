@@ -12,4 +12,6 @@ namespace CL
         public string DescripcionPerfil { get; set; }
 
     }
+
+   
 }

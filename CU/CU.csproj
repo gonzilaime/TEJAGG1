@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -62,6 +63,12 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompras.Designer.cs">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +86,12 @@
     </Compile>
     <Compile Include="FrmNewModClientes.Designer.cs">
       <DependentUpon>FrmNewModClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewModCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewModCompras.Designer.cs">
+      <DependentUpon>FrmNewModCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNewProvCli.cs">
       <SubType>Form</SubType>
@@ -106,11 +119,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubFrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrmCompras.Designer.cs">
+      <DependentUpon>SubFrmCompras.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmArticulos.resx">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompras.resx">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -120,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNewModClientes.resx">
       <DependentUpon>FrmNewModClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewModCompras.resx">
+      <DependentUpon>FrmNewModCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNewProvCli.resx">
       <DependentUpon>FrmNewProvCli.cs</DependentUpon>
@@ -143,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubFrmCompras.resx">
+      <DependentUpon>SubFrmCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -278,6 +306,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PATO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box-package-on-a-cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-truck-with-packages-behind1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camion Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupo Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caja Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caja Negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orden Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orden negra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessmanAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic-square16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multi-tab16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar161.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
