@@ -115,6 +115,7 @@ namespace CU
 
                 FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
                 formProveedor.ShowDialog();
+                listar();
             }
             else
             {
@@ -126,6 +127,11 @@ namespace CU
 
 
             private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            listar();
+        }
+
+        private void frmProveedores_Activated(object sender, EventArgs e)
         {
             listar();
         }

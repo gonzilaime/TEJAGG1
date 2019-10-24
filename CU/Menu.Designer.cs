@@ -147,11 +147,11 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.panelMenu.Controls.Add(this.btnCom);
             this.panelMenu.Controls.Add(this.btnInicio);
+            this.panelMenu.Controls.Add(this.btnProv);
+            this.panelMenu.Controls.Add(this.btnCom);
             this.panelMenu.Controls.Add(this.btnArt);
             this.panelMenu.Controls.Add(this.btnCli);
-            this.panelMenu.Controls.Add(this.btnProv);
             this.panelMenu.Controls.Add(this.btnTipoPerfil);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.btnMarco);

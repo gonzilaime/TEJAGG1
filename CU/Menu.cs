@@ -17,7 +17,7 @@ namespace CU
     {
         public TipoPerfil _tipoPerfil;
         public Usuario usuario;
-
+        public FrmMenu frmMenu;
         
             
 
@@ -105,7 +105,7 @@ namespace CU
             _tipoPerfil = new TipoPerfil();
             _tipoPerfil.IdPerfil = _perfil;
             usuario = new Usuario();
-
+            
 
         }
 
@@ -264,8 +264,9 @@ namespace CU
             panelCompras.Visible = false;
             panelProveedores.Visible = false;
             panelClientes.Visible = false;
-
-
+            
+            
+           
         }
 
 

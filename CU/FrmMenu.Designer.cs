@@ -68,9 +68,8 @@
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(327, 511);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(78, 33);
+            this.lblFecha.Size = new System.Drawing.Size(0, 33);
             this.lblFecha.TabIndex = 7;
-            this.lblFecha.Text = "Fecha";
             this.lblFecha.Click += new System.EventHandler(this.LblFecha_Click);
             // 
             // lblHora
@@ -80,9 +79,8 @@
             this.lblHora.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(390, 426);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(159, 78);
+            this.lblHora.Size = new System.Drawing.Size(0, 78);
             this.lblHora.TabIndex = 6;
-            this.lblHora.Text = "Hora";
             this.lblHora.Click += new System.EventHandler(this.LblHora_Click);
             // 
             // timerHoraYFecha
@@ -127,9 +125,9 @@
 
         private System.Windows.Forms.Label lblGestion;
         private System.Windows.Forms.Label lblTejag;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Timer timerHoraYFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lblFecha;
+        public System.Windows.Forms.Label lblHora;
+        public System.Windows.Forms.Timer timerHoraYFecha;
     }
 }

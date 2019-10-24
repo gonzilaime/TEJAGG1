@@ -188,7 +188,7 @@ namespace CU
 
                 _proveedor.Accion(_proveedor, "ALTA");
                 form.listar();
-                this.Hide();
+                this.Close();
                 MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -234,7 +234,7 @@ namespace CU
                 _proveedor.Estado.IdEstado = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstado"]);
 
                 _proveedor.Accion(_proveedor, "MODIFICAR");
-                this.Hide();
+                this.Close();
                 MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido modificado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }//end-if
