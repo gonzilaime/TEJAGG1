@@ -46,13 +46,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.listaArticulos = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtArticulos = new System.Windows.Forms.TextBox();
@@ -291,18 +291,6 @@
             this.listaArticulos.Size = new System.Drawing.Size(440, 332);
             this.listaArticulos.TabIndex = 97;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Controls.Add(this.panelBuscar);
-            this.panel4.Location = new System.Drawing.Point(13, 31);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(444, 372);
-            this.panel4.TabIndex = 99;
-            // 
             // IdArticulo
             // 
             this.IdArticulo.HeaderText = "ID Artículo";
@@ -345,6 +333,18 @@
             this.RazonSocial.Name = "RazonSocial";
             this.RazonSocial.ReadOnly = true;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Controls.Add(this.panelBuscar);
+            this.panel4.Location = new System.Drawing.Point(13, 31);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(444, 372);
+            this.panel4.TabIndex = 99;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
@@ -370,9 +370,9 @@
             this.txtArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtArticulos.Enabled = false;
-            this.txtArticulos.Location = new System.Drawing.Point(537, 140);
+            this.txtArticulos.Location = new System.Drawing.Point(530, 140);
             this.txtArticulos.Name = "txtArticulos";
-            this.txtArticulos.Size = new System.Drawing.Size(217, 20);
+            this.txtArticulos.Size = new System.Drawing.Size(224, 20);
             this.txtArticulos.TabIndex = 102;
             // 
             // txtCodProv
@@ -435,8 +435,9 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtBonificacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "SubFrmCompras";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SubFrmCompras";
             this.Load += new System.EventHandler(this.SubFrmCompras_Load);
             this.panel1.ResumeLayout(false);

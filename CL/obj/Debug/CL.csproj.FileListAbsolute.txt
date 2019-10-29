@@ -55,7 +55,6 @@ C:\git TEJAGG1\TEJAGG1\CL\obj\Debug\CL.pdb
 C:\Desarrollos\git 4\TEJAGG1\CL\bin\Debug\CL.dll
 C:\Desarrollos\git 4\TEJAGG1\CL\bin\Debug\CL.pdb
 C:\Desarrollos\git 4\TEJAGG1\CL\obj\Debug\CL.csprojAssemblyReference.cache
-C:\Desarrollos\git 4\TEJAGG1\CL\obj\Debug\CL.csproj.CoreCompileInputs.cache
 C:\Desarrollos\git 4\TEJAGG1\CL\obj\Debug\CL.dll
 C:\Desarrollos\git 4\TEJAGG1\CL\obj\Debug\CL.pdb
 C:\Users\Agustin\Desktop\Tejag (2)\Copia\CL\bin\Debug\CL.dll

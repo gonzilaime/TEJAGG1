@@ -37,6 +37,7 @@ namespace CU
             if (_tipoPerfil.IdPerfil == 1) { 
             FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
             formulario.ShowDialog();
+                
             }
             else
             {
@@ -57,6 +58,7 @@ namespace CU
         }
 
         public void listar()
+        
         {
             listaProveedor.Rows.Clear();
             var cadena = txtBuscar.Text.ToString();

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -49,12 +50,18 @@
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.radioBtnInactivos = new System.Windows.Forms.RadioButton();
+            this.radioBtnEntregada = new System.Windows.Forms.RadioButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.radioBtnPendiente = new System.Windows.Forms.RadioButton();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -69,6 +76,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(768, 28);
             this.panel2.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.Location = new System.Drawing.Point(266, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(502, 24);
+            this.panel5.TabIndex = 11;
             // 
             // btnModificar
             // 
@@ -85,7 +102,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 24);
             this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar Proveedor";
+            this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
@@ -165,8 +182,14 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.radioBtnPendiente);
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.radioBtnInactivos);
+            this.panel3.Controls.Add(this.radioBtnEntregada);
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.txtBuscar);
+            this.panel3.Controls.Add(this.panel6);
             this.panel3.Location = new System.Drawing.Point(17, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(736, 32);
@@ -231,7 +254,7 @@
             this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaProveedor.EnableHeadersVisualStyles = false;
             this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaProveedor.Location = new System.Drawing.Point(17, 141);
+            this.listaProveedor.Location = new System.Drawing.Point(2, 34);
             this.listaProveedor.Name = "listaProveedor";
             this.listaProveedor.ReadOnly = true;
             this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -246,7 +269,7 @@
             this.listaProveedor.RowHeadersWidth = 51;
             this.listaProveedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaProveedor.Size = new System.Drawing.Size(736, 316);
+            this.listaProveedor.Size = new System.Drawing.Size(736, 390);
             this.listaProveedor.TabIndex = 13;
             // 
             // Fecha
@@ -290,20 +313,80 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Controls.Add(this.listaProveedor);
             this.panel4.Location = new System.Drawing.Point(15, 107);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 352);
+            this.panel4.Size = new System.Drawing.Size(740, 426);
             this.panel4.TabIndex = 15;
             // 
-            // panel5
+            // radioBtnInactivos
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.Location = new System.Drawing.Point(266, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(502, 24);
-            this.panel5.TabIndex = 11;
+            this.radioBtnInactivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnInactivos.AutoSize = true;
+            this.radioBtnInactivos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnInactivos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnInactivos.Location = new System.Drawing.Point(630, 4);
+            this.radioBtnInactivos.Name = "radioBtnInactivos";
+            this.radioBtnInactivos.Size = new System.Drawing.Size(89, 25);
+            this.radioBtnInactivos.TabIndex = 19;
+            this.radioBtnInactivos.TabStop = true;
+            this.radioBtnInactivos.Text = "Inactivos";
+            this.radioBtnInactivos.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnEntregada
+            // 
+            this.radioBtnEntregada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnEntregada.AutoSize = true;
+            this.radioBtnEntregada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnEntregada.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnEntregada.Location = new System.Drawing.Point(495, 3);
+            this.radioBtnEntregada.Name = "radioBtnEntregada";
+            this.radioBtnEntregada.Size = new System.Drawing.Size(105, 25);
+            this.radioBtnEntregada.TabIndex = 18;
+            this.radioBtnEntregada.TabStop = true;
+            this.radioBtnEntregada.Text = "Entregadas";
+            this.radioBtnEntregada.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(481, 1);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(3, 32);
+            this.panel7.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(612, 1);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 32);
+            this.panel6.TabIndex = 16;
+            // 
+            // radioBtnPendiente
+            // 
+            this.radioBtnPendiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnPendiente.AutoSize = true;
+            this.radioBtnPendiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnPendiente.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnPendiente.Location = new System.Drawing.Point(361, 3);
+            this.radioBtnPendiente.Name = "radioBtnPendiente";
+            this.radioBtnPendiente.Size = new System.Drawing.Size(104, 25);
+            this.radioBtnPendiente.TabIndex = 20;
+            this.radioBtnPendiente.TabStop = true;
+            this.radioBtnPendiente.Text = "Pendientes";
+            this.radioBtnPendiente.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(344, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(3, 32);
+            this.panel8.TabIndex = 18;
             // 
             // FrmCompras
             // 
@@ -312,7 +395,6 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(768, 557);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.listaProveedor);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -326,6 +408,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,5 +434,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstado;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.RadioButton radioBtnPendiente;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.RadioButton radioBtnInactivos;
+        private System.Windows.Forms.RadioButton radioBtnEntregada;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
     }
 }
