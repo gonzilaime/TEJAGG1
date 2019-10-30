@@ -279,10 +279,15 @@ namespace CU
         {
 
         }
-
+        private void CargaUser ()
+        {
+            btnNick.Text = Usuario.CacheUser.Nick;
+            btnTipoPerfil.Text = Usuario.CacheUser.IdPerfil;
+        }
         private void FormMenu_Load_1(object sender, EventArgs e)
         {
             BtnIni_Click(null, e);
+            CargaUser();
         
         }
 
