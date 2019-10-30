@@ -41,26 +41,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblProveedores = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.listaProveedor = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioBtnInactivos = new System.Windows.Forms.RadioButton();
-            this.radioBtnEntregada = new System.Windows.Forms.RadioButton();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.radioBtnPendiente = new System.Windows.Forms.RadioButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.radioBtnInactivos = new System.Windows.Forms.RadioButton();
+            this.radioBtnEntregada = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.listaOrdenes = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.IdOrdenDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionEstadoOrdenCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaOrdenes)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,129 +195,28 @@
             this.panel3.Size = new System.Drawing.Size(736, 32);
             this.panel3.TabIndex = 14;
             // 
-            // pictureBox1
+            // radioBtnPendiente
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.radioBtnPendiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnPendiente.AutoSize = true;
+            this.radioBtnPendiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnPendiente.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnPendiente.Location = new System.Drawing.Point(361, 3);
+            this.radioBtnPendiente.Name = "radioBtnPendiente";
+            this.radioBtnPendiente.Size = new System.Drawing.Size(104, 25);
+            this.radioBtnPendiente.TabIndex = 20;
+            this.radioBtnPendiente.TabStop = true;
+            this.radioBtnPendiente.Text = "Pendientes";
+            this.radioBtnPendiente.UseVisualStyleBackColor = true;
             // 
-            // txtBuscar
+            // panel8
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(37, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
-            this.txtBuscar.TabIndex = 7;
-            // 
-            // listaProveedor
-            // 
-            this.listaProveedor.AllowUserToAddRows = false;
-            this.listaProveedor.AllowUserToDeleteRows = false;
-            this.listaProveedor.AllowUserToResizeColumns = false;
-            this.listaProveedor.AllowUserToResizeRows = false;
-            this.listaProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.listaProveedor.BackgroundColor = System.Drawing.Color.LightGray;
-            this.listaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listaProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.listaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
-            this.NroPedido,
-            this.Proveedor,
-            this.Monto,
-            this.DescripcionEstado});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle2;
-            this.listaProveedor.EnableHeadersVisualStyles = false;
-            this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaProveedor.Location = new System.Drawing.Point(2, 34);
-            this.listaProveedor.Name = "listaProveedor";
-            this.listaProveedor.ReadOnly = true;
-            this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.listaProveedor.RowHeadersWidth = 51;
-            this.listaProveedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaProveedor.Size = new System.Drawing.Size(736, 390);
-            this.listaProveedor.TabIndex = 13;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // NroPedido
-            // 
-            this.NroPedido.HeaderText = "Nro de Pedido";
-            this.NroPedido.MinimumWidth = 6;
-            this.NroPedido.Name = "NroPedido";
-            this.NroPedido.ReadOnly = true;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.MinimumWidth = 6;
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            // 
-            // DescripcionEstado
-            // 
-            this.DescripcionEstado.HeaderText = "Estado";
-            this.DescripcionEstado.MinimumWidth = 6;
-            this.DescripcionEstado.Name = "DescripcionEstado";
-            this.DescripcionEstado.ReadOnly = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Controls.Add(this.listaProveedor);
-            this.panel4.Location = new System.Drawing.Point(15, 107);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 426);
-            this.panel4.TabIndex = 15;
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(344, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(3, 32);
+            this.panel8.TabIndex = 18;
             // 
             // radioBtnInactivos
             // 
@@ -347,6 +246,17 @@
             this.radioBtnEntregada.Text = "Entregadas";
             this.radioBtnEntregada.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -355,6 +265,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(3, 32);
             this.panel7.TabIndex = 17;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(37, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
+            this.txtBuscar.TabIndex = 7;
             // 
             // panel6
             // 
@@ -365,28 +285,108 @@
             this.panel6.Size = new System.Drawing.Size(3, 32);
             this.panel6.TabIndex = 16;
             // 
-            // radioBtnPendiente
+            // listaOrdenes
             // 
-            this.radioBtnPendiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioBtnPendiente.AutoSize = true;
-            this.radioBtnPendiente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioBtnPendiente.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnPendiente.Location = new System.Drawing.Point(361, 3);
-            this.radioBtnPendiente.Name = "radioBtnPendiente";
-            this.radioBtnPendiente.Size = new System.Drawing.Size(104, 25);
-            this.radioBtnPendiente.TabIndex = 20;
-            this.radioBtnPendiente.TabStop = true;
-            this.radioBtnPendiente.Text = "Pendientes";
-            this.radioBtnPendiente.UseVisualStyleBackColor = true;
+            this.listaOrdenes.AllowUserToAddRows = false;
+            this.listaOrdenes.AllowUserToDeleteRows = false;
+            this.listaOrdenes.AllowUserToResizeColumns = false;
+            this.listaOrdenes.AllowUserToResizeRows = false;
+            this.listaOrdenes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listaOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.listaOrdenes.BackgroundColor = System.Drawing.Color.LightGray;
+            this.listaOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listaOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.listaOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdOrdenDeCompra,
+            this.Fecha,
+            this.RazonSocial,
+            this.DescripcionEstadoOrdenCompra,
+            this.Monto});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaOrdenes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.listaOrdenes.EnableHeadersVisualStyles = false;
+            this.listaOrdenes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.listaOrdenes.Location = new System.Drawing.Point(2, 34);
+            this.listaOrdenes.Name = "listaOrdenes";
+            this.listaOrdenes.ReadOnly = true;
+            this.listaOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.listaOrdenes.RowHeadersWidth = 51;
+            this.listaOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.listaOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.listaOrdenes.Size = new System.Drawing.Size(736, 390);
+            this.listaOrdenes.TabIndex = 13;
             // 
-            // panel8
+            // panel4
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(344, 1);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(3, 32);
-            this.panel8.TabIndex = 18;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Controls.Add(this.listaOrdenes);
+            this.panel4.Location = new System.Drawing.Point(15, 107);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(740, 426);
+            this.panel4.TabIndex = 15;
+            // 
+            // IdOrdenDeCompra
+            // 
+            this.IdOrdenDeCompra.HeaderText = "Numero orden de compra";
+            this.IdOrdenDeCompra.MinimumWidth = 6;
+            this.IdOrdenDeCompra.Name = "IdOrdenDeCompra";
+            this.IdOrdenDeCompra.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.MinimumWidth = 6;
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            // 
+            // DescripcionEstadoOrdenCompra
+            // 
+            this.DescripcionEstadoOrdenCompra.HeaderText = "Estado";
+            this.DescripcionEstadoOrdenCompra.MinimumWidth = 6;
+            this.DescripcionEstadoOrdenCompra.Name = "DescripcionEstadoOrdenCompra";
+            this.DescripcionEstadoOrdenCompra.ReadOnly = true;
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.MinimumWidth = 6;
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
             // 
             // FrmCompras
             // 
@@ -407,7 +407,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaOrdenes)).EndInit();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -426,13 +426,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView listaProveedor;
+        private System.Windows.Forms.DataGridView listaOrdenes;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstado;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.RadioButton radioBtnPendiente;
         private System.Windows.Forms.Panel panel8;
@@ -440,5 +435,10 @@
         private System.Windows.Forms.RadioButton radioBtnEntregada;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdOrdenDeCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstadoOrdenCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
     }
 }
