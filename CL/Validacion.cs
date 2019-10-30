@@ -6,7 +6,6 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CL;
-
 namespace CL
 {
     public class Validacion
@@ -150,7 +149,6 @@ namespace CL
             return rta;
 
         }
-       
 
     }
 }

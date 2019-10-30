@@ -205,6 +205,7 @@ C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.Login.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.FormMenu.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.Properties.Resources.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.GenerateResource.cache
+C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.CopyComplete
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.exe
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.pdb
@@ -235,3 +236,6 @@ C:\Users\Agustin\Desktop\Tejag (2)\Copia\CU\obj\Debug\CU.csproj.GenerateResource
 C:\Users\Agustin\Desktop\Tejag (2)\Copia\CU\obj\Debug\CU.csproj.CopyComplete
 C:\Users\Agustin\Desktop\Tejag (2)\Copia\CU\obj\Debug\CU.exe
 C:\Users\Agustin\Desktop\Tejag (2)\Copia\CU\obj\Debug\CU.pdb
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.FrmCompras.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.FrmNewModCompras.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.SubFrmCompras.resources

@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNewArticulo = new System.Windows.Forms.Button();
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -51,6 +50,7 @@
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,16 +70,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(768, 28);
             this.panel2.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.Location = new System.Drawing.Point(266, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(502, 24);
-            this.panel5.TabIndex = 11;
             // 
             // btnModificar
             // 
@@ -259,7 +249,7 @@
             this.listaArticulos.RowHeadersWidth = 51;
             this.listaArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaArticulos.Size = new System.Drawing.Size(736, 390);
+            this.listaArticulos.Size = new System.Drawing.Size(736, 316);
             this.listaArticulos.TabIndex = 8;
             this.listaArticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellContentDoubleClick);
             this.listaArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellDoubleClick);
@@ -313,8 +303,18 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel4.Location = new System.Drawing.Point(15, 107);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 426);
+            this.panel4.Size = new System.Drawing.Size(740, 352);
             this.panel4.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.Location = new System.Drawing.Point(266, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(502, 24);
+            this.panel5.TabIndex = 11;
             // 
             // FrmArticulos
             // 

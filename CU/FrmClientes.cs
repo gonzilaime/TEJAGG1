@@ -111,7 +111,6 @@ namespace CU
 
                 FrmNewModClientes formProveedor = new FrmNewModClientes(_cliente);
                 formProveedor.ShowDialog();
-                listar();
             }
             else
             {
@@ -125,9 +124,6 @@ namespace CU
             listar();
         }
 
-        private void FrmClientes_Activated(object sender, EventArgs e)
-        {
-            listar();
-        }
+       
     }
 }

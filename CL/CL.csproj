@@ -44,7 +44,11 @@
     <Compile Include="Articulos.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="Conectar.cs" />
+    <Compile Include="Detalle.cs" />
+    <Compile Include="EjecutarSP.cs" />
     <Compile Include="Estado.cs" />
+    <Compile Include="EstadoOrdenCompra.cs" />
+    <Compile Include="OrdenDeCompra.cs" />
     <Compile Include="Proveedor.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="TipoPerfil.cs" />

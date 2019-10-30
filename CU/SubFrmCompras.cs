@@ -89,7 +89,7 @@ namespace CU
                 default: break;
             }
             base.WndProc(ref m);
-            //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion Movilidad y sombra movilidad y sombra movilidad y sombra
 

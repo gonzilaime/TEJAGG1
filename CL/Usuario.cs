@@ -49,20 +49,15 @@ namespace CL
                
                 if (dt.Rows.Count == 1)
                 {
-                    string rowUser = dt.Rows[0]["Nick"].ToString();
-                    Usuario.CacheUser.Nick = rowUser;
-             
-
                     if (Convert.ToInt32(dt.Rows[0][2]) == 1)
                     {
                         NroPerfil = 1;
-                        Usuario.CacheUser.IdPerfil = "Administrador";
+                        
                         rta = true;
                     }
                     else if (Convert.ToInt32(dt.Rows[0][2]) == 2)
                     {
                         NroPerfil = 2;
-                        Usuario.CacheUser.IdPerfil = "Usuario";
                         rta = true;
                     }
                     
@@ -87,10 +82,6 @@ namespace CL
             }//finally
             return rta;
         }
-            public static class CacheUser
-        {
-            public static string Nick { get; set; } 
-            public static string IdPerfil { get; set; }
-        }
+
     }
 }

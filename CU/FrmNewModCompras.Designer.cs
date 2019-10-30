@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboProveedores = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,14 +62,15 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cboProveedores
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cboProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProveedores.FormattingEnabled = true;
+            this.cboProveedores.Location = new System.Drawing.Point(39, 54);
+            this.cboProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProveedores.Name = "cboProveedores";
+            this.cboProveedores.Size = new System.Drawing.Size(265, 24);
+            this.cboProveedores.TabIndex = 0;
             // 
             // panel1
             // 
@@ -77,8 +79,9 @@
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(632, 25);
+            this.panel1.Size = new System.Drawing.Size(843, 31);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -91,9 +94,10 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(580, -1);
+            this.btnMinimizar.Location = new System.Drawing.Point(773, -1);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(35, 32);
             this.btnMinimizar.TabIndex = 15;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -107,9 +111,10 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(606, -1);
+            this.btnCerrar.Location = new System.Drawing.Point(808, -1);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(26, 26);
+            this.btnCerrar.Size = new System.Drawing.Size(35, 32);
             this.btnCerrar.TabIndex = 14;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -123,9 +128,10 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnAgregar);
-            this.panel3.Location = new System.Drawing.Point(12, 78);
+            this.panel3.Location = new System.Drawing.Point(16, 96);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(608, 32);
+            this.panel3.Size = new System.Drawing.Size(811, 39);
             this.panel3.TabIndex = 12;
             // 
             // txtBuscar
@@ -133,18 +139,20 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(101, 5);
+            this.txtBuscar.Location = new System.Drawing.Point(135, 6);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(394, 26);
             this.txtBuscar.TabIndex = 2;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::CU.Properties.Resources.magnifying_glass;
-            this.pictureBox3.Location = new System.Drawing.Point(79, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(105, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox3.Size = new System.Drawing.Size(21, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 83;
             this.pictureBox3.TabStop = false;
@@ -153,10 +161,12 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = global::CU.Properties.Resources.minus__5_;
-            this.btnEliminar.Location = new System.Drawing.Point(44, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(59, 10);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(20, 16);
+            this.btnEliminar.Size = new System.Drawing.Size(27, 20);
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.TabStop = false;
@@ -165,10 +175,12 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Image = global::CU.Properties.Resources.plus_sign;
-            this.btnAgregar.Location = new System.Drawing.Point(17, 8);
+            this.btnAgregar.Location = new System.Drawing.Point(23, 10);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(16, 16);
+            this.btnAgregar.Size = new System.Drawing.Size(21, 20);
             this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.TabStop = false;
@@ -213,7 +225,8 @@
             this.listaCliente.DefaultCellStyle = dataGridViewCellStyle11;
             this.listaCliente.EnableHeadersVisualStyles = false;
             this.listaCliente.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaCliente.Location = new System.Drawing.Point(12, 110);
+            this.listaCliente.Location = new System.Drawing.Point(16, 135);
+            this.listaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listaCliente.Name = "listaCliente";
             this.listaCliente.ReadOnly = true;
             this.listaCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -228,12 +241,13 @@
             this.listaCliente.RowHeadersWidth = 51;
             this.listaCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaCliente.Size = new System.Drawing.Size(608, 206);
+            this.listaCliente.Size = new System.Drawing.Size(811, 254);
             this.listaCliente.TabIndex = 13;
             // 
             // CodProveedor
             // 
             this.CodProveedor.HeaderText = "Cod Proveedor";
+            this.CodProveedor.MinimumWidth = 6;
             this.CodProveedor.Name = "CodProveedor";
             this.CodProveedor.ReadOnly = true;
             // 
@@ -247,6 +261,7 @@
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
@@ -267,6 +282,7 @@
             // SubTotal
             // 
             this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
             // 
@@ -277,27 +293,30 @@
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.lblTotal);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 319);
+            this.panel2.Location = new System.Drawing.Point(16, 393);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(608, 30);
+            this.panel2.Size = new System.Drawing.Size(811, 37);
             this.panel2.TabIndex = 13;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(431, 5);
+            this.lblTotal.Location = new System.Drawing.Point(575, 6);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(43, 19);
+            this.lblTotal.Size = new System.Drawing.Size(53, 23);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "Total";
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(477, 5);
+            this.textBox1.Location = new System.Drawing.Point(636, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
+            this.textBox1.Size = new System.Drawing.Size(165, 22);
             this.textBox1.TabIndex = 0;
             // 
             // btnFinalizar
@@ -309,9 +328,10 @@
             this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
             this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(415, 377);
+            this.btnFinalizar.Location = new System.Drawing.Point(553, 464);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(95, 29);
+            this.btnFinalizar.Size = new System.Drawing.Size(127, 36);
             this.btnFinalizar.TabIndex = 3;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
@@ -325,31 +345,46 @@
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(526, 377);
+            this.btnCancelar.Location = new System.Drawing.Point(701, 464);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightYellow;
+            this.button1.Location = new System.Drawing.Point(350, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 48);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Generar Orden de compra";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // FrmNewModCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(632, 416);
+            this.ClientSize = new System.Drawing.Size(843, 512);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listaCliente);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboProveedores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNewModCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNewModCompras";
+            this.Load += new System.EventHandler(this.FrmNewModCompras_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -365,7 +400,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboProveedores;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox btnEliminar;
@@ -386,5 +421,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button button1;
     }
 }
