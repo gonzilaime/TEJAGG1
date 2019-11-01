@@ -16,8 +16,9 @@ namespace CU
         public Proveedor _proveedor;
         public Provincia _provincia;
         public string Accion;
+        public frmProveedores form;
 
-        //Sombra en el panel y efecto ShowDialog
+        //Sombra en el panel
         #region
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -93,14 +94,16 @@ namespace CU
                 default: break;
             }
             base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+            //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
-#endregion
-    
+        #endregion
+
+        
+
         public FrmNewProvCli(Proveedor proveedor)
         {
             InitializeComponent();
-            
+
             _proveedor = new Proveedor();
             _provincia = new Provincia();
             Validacion.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
@@ -122,7 +125,7 @@ namespace CU
                 TxtEmail.Text = proveedor.Email;
                 cboEstadoProv.Text = proveedor.Estado.DescripcionEstado;
                 Accion = "MODIFICAR";
-                
+
             }//end-if
             else
             {
@@ -134,20 +137,17 @@ namespace CU
             }
         }//constuctor
 
-
-        [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
-                private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int msg, int wparam, int lparam);
-
-       
-
+        
         private void FrmNewProv_Load(object sender, EventArgs e)
         {
 
         }
+        #region MOVILIDAD PARA EL PANEL SUPERIOR
 
-      
+        [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int msg, int wparam, int lparam);
 
         private void FrmNewProv_MouseDown(object sender, MouseEventArgs e)
         {
@@ -162,40 +162,317 @@ namespace CU
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
 
-  
+        #region CAMPOS OBLIGATORIOS
+        public bool CamposObligatorios()
+        {
+
+            // SI NO SE COMPLETA NINGUN CAMPO
+            if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+               && txtLocalidad.Text == "" && txtDireccion.Text == "" && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            // SI SE COMPLETAN 1 CAMPO
+            else if (txtCuit.Text == "" && txtLocalidad.Text == ""
+                              && txtDireccion.Text == "" && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+
+            }
+
+            else if (txtRazonSocial.Text == "" && txtLocalidad.Text == ""
+                     && txtDireccion.Text == "" && txtTel1.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                     && txtDireccion.Text == "" && txtTel1.Text == "")
+
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                    && txtLocalidad.Text == "" && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                   && txtLocalidad.Text == "" && txtDireccion.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+
+            //SI SE COMPLETAN 2 CAMPOS
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                    && txtLocalidad.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                    && txtDireccion.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == ""
+                   && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtCuit.Text == "" && txtLocalidad.Text == ""
+                   && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtCuit.Text == "" && txtLocalidad.Text == ""
+                    && txtDireccion.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtRazonSocial.Text == "" && txtLocalidad.Text == "" && txtDireccion.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtRazonSocial.Text == "" && txtLocalidad.Text == "" && txtTel1.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtLocalidad.Text == "" && txtDireccion.Text == "" && txtTel1.Text == "")
+            {
+                lblDireccionObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtCuit.Text == "" && txtTel1.Text == ""
+                    && txtDireccion.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+
+            //SI SE COMPLETAN 3 CAMPOS
+            else if (txtCuit.Text == "" && txtRazonSocial.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblRazonSocialObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtCuit.Text == "" && txtLocalidad.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtCuit.Text == "" && txtDireccion.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtCuit.Text == "" && txtTel1.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtRazonSocial.Text == "" && txtLocalidad.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblLocalidadObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtRazonSocial.Text == "" && txtDireccion.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtRazonSocial.Text == "" && txtTel1.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtLocalidad.Text == "" && txtDireccion.Text == "")
+            {
+                lblLocalidadObligatorio.Visible = true;
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtLocalidad.Text == "" && txtTel1.Text == "")
+            {
+                lblLocalidadObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+
+                return false;
+            }
+            else if (txtDireccion.Text == "" && txtTel1.Text == "")
+            {
+                lblDireccionObligatorio.Visible = true;
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            //SI SE COMPLETAN 4 CAMPOS
+            else if (txtCuit.Text == "")
+            {
+                lblCuitObligatorio.Visible = true;
+
+                return false;
+            }
+
+            else if (txtRazonSocial.Text == "")
+            {
+                lblRazonSocialObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtLocalidad.Text == "")
+            {
+                lblLocalidadObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtDireccion.Text == "")
+            {
+                lblDireccionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtTel1.Text == "")
+            {
+                lblTel1Obligatorio.Visible = true;
+
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #region NADA
+        
+
+      
+
 
         private void LblCodProv_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
 
+        #region BTNGUARDAR, MODIFICAR, CANCELAR
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (Accion == "ALTA")
+            bool rta = false;
+             if (Accion == "ALTA")
             {
-               
+                 if (CamposObligatorios() == rta)
+                {
+                    return; 
+                }
+
                 _proveedor.CuitCuil = txtCuit.Text;
-                _proveedor.RazonSocial = txtRazonSocial.Text;
-                _proveedor.Direccion = txtDireccion.Text;
-                _proveedor.Localidad = txtLocalidad.Text;
-                _proveedor.provincia.IdProvincia = Convert.ToInt32(((DataRowView)cboProv.SelectedItem)["IdProvincia"]);
-                _proveedor.Tel1 = txtTel1.Text.ToString();
-                _proveedor.Tel2 = txtTel2.Text.ToString();
-                _proveedor.Email = TxtEmail.Text.ToString();
-                _proveedor.Estado.IdEstado = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstado"]);
+                    _proveedor.RazonSocial = txtRazonSocial.Text;
+                    _proveedor.Direccion = txtDireccion.Text;
+                    _proveedor.Localidad = txtLocalidad.Text;
+                    _proveedor.provincia.IdProvincia = Convert.ToInt32(((DataRowView)cboProv.SelectedItem)["IdProvincia"]);
+                    _proveedor.Tel1 = txtTel1.Text.ToString();
+                    _proveedor.Tel2 = txtTel2.Text.ToString();
+                    _proveedor.Email = TxtEmail.Text.ToString();
+                    _proveedor.Estado.IdEstado = Convert.ToInt32(((DataRowView)cboEstadoProv.SelectedItem)["IdEstado"]);
 
-                _proveedor.Accion(_proveedor, "ALTA");
-                this.Close();
-                MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _proveedor.Accion(_proveedor, "ALTA");
 
+                    this.Close();
+                    MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    form.listar();
+                
             }
-            
-         
-               
-            
         }
-
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Desea cancelar la operación?" +
@@ -217,8 +494,14 @@ namespace CU
         {
 
             Accion = "MODIFICAR";
+            bool rta = false;
 
             if (Accion == "MODIFICAR") {
+
+                if (CamposObligatorios() == rta)
+                {
+                    return;
+                }
 
                 _proveedor.IdProveedor = Convert.ToInt32(txtCodigoProveedor.Text.ToString());
                 _proveedor.CuitCuil = txtCuit.Text;
@@ -237,7 +520,9 @@ namespace CU
 
             }//end-if
         }
+        #endregion
 
+        #region BOTONES CERRAR Y MINIMIZAR
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -248,9 +533,42 @@ namespace CU
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txtCuit_TextChanged(object sender, EventArgs e)
+        #endregion
+
+        private void FrmNewProvCli_Activated(object sender, EventArgs e)
         {
             
         }
+
+        #region TEXTCHANGED // Borra el label campo obligatorio al llenar el texbox
+        private void txtRazonSocial_TextChanged(object sender, EventArgs e)
+        {
+            lblRazonSocialObligatorio.Visible = false;
+        }
+
+        private void cboProv_TextChanged(object sender, EventArgs e)
+        {
+            lblProvinciaObligatorio.Visible = false;
+        }
+
+        private void txtLocalidad_TextChanged(object sender, EventArgs e)
+        {
+            lblLocalidadObligatorio.Visible = false;
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            lblDireccionObligatorio.Visible = false;
+        }
+
+        private void txtTel1_TextChanged(object sender, EventArgs e)
+        {
+            lblTel1Obligatorio.Visible = false;
+        }
+        private void txtCuit_TextChanged(object sender, EventArgs e)
+        {
+            lblCuitObligatorio.Visible = false;
+        }
+        #endregion
     }
 }

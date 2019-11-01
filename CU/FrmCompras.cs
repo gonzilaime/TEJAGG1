@@ -22,7 +22,6 @@ namespace CU
             tipoPerfil.IdPerfil = _perfil;
             ordenCompra = new OrdenDeCompra();
             _estadoCompra = new EstadoOrdenCompra();
-
         }//constructor
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -33,14 +32,12 @@ namespace CU
 
                 FrmNewModCompras formularioOrden = new FrmNewModCompras();
                 formularioOrden.ShowDialog();
-                
             }//if
             else
             {
                 MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador",
                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }//end-if
-
         }//btnAgregar
 
         public void listar()
@@ -52,7 +49,7 @@ namespace CU
 
             foreach (var orden in ordenObtenida)
             {
-                listaOrdenes.Rows.Add(orden.IdOrdenDeCompra,orden.Fecha,orden.proveedor.RazonSocial,
+                listaOrdenes.Rows.Add(orden.IdOrdenDeCompra, orden.Fecha, orden.proveedor.RazonSocial,
                     orden._estado.DescripcionEstadoOrdenCompra);
             }//foreach
 
@@ -61,16 +58,12 @@ namespace CU
         private void FrmCompras_Load(object sender, EventArgs e)
         {
             listar();
-
-            
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             listar();
         }//txtChanged
-
-        
     }//FrmCompras
     
 }//CU

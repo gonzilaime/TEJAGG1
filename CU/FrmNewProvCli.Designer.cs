@@ -56,12 +56,10 @@
             this.txtCodigoProveedor = new System.Windows.Forms.TextBox();
             this.lblCuitObligatorio = new System.Windows.Forms.Label();
             this.lblRazonSocialObligatorio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblProvinciaObligatorio = new System.Windows.Forms.Label();
+            this.lblLocalidadObligatorio = new System.Windows.Forms.Label();
+            this.lblDireccionObligatorio = new System.Windows.Forms.Label();
+            this.lblTel1Obligatorio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,6 +185,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(223, 23);
             this.txtDireccion.TabIndex = 6;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblEmail
             // 
@@ -200,6 +199,7 @@
             // 
             // cboEstadoProv
             // 
+            this.cboEstadoProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstadoProv.FormattingEnabled = true;
             this.cboEstadoProv.Location = new System.Drawing.Point(178, 53);
@@ -217,6 +217,7 @@
             this.cboProv.Name = "cboProv";
             this.cboProv.Size = new System.Drawing.Size(221, 24);
             this.cboProv.TabIndex = 4;
+            this.cboProv.TextChanged += new System.EventHandler(this.cboProv_TextChanged);
             // 
             // lblProvincia
             // 
@@ -247,6 +248,7 @@
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(199, 23);
             this.txtRazonSocial.TabIndex = 3;
+            this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
             // 
             // txtTel1
             // 
@@ -257,6 +259,7 @@
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(219, 23);
             this.txtTel1.TabIndex = 7;
+            this.txtTel1.TextChanged += new System.EventHandler(this.txtTel1_TextChanged);
             // 
             // txtLocalidad
             // 
@@ -267,6 +270,7 @@
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(219, 23);
             this.txtLocalidad.TabIndex = 5;
+            this.txtLocalidad.TextChanged += new System.EventHandler(this.txtLocalidad_TextChanged);
             // 
             // txtCuit
             // 
@@ -385,74 +389,57 @@
             this.lblRazonSocialObligatorio.Text = "Este campo es obligatorio.";
             this.lblRazonSocialObligatorio.Visible = false;
             // 
-            // label1
+            // lblProvinciaObligatorio
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(138, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 16);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Este campo es obligatorio.";
-            this.label1.Visible = false;
+            this.lblProvinciaObligatorio.AutoSize = true;
+            this.lblProvinciaObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblProvinciaObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvinciaObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblProvinciaObligatorio.Location = new System.Drawing.Point(138, 34);
+            this.lblProvinciaObligatorio.Name = "lblProvinciaObligatorio";
+            this.lblProvinciaObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblProvinciaObligatorio.TabIndex = 57;
+            this.lblProvinciaObligatorio.Text = "Este campo es obligatorio.";
+            this.lblProvinciaObligatorio.Visible = false;
             // 
-            // label2
+            // lblLocalidadObligatorio
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(138, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 16);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Este campo es obligatorio.";
-            this.label2.Visible = false;
+            this.lblLocalidadObligatorio.AutoSize = true;
+            this.lblLocalidadObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblLocalidadObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidadObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblLocalidadObligatorio.Location = new System.Drawing.Point(138, 279);
+            this.lblLocalidadObligatorio.Name = "lblLocalidadObligatorio";
+            this.lblLocalidadObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblLocalidadObligatorio.TabIndex = 58;
+            this.lblLocalidadObligatorio.Text = "Este campo es obligatorio.";
+            this.lblLocalidadObligatorio.Visible = false;
             // 
-            // label3
+            // lblDireccionObligatorio
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(447, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 16);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Este campo es obligatorio.";
-            this.label3.Visible = false;
+            this.lblDireccionObligatorio.AutoSize = true;
+            this.lblDireccionObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblDireccionObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblDireccionObligatorio.Location = new System.Drawing.Point(447, 79);
+            this.lblDireccionObligatorio.Name = "lblDireccionObligatorio";
+            this.lblDireccionObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblDireccionObligatorio.TabIndex = 59;
+            this.lblDireccionObligatorio.Text = "Este campo es obligatorio.";
+            this.lblDireccionObligatorio.Visible = false;
             // 
-            // label4
+            // lblTel1Obligatorio
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(447, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 16);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Este campo es obligatorio.";
-            this.label4.Visible = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(288, 304);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(275, 298);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(85, 27);
-            this.panel2.TabIndex = 61;
+            this.lblTel1Obligatorio.AutoSize = true;
+            this.lblTel1Obligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblTel1Obligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTel1Obligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblTel1Obligatorio.Location = new System.Drawing.Point(447, 129);
+            this.lblTel1Obligatorio.Name = "lblTel1Obligatorio";
+            this.lblTel1Obligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblTel1Obligatorio.TabIndex = 60;
+            this.lblTel1Obligatorio.Text = "Este campo es obligatorio.";
+            this.lblTel1Obligatorio.Visible = false;
             // 
             // FrmNewProvCli
             // 
@@ -460,12 +447,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(666, 329);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTel1Obligatorio);
+            this.Controls.Add(this.lblDireccionObligatorio);
+            this.Controls.Add(this.lblLocalidadObligatorio);
+            this.Controls.Add(this.lblProvinciaObligatorio);
             this.Controls.Add(this.lblRazonSocialObligatorio);
             this.Controls.Add(this.lblCuitObligatorio);
             this.Controls.Add(this.txtCodigoProveedor);
@@ -496,6 +481,7 @@
             this.Name = "FrmNewProvCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2";
+            this.Activated += new System.EventHandler(this.FrmNewProvCli_Activated);
             this.Load += new System.EventHandler(this.FrmNewProv_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmNewProv_MouseDown);
             this.panel1.ResumeLayout(false);
@@ -530,14 +516,12 @@
         private System.Windows.Forms.Label lblEstadoProveedor;
         private System.Windows.Forms.TextBox txtCodigoProveedor;
         private System.Windows.Forms.Label lblCodigoProveedor;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTel1Obligatorio;
+        private System.Windows.Forms.Label lblDireccionObligatorio;
+        private System.Windows.Forms.Label lblLocalidadObligatorio;
+        private System.Windows.Forms.Label lblProvinciaObligatorio;
         private System.Windows.Forms.Label lblRazonSocialObligatorio;
         private System.Windows.Forms.Label lblCuitObligatorio;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
     }

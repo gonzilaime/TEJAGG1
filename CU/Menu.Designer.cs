@@ -35,11 +35,11 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnCom = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.btnProv = new System.Windows.Forms.Button();
+            this.btnCom = new System.Windows.Forms.Button();
             this.btnArt = new System.Windows.Forms.Button();
             this.btnCli = new System.Windows.Forms.Button();
-            this.btnProv = new System.Windows.Forms.Button();
             this.btnTipoPerfil = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMarco = new System.Windows.Forms.Button();
@@ -175,26 +175,6 @@
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelMenu_MouseDown);
             // 
-            // btnCom
-            // 
-            this.btnCom.BackColor = System.Drawing.Color.DarkGray;
-            this.btnCom.FlatAppearance.BorderSize = 0;
-            this.btnCom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnCom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCom.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCom.ForeColor = System.Drawing.Color.Black;
-            this.btnCom.Image = global::CU.Properties.Resources.Orden_Azul;
-            this.btnCom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCom.Location = new System.Drawing.Point(12, 307);
-            this.btnCom.Name = "btnCom";
-            this.btnCom.Size = new System.Drawing.Size(184, 42);
-            this.btnCom.TabIndex = 12;
-            this.btnCom.TabStop = false;
-            this.btnCom.Text = "Compras";
-            this.btnCom.UseVisualStyleBackColor = false;
-            this.btnCom.Visible = false;
-            // 
             // btnInicio
             // 
             this.btnInicio.BackColor = System.Drawing.Color.DarkGray;
@@ -214,6 +194,47 @@
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
+            // 
+            // btnProv
+            // 
+            this.btnProv.BackColor = System.Drawing.Color.DarkGray;
+            this.btnProv.FlatAppearance.BorderSize = 0;
+            this.btnProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProv.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProv.ForeColor = System.Drawing.Color.Black;
+            this.btnProv.Image = global::CU.Properties.Resources.Camion_Azul;
+            this.btnProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProv.Location = new System.Drawing.Point(12, 181);
+            this.btnProv.Name = "btnProv";
+            this.btnProv.Size = new System.Drawing.Size(184, 42);
+            this.btnProv.TabIndex = 9;
+            this.btnProv.TabStop = false;
+            this.btnProv.Text = "Proveedores";
+            this.btnProv.UseVisualStyleBackColor = false;
+            this.btnProv.Visible = false;
+            this.btnProv.Click += new System.EventHandler(this.BtnProv_Click);
+            // 
+            // btnCom
+            // 
+            this.btnCom.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCom.FlatAppearance.BorderSize = 0;
+            this.btnCom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnCom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCom.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCom.ForeColor = System.Drawing.Color.Black;
+            this.btnCom.Image = global::CU.Properties.Resources.Orden_Azul;
+            this.btnCom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCom.Location = new System.Drawing.Point(12, 307);
+            this.btnCom.Name = "btnCom";
+            this.btnCom.Size = new System.Drawing.Size(184, 42);
+            this.btnCom.TabIndex = 12;
+            this.btnCom.TabStop = false;
+            this.btnCom.Text = "Compras";
+            this.btnCom.UseVisualStyleBackColor = false;
+            this.btnCom.Visible = false;
             // 
             // btnArt
             // 
@@ -254,27 +275,6 @@
             this.btnCli.Text = "Clientes";
             this.btnCli.UseVisualStyleBackColor = false;
             this.btnCli.Visible = false;
-            // 
-            // btnProv
-            // 
-            this.btnProv.BackColor = System.Drawing.Color.DarkGray;
-            this.btnProv.FlatAppearance.BorderSize = 0;
-            this.btnProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProv.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProv.ForeColor = System.Drawing.Color.Black;
-            this.btnProv.Image = global::CU.Properties.Resources.Camion_Azul;
-            this.btnProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProv.Location = new System.Drawing.Point(12, 181);
-            this.btnProv.Name = "btnProv";
-            this.btnProv.Size = new System.Drawing.Size(184, 42);
-            this.btnProv.TabIndex = 9;
-            this.btnProv.TabStop = false;
-            this.btnProv.Text = "Proveedores";
-            this.btnProv.UseVisualStyleBackColor = false;
-            this.btnProv.Visible = false;
-            this.btnProv.Click += new System.EventHandler(this.BtnProv_Click);
             // 
             // btnTipoPerfil
             // 

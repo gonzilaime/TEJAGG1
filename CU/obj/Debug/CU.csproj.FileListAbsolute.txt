@@ -205,7 +205,6 @@ C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.Login.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.FormMenu.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.Properties.Resources.resources
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.GenerateResource.cache
-C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.csproj.CopyComplete
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.exe
 C:\Desarrollos\git 4\TEJAGG1\CU\obj\Debug\CU.pdb

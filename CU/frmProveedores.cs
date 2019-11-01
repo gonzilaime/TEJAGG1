@@ -30,21 +30,20 @@ namespace CU
             conexion = new Conectar();
             _proveedor = new Proveedor();
             _provincia = new Provincia();
-        }//constructor
+        }
 
         private void BtnNewProveedor_Click(object sender, EventArgs e)
         {
             if (_tipoPerfil.IdPerfil == 1) { 
             FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
             formulario.ShowDialog();
-                listar();
-            }//if
+                
+            }
             else
             {
                 MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }//end-if
-
-        }//btnNewProveedor
+            }
+        }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -56,23 +55,22 @@ namespace CU
 
             listar();
            
-        }//FormLoad
+        }
 
         public void listar()
+        
         {
-            Proveedor proveedor = new Proveedor();
             listaProveedor.Rows.Clear();
             var cadena = txtBuscar.Text.ToString();
-            var proveedorObtenido = proveedor.obtenerProveedores(cadena);
+            var proveedorObtenido = _proveedor.obtenerProveedores(cadena);
 
             foreach (var reg in proveedorObtenido)
             {
                 listaProveedor.Rows.Add(reg.IdProveedor, reg.CuitCuil, reg.RazonSocial, reg.Direccion,
                     reg.Localidad, reg.provincia.DescripcionProvincia, reg.Tel1, reg.Tel2, reg.Email,
                     reg.Estado.DescripcionEstado);
-            }//foreach
-
-        }//listar
+            }
+        }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
@@ -92,14 +90,13 @@ namespace CU
 
                 Form formProveedor = new FrmNewProvCli(_proveedor);
                 formProveedor.ShowDialog();
-                listar();
-            }//if
+            }
             else
             {
                 MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }//end-if
+            }
 
-        }//btnModificar
+        }
 
         private void ListaProveedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,24 +118,24 @@ namespace CU
                 FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
                 formProveedor.ShowDialog();
                 listar();
-            }//if
+            }
             else
             {
                 MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }//end-if
+            }
 
-        }//DoubleCllick
+        }
 
-        private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
+
+
+            private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-
-          listar();
-        }//txtChange
+            listar();
+        }
 
         private void frmProveedores_Activated(object sender, EventArgs e)
         {
             listar();
-
-        }//Activated
+        }
     }
 }

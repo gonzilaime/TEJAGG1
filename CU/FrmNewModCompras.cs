@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,14 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using CL;
 
 namespace CU
 {
     public partial class FrmNewModCompras : Form
     {
+
         public Proveedor proveedor;
         public OrdenDeCompra ordenDecompra;
-
         #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -91,16 +91,15 @@ namespace CU
                 default: break;
             }
             base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+            //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
 #endregion
-        
         public FrmNewModCompras()
         {
             InitializeComponent();
             proveedor = new Proveedor();
             ordenDecompra = new OrdenDeCompra();
-            Validacion.combo2campos(cboProveedores, "RazonSocial", "IdProveedor", "Proveedores");
+            Validacion.combo2campos(cboProveedor, "RazonSocial", "IdProveedor", "Proveedores");
         }
 
         [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
@@ -146,16 +145,6 @@ namespace CU
 
             }
 
-
-        }
-
-        private void FrmNewModCompras_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
 
         }
     }
