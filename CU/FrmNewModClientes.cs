@@ -19,6 +19,7 @@ namespace CU
         public Provincia _provincia;
         public Estado _estado;
         public string Accion;
+        public Validacion validar;
 
         #region SOMBRA EN EL FORMULARIO
         private const int WM_NCHITTEST = 0x84;
@@ -106,7 +107,8 @@ namespace CU
             _cliente = new Clientes();
             _provincia = new Provincia();
             _estado = new Estado();
-           
+            validar = new Validacion();
+
 
             Validacion.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
             Validacion.combo2campos(cboEstadoCli, "DescripcionEstado", "IdEstado", "Estado");
@@ -458,6 +460,12 @@ namespace CU
                 if (CamposObligatorios() == rta)
                 {
                     return;
+                }
+                else if (!validar.IsValidEmail(TxtEmail.Text.ToString()))
+                {
+                    MessageBox.Show("Introduzca un correo válido", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
                 }
 
 

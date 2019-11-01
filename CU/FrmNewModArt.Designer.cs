@@ -47,6 +47,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblTel1Obligatorio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,9 +120,9 @@
             this.lblEstadoArt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoArt.Location = new System.Drawing.Point(17, 37);
             this.lblEstadoArt.Name = "lblEstadoArt";
-            this.lblEstadoArt.Size = new System.Drawing.Size(94, 19);
+            this.lblEstadoArt.Size = new System.Drawing.Size(87, 19);
             this.lblEstadoArt.TabIndex = 80;
-            this.lblEstadoArt.Text = "Proveedor *";
+            this.lblEstadoArt.Text = "Proveedor ";
             // 
             // txtNombreProd
             // 
@@ -285,12 +288,54 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
+            // lblTel1Obligatorio
+            // 
+            this.lblTel1Obligatorio.AutoSize = true;
+            this.lblTel1Obligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblTel1Obligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTel1Obligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblTel1Obligatorio.Location = new System.Drawing.Point(172, 103);
+            this.lblTel1Obligatorio.Name = "lblTel1Obligatorio";
+            this.lblTel1Obligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblTel1Obligatorio.TabIndex = 104;
+            this.lblTel1Obligatorio.Text = "Este campo es obligatorio.";
+            this.lblTel1Obligatorio.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(172, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 16);
+            this.label1.TabIndex = 105;
+            this.label1.Text = "Este campo es obligatorio.";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(172, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 16);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "Este campo es obligatorio.";
+            this.label2.Visible = false;
+            // 
             // FrmNewModArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(383, 306);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTel1Obligatorio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDecimal);
             this.Controls.Add(this.label5);
@@ -340,5 +385,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label lblTel1Obligatorio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
