@@ -17,6 +17,8 @@ namespace CU
         public Provincia _provincia;
         public string Accion;
         public frmProveedores form;
+        public Validacion validar;
+
 
         //Sombra en el panel
         #region
@@ -102,6 +104,7 @@ namespace CU
 
         public FrmNewProvCli(Proveedor proveedor)
         {
+            validar = new Validacion();
             InitializeComponent();
 
             _proveedor = new Proveedor();
@@ -453,6 +456,12 @@ namespace CU
                  if (CamposObligatorios() == rta)
                 {
                     return; 
+                }
+                else if (!validar.IsValidEmail(TxtEmail.Text.ToString()))
+                {
+                    MessageBox.Show("Introduzca un correo válido", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
                 }
 
                 _proveedor.CuitCuil = txtCuit.Text;
