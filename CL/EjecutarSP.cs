@@ -16,7 +16,6 @@ namespace CL
             using (SqlConnection conexion = BaseDeDatos.Abrir())
             {
                 bool retornar = true;
-                conexion.Open();
                 var comando = new SqlCommand();
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.StoredProcedure;

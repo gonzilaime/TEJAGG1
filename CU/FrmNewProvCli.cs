@@ -434,9 +434,7 @@ namespace CU
             return true;
         }
         #endregion
-
-        #region NADA
-        
+      
 
       
 
@@ -445,7 +443,6 @@ namespace CU
         {
 
         }
-        #endregion
 
         #region BTNGUARDAR, MODIFICAR, CANCELAR
         private void BtnGuardar_Click(object sender, EventArgs e)

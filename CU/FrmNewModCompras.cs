@@ -14,8 +14,8 @@ namespace CU
     public partial class FrmNewModCompras : Form
     {
 
-        public Proveedor proveedor;
-        public OrdenDeCompra ordenDecompra;
+        public Proveedor _proveedor;
+        public OrdenDeCompra _ordenDecompra;
         #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -97,8 +97,8 @@ namespace CU
         public FrmNewModCompras()
         {
             InitializeComponent();
-            proveedor = new Proveedor();
-            ordenDecompra = new OrdenDeCompra();
+            _proveedor = new Proveedor();
+            _ordenDecompra = new OrdenDeCompra();
             Validacion.combo2campos(cboProveedor, "RazonSocial", "IdProveedor", "Proveedores");
         }
 
@@ -126,6 +126,7 @@ namespace CU
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
             SubFrmCompras SubCompras = new SubFrmCompras();
             SubCompras.ShowDialog();
         }
@@ -146,6 +147,13 @@ namespace CU
             }
 
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            _ordenDecompra.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
+            _ordenDecompra.Accion(_ordenDecompra, "ALTA");
+            MessageBox.Show("Se generó la orden de compra exitosamente, agregue los artículos en la siguiente lista");
         }
     }
 }
