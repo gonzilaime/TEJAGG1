@@ -462,7 +462,7 @@ namespace CU
 
                 }
 
-                _proveedor.CuitCuil = txtCuit.Text;
+                    _proveedor.CuitCuil = txtCuit.Text;
                     _proveedor.RazonSocial = txtRazonSocial.Text;
                     _proveedor.Direccion = txtDireccion.Text;
                     _proveedor.Localidad = txtLocalidad.Text;

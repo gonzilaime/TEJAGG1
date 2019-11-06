@@ -16,6 +16,7 @@ namespace CU
 
         public Proveedor _proveedor;
         public OrdenDeCompra _ordenDecompra;
+        public Detalle detalle_;
         #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -94,12 +95,26 @@ namespace CU
             //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
 #endregion
-        public FrmNewModCompras()
+        public FrmNewModCompras(Detalle detalle)
         {
             InitializeComponent();
             _proveedor = new Proveedor();
             _ordenDecompra = new OrdenDeCompra();
+            detalle_ = new Detalle();
             Validacion.combo2campos(cboProveedor, "RazonSocial", "IdProveedor", "Proveedores");
+
+            if (detalle != null)
+            {
+                detalle_.IdOrdenDeCompra = detalle.IdOrdenDeCompra;
+                cboProveedor.Enabled = false;
+                listarDetalles();
+
+            }
+            else
+            {
+                
+               
+            }
         }
 
         [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
@@ -112,6 +127,24 @@ namespace CU
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        /*************************************************************
+       * Método para llenar ListBox con Detalle de orden de compra***
+      ****************************************************************/
+        public void listarDetalles()
+        {
+            listaDetalle.Rows.Clear();
+            var detalleObtenido = detalle_.obtenerDetalleByOrdenDeCompra(detalle_.IdOrdenDeCompra);
+
+            foreach (var detalles in detalleObtenido)
+            {
+                listaDetalle.Rows.Add(detalles.proveedor.IdProveedor, detalles.articulos.NombreArticulo,
+                    detalles.Cantidad, detalles.Bonificacion, detalles.articulos.Precio, detalles.Subtotal);
+
+            }//foreach
+
+        }//listarDetalles
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -126,8 +159,9 @@ namespace CU
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
-            SubFrmCompras SubCompras = new SubFrmCompras();
+            
+            int IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
+            SubFrmCompras SubCompras = new SubFrmCompras(IdProveedor);
             SubCompras.ShowDialog();
         }
 
@@ -154,6 +188,11 @@ namespace CU
             _ordenDecompra.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
             _ordenDecompra.Accion(_ordenDecompra, "ALTA");
             MessageBox.Show("Se generó la orden de compra exitosamente, agregue los artículos en la siguiente lista");
+        }
+
+        private void FrmNewModCompras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

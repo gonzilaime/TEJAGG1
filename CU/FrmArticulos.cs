@@ -28,7 +28,7 @@ namespace CU
         
 
         /******************************************************
-         * Métodos para llenar LitBox con datos de Articulos***
+         * Métodos para llenar ListBox con datos de Articulos***
         *******************************************************/
         public void listarArticulos()
         {
