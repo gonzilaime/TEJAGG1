@@ -56,14 +56,21 @@ namespace CL
             {
                 conn = database.Abrir();
                 cmd.Connection = conn;
-
+                cmd.CommandType = CommandType.StoredProcedure;
                 if (ejecutar == "ALTA")
                 {
-                    cmd.CommandText = "INSERT INTO Clientes "
-                        + "VALUES " + "('" + cliente.CuitCuil + "','" + cliente.RazonSocial + "','" + cliente.Direccion + "','"
-                        + cliente.Localidad + "'," + cliente.provincia.IdProvincia + ",'" + cliente.Tel1 + "','" + cliente.Tel2 + "','"
-                        + cliente.Email + "'," + cliente.estado.IdEstado + ")";
+                    cmd.CommandText = "prc_AltaCliente";
 
+                    cmd.Parameters.Add(new SqlParameter("@CuitCuil", cliente.CuitCuil));
+                    cmd.Parameters.Add(new SqlParameter("@RazonSocial", cliente.RazonSocial));
+                    cmd.Parameters.Add(new SqlParameter("@Direccion", cliente.Direccion));
+                    cmd.Parameters.Add(new SqlParameter("@Localidad", cliente.Localidad));
+                    cmd.Parameters.Add(new SqlParameter("@IdProvincia", cliente.provincia.IdProvincia));
+                    cmd.Parameters.Add(new SqlParameter("@Tel1", cliente.Tel1));
+                    cmd.Parameters.Add(new SqlParameter("@Tel2", cliente.Tel2));
+                    cmd.Parameters.Add(new SqlParameter("@Email", cliente.Email));
+                    cmd.Parameters.Add(new SqlParameter("@IdEstado", cliente.estado.IdEstado));
+                    cmd.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                 }
 
                 /***************
@@ -72,12 +79,18 @@ namespace CL
 
                 else if (ejecutar == "MODIFICAR")
                 {
-                    cmd.CommandText = "UPDATE Clientes SET CuitCuil = '" + cliente.CuitCuil + "',"
-                        + " RazonSocial = '" + cliente.RazonSocial + "', " + "Direccion = '" + cliente.Direccion + "',"
-                        + " Localidad = '" + cliente.Localidad + "', " + " IdProvincia = " + cliente.provincia.IdProvincia + ", "
-                        + " Tel1 = '" + cliente.Tel1 + "'," + " Tel2 = '" + cliente.Tel2 + "' ," + " Email = '" + cliente.Email + "',"
-                        + " IdEstado = " + cliente.estado.IdEstado 
-                        + " WHERE IdCliente= " + cliente.IdCliente;
+                    cmd.CommandText = "prc_ModificarClientes";
+                    cmd.Parameters.Add(new SqlParameter("@IdClientes", cliente.IdCliente));
+                    cmd.Parameters.Add(new SqlParameter("@CuitCuil", cliente.CuitCuil));
+                    cmd.Parameters.Add(new SqlParameter("@RazonSocial", cliente.RazonSocial));
+                    cmd.Parameters.Add(new SqlParameter("@Direccion", cliente.Direccion));
+                    cmd.Parameters.Add(new SqlParameter("@Localidad", cliente.Localidad));
+                    cmd.Parameters.Add(new SqlParameter("@IdProvincia", cliente.provincia.IdProvincia));
+                    cmd.Parameters.Add(new SqlParameter("@Tel1", cliente.Tel1));
+                    cmd.Parameters.Add(new SqlParameter("@Tel2", cliente.Tel2));
+                    cmd.Parameters.Add(new SqlParameter("@Email", cliente.Email));
+                    cmd.Parameters.Add(new SqlParameter("@IdEstado", cliente.estado.IdEstado));
+                    cmd.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                 }
 
                 cmd.ExecuteNonQuery();

@@ -18,6 +18,7 @@ namespace CU
         public string Accion;
         public frmProveedores form;
         public Validacion validar;
+        public Usuario usuario;
 
 
         //Sombra en el panel
@@ -106,7 +107,7 @@ namespace CU
         {
             validar = new Validacion();
             InitializeComponent();
-
+            usuario = new Usuario();
             _proveedor = new Proveedor();
             _provincia = new Provincia();
             Validacion.combo2campos(cboProv, "DescripcionProvincia", "IdProvincia", "Provincia");
@@ -475,7 +476,7 @@ namespace CU
 
                     this.Close();
                     MessageBox.Show("El proveedor " + _proveedor.RazonSocial + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    form.listar();
+                    //form.listar();
                 
             }
         }

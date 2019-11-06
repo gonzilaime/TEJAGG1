@@ -95,7 +95,7 @@ namespace CU
                     break;
                 default: break;
             }
-            base.WndProc(ref m);
+            0base.WndProc(ref m);
             //    if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion//sombra formulario

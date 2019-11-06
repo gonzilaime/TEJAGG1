@@ -48,35 +48,51 @@ namespace CL
             var cmd = new SqlCommand();
             bool rta;
 
-                 /********
-                  **ALTA**
-                  ********/
+            /********
+             **ALTA**
+             ********/
             try
             {
-                conn= database.Abrir();
+                conn = database.Abrir();
                 cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 if (ejecutar == "ALTA")
                 {
-                    cmd.CommandText = "INSERT INTO Proveedores "
-                        + "VALUES " + "('" + proveedor.CuitCuil + "','" + proveedor.RazonSocial + "','" + proveedor.Direccion + "','"
-                        + proveedor.Localidad + "'," + proveedor.provincia.IdProvincia + ",'" + proveedor.Tel1 + "','" + proveedor.Tel2 + "','"
-                        + proveedor.Email + "'," + proveedor.Estado.IdEstado + ")";
+
+                    cmd.CommandText = "prc_AltaProveedor";
+
+                    cmd.Parameters.Add(new SqlParameter("@CuitCuil", proveedor.CuitCuil));
+                    cmd.Parameters.Add(new SqlParameter("@RazonSocial", proveedor.RazonSocial));
+                    cmd.Parameters.Add(new SqlParameter("@Direccion", proveedor.Direccion));
+                    cmd.Parameters.Add(new SqlParameter("@Localidad", proveedor.Localidad));
+                    cmd.Parameters.Add(new SqlParameter("@IdProvincia", proveedor.provincia.IdProvincia));
+                    cmd.Parameters.Add(new SqlParameter("@Tel1", proveedor.Tel1));
+                    cmd.Parameters.Add(new SqlParameter("@Tel2", proveedor.Tel2));
+                    cmd.Parameters.Add(new SqlParameter("@Email", proveedor.Email));
+                    cmd.Parameters.Add(new SqlParameter("@IdEstado", proveedor.Estado.IdEstado));
+                    cmd.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
 
                 }
 
-                 /***************
-                 **MODIFICACION**
-                 ***************/
-                 
+                /***************
+                **MODIFICACION**
+                ***************/
+
                 else if (ejecutar == "MODIFICAR")
                 {
-                    cmd.CommandText = "UPDATE Proveedores SET CuitCuil = '" + proveedor.CuitCuil + "',"
-                        + " RazonSocial = '" + proveedor.RazonSocial + "', " + "Direccion = '" + proveedor.Direccion + "',"
-                        + " Localidad = '" + proveedor.Localidad + "', " + " IdProvincia = " + proveedor.provincia.IdProvincia + ", "
-                        + " Tel1 = '" + proveedor.Tel1 + "'," + " Tel2 = '" + proveedor.Tel2 + "' ," + " Email = '" + proveedor.Email 
-                        + "'," + " IdEstado = " + proveedor.Estado.IdEstado  
-                        + " WHERE IdProveedor = " + proveedor.IdProveedor;
+                    cmd.CommandText = "prc_ModificarProveedor";
+                    cmd.Parameters.Add(new SqlParameter("@IdProveedor", proveedor.IdProveedor));
+                    cmd.Parameters.Add(new SqlParameter("@CuitCuil", proveedor.CuitCuil));
+                    cmd.Parameters.Add(new SqlParameter("@RazonSocial", proveedor.RazonSocial));
+                    cmd.Parameters.Add(new SqlParameter("@Direccion", proveedor.Direccion));
+                    cmd.Parameters.Add(new SqlParameter("@Localidad", proveedor.Localidad));
+                    cmd.Parameters.Add(new SqlParameter("@IdProvincia", proveedor.provincia.IdProvincia));
+                    cmd.Parameters.Add(new SqlParameter("@Tel1", proveedor.Tel1));
+                    cmd.Parameters.Add(new SqlParameter("@Tel2", proveedor.Tel2));
+                    cmd.Parameters.Add(new SqlParameter("@Email", proveedor.Email));
+                    cmd.Parameters.Add(new SqlParameter("@IdEstado", proveedor.Estado.IdEstado));
+                    cmd.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                 }
 
                 cmd.ExecuteNonQuery();

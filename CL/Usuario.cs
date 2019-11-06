@@ -51,7 +51,7 @@ namespace CL
                 {
                     string rowUser = dt.Rows[0]["Nick"].ToString();
                     Usuario.CacheUser.Nick = rowUser;
-             
+                    UsuarioLogueado.Nick = rowUser;
 
                     if (Convert.ToInt32(dt.Rows[0][2]) == 1)
                     {
