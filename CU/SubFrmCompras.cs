@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -92,11 +93,16 @@ namespace CU
             //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion Movilidad y sombra movilidad y sombra movilidad y sombra
+        public Articulos articulos_;
+        public Detalle detalle;
 
-
-        public SubFrmCompras()
+        public SubFrmCompras(int IdProveedor)
         {
             InitializeComponent();
+            articulos_ = new Articulos();
+            detalle = new Detalle();
+            articulos_.IdProveedor = IdProveedor;
+
         }
         #region movilidad para panel
 
@@ -112,6 +118,24 @@ namespace CU
             this.Close();
         }
 
+        /******************************************************
+         * Métodos para llenar ListBox con datos de Articulos***
+        *******************************************************/
+        public void listarArticulos()
+        {
+            listaArticulos.Rows.Clear();
+            var filtro = txtBuscar.Text;
+            var articuloObtenido = articulos_.obtenerArticulosByProveedor(articulos_.IdProveedor);
+
+            foreach (var articulo in articuloObtenido)
+            {
+                listaArticulos.Rows.Add(articulo.IdArticulo, articulo.NombreArticulo, articulo.Bonificacion,
+                    articulo.Precio, articulo.proveedor.IdProveedor, articulo.proveedor.RazonSocial);
+
+            }//foreach
+
+        }//listarArticulos
+
         private void buttonMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -119,7 +143,7 @@ namespace CU
 
         private void SubFrmCompras_Load(object sender, EventArgs e)
         {
-
+            listarArticulos();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -127,7 +151,7 @@ namespace CU
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Desea cancelar la operación?" +
@@ -141,6 +165,28 @@ namespace CU
             else
             {
 
+            }
+        }
+
+        private void ListaArticulos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtCodProv.Text = listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtArticulos.Text = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtBonificacion.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in listaArticulos.Rows)
+            {
+                detalle.IdArticulo = Convert.ToInt32(txtCodProv.Text);
+                detalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                detalle.Bonificacion = Convert.ToInt32(txtBonificacion.Text);
+
+                detalle.Alta(detalle);
             }
         }
     }

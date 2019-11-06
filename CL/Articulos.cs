@@ -143,6 +143,58 @@ namespace CL
 
         }//obtenerArticulos
 
+        public List<Articulos> obtenerArticulosByProveedor(int IdProveedor)
+        {
+            var conn = new SqlConnection();
+            var cmd = new SqlCommand();
+            var baseDatos = new Conectar();
+            var lista = new List<Articulos>();
+
+            try
+            {
+                conn = baseDatos.Abrir();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT t1.IdArticulo,t1.NombreArticulo,t1.Bonificacion,t1.Precio,t2.IdProveedor,t2.RazonSocial"
+                                + " FROM Articulo as t1 "
+                                + "INNER JOIN Proveedores as t2 "
+                                + " ON t1.IdProveedor = t2.IdProveedor "
+                                + " WHERE t2.IdProveedor = " + IdProveedor;
+                
+
+                var registroObtenido = cmd.ExecuteReader();
+                while (registroObtenido != null && registroObtenido.Read())
+                {
+                    var articulo = new Articulos();
+
+                    articulo.IdArticulo = (int)registroObtenido["IdArticulo"];
+                    articulo.NombreArticulo = (string)registroObtenido["NombreArticulo"];
+                    articulo.Bonificacion = (int)registroObtenido["Bonificacion"];
+                    articulo.Precio = (decimal)registroObtenido["Precio"];
+                    articulo.proveedor.IdProveedor = (int)registroObtenido["IdProveedor"];
+                    articulo.proveedor.RazonSocial = (string)registroObtenido["RazonSocial"];
+
+                    lista.Add(articulo);
+
+                }//while
+
+            }//try
+            catch (Exception e)
+            {
+                MessageBox.Show(string.Concat(e.Message, e.StackTrace), "");
+                MessageBox.Show("Falla al cargar lista");
+            }//catch
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Dispose();
+                    conn.Close();
+                }
+            }//finally
+
+            return lista;
+
+        }//obtenerArticulosByProveedor
 
 
     }//Articulos

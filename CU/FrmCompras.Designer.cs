@@ -354,6 +354,7 @@
             this.listaOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaOrdenes.Size = new System.Drawing.Size(723, 390);
             this.listaOrdenes.TabIndex = 13;
+            this.listaOrdenes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaOrdenes_CellContentDoubleClick);
             // 
             // IdOrdenDeCompra
             // 
