@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonMinimizar = new System.Windows.Forms.Button();
             this.buttonCerrar = new System.Windows.Forms.Button();
@@ -41,7 +41,6 @@
             this.txtBonificacion = new System.Windows.Forms.TextBox();
             this.lblPorcentaje = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -73,7 +72,7 @@
             this.panel1.Controls.Add(this.buttonCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1021, 31);
             this.panel1.TabIndex = 2;
@@ -89,7 +88,7 @@
             this.buttonMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimizar.Location = new System.Drawing.Point(951, 0);
-            this.buttonMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMinimizar.Name = "buttonMinimizar";
             this.buttonMinimizar.Size = new System.Drawing.Size(35, 32);
             this.buttonMinimizar.TabIndex = 87;
@@ -106,7 +105,7 @@
             this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCerrar.Location = new System.Drawing.Point(987, 0);
-            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCerrar.Name = "buttonCerrar";
             this.buttonCerrar.Size = new System.Drawing.Size(35, 32);
             this.buttonCerrar.TabIndex = 86;
@@ -151,7 +150,7 @@
             this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCantidad.Location = new System.Drawing.Point(715, 252);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(290, 22);
             this.txtCantidad.TabIndex = 92;
@@ -161,7 +160,7 @@
             this.txtBonificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtBonificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBonificacion.Location = new System.Drawing.Point(747, 332);
-            this.txtBonificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBonificacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtBonificacion.Name = "txtBonificacion";
             this.txtBonificacion.Size = new System.Drawing.Size(219, 22);
             this.txtBonificacion.TabIndex = 93;
@@ -186,32 +185,14 @@
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(687, 460);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(796, 463);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(97, 36);
             this.btnAgregar.TabIndex = 95;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(911, 460);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(97, 36);
-            this.btnCancelar.TabIndex = 96;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panelBuscar
             // 
@@ -221,7 +202,7 @@
             this.panelBuscar.Controls.Add(this.pictureBox1);
             this.panelBuscar.Controls.Add(this.txtBuscar);
             this.panelBuscar.Location = new System.Drawing.Point(3, 2);
-            this.panelBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(587, 46);
             this.panelBuscar.TabIndex = 98;
@@ -231,7 +212,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
             this.pictureBox1.Location = new System.Drawing.Point(20, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(21, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +225,7 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(49, 10);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(394, 26);
             this.txtBuscar.TabIndex = 5;
@@ -262,14 +243,14 @@
             this.listaArticulos.BackgroundColor = System.Drawing.Color.LightGray;
             this.listaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.listaArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdArticulo,
@@ -278,29 +259,29 @@
             this.Precio,
             this.IdProveedor,
             this.RazonSocial});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaArticulos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaArticulos.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaArticulos.EnableHeadersVisualStyles = false;
             this.listaArticulos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaArticulos.Location = new System.Drawing.Point(20, 85);
-            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.listaArticulos.Name = "listaArticulos";
             this.listaArticulos.ReadOnly = true;
             this.listaArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaArticulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaArticulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaArticulos.RowHeadersWidth = 51;
             this.listaArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -359,7 +340,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel4.Controls.Add(this.panelBuscar);
             this.panel4.Location = new System.Drawing.Point(17, 38);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(592, 458);
             this.panel4.TabIndex = 99;
@@ -370,7 +351,7 @@
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Location = new System.Drawing.Point(771, 412);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(234, 22);
             this.txtPrecio.TabIndex = 101;
@@ -392,7 +373,7 @@
             this.txtArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtArticulos.Enabled = false;
             this.txtArticulos.Location = new System.Drawing.Point(707, 172);
-            this.txtArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.txtArticulos.Name = "txtArticulos";
             this.txtArticulos.Size = new System.Drawing.Size(298, 22);
             this.txtArticulos.TabIndex = 102;
@@ -403,7 +384,7 @@
             this.txtCodProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodProv.Enabled = false;
             this.txtCodProv.Location = new System.Drawing.Point(771, 92);
-            this.txtCodProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodProv.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProv.Name = "txtCodProv";
             this.txtCodProv.Size = new System.Drawing.Size(234, 22);
             this.txtCodProv.TabIndex = 104;
@@ -428,8 +409,8 @@
             this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
             this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(799, 460);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFinalizar.Location = new System.Drawing.Point(908, 463);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(97, 36);
             this.btnFinalizar.TabIndex = 105;
@@ -452,7 +433,6 @@
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.LblArticulo);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblBon);
@@ -460,7 +440,7 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtBonificacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "SubFrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -487,7 +467,6 @@
         private System.Windows.Forms.TextBox txtBonificacion;
         private System.Windows.Forms.Label lblPorcentaje;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button buttonMinimizar;
         private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.Panel panelBuscar;

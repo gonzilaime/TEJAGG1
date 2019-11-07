@@ -19,10 +19,11 @@ namespace CL
 
         public TipoPerfil perfil;
 
+        public Encriptar encriptar;
         public Usuario()
         {
             perfil = new TipoPerfil();
-
+            encriptar = new Encriptar();
         }
         
         public bool login(string Nick, string Contraseña)
@@ -35,7 +36,7 @@ namespace CL
 
             try
             {
-               
+                //string cadenaEncriptada = encriptar.GetMD5(Contraseña);
                 conn = baseDatos.Abrir();
                 comando.Connection = conn;
                 SqlCommand cmd = new SqlCommand("SELECT Nick, Contraseña, IdPerfil FROM Usuario WHERE Nick = @Nick AND Contraseña = @Contraseña", conn);
@@ -51,7 +52,7 @@ namespace CL
                 {
                     string rowUser = dt.Rows[0]["Nick"].ToString();
                     Usuario.CacheUser.Nick = rowUser;
-             
+                    UsuarioLogueado.Nick = rowUser;
 
                     if (Convert.ToInt32(dt.Rows[0][2]) == 1)
                     {

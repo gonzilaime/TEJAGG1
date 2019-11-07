@@ -382,5 +382,17 @@
   <ItemGroup>
     <None Include="Resources\minimizar161.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo user negro16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo user 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo user 241.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -51,7 +51,6 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,11 +64,12 @@
             // cboProveedor
             // 
             this.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(16, 63);
+            this.cboProveedor.Location = new System.Drawing.Point(16, 55);
             this.cboProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(265, 24);
+            this.cboProveedor.Size = new System.Drawing.Size(304, 33);
             this.cboProveedor.TabIndex = 0;
             // 
             // panel1
@@ -81,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 31);
+            this.panel1.Size = new System.Drawing.Size(909, 31);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -94,7 +94,7 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(773, -1);
+            this.btnMinimizar.Location = new System.Drawing.Point(838, -1);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(35, 32);
@@ -111,7 +111,7 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(808, -1);
+            this.btnCerrar.Location = new System.Drawing.Point(873, -1);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 32);
@@ -128,10 +128,10 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.btnAgregar);
-            this.panel3.Location = new System.Drawing.Point(16, 96);
+            this.panel3.Location = new System.Drawing.Point(16, 103);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(811, 39);
+            this.panel3.Size = new System.Drawing.Size(877, 39);
             this.panel3.TabIndex = 12;
             // 
             // txtBuscar
@@ -223,7 +223,7 @@
             this.listaDetalle.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaDetalle.EnableHeadersVisualStyles = false;
             this.listaDetalle.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaDetalle.Location = new System.Drawing.Point(16, 135);
+            this.listaDetalle.Location = new System.Drawing.Point(16, 142);
             this.listaDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.listaDetalle.Name = "listaDetalle";
             this.listaDetalle.ReadOnly = true;
@@ -239,7 +239,7 @@
             this.listaDetalle.RowHeadersWidth = 51;
             this.listaDetalle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaDetalle.Size = new System.Drawing.Size(811, 254);
+            this.listaDetalle.Size = new System.Drawing.Size(877, 315);
             this.listaDetalle.TabIndex = 13;
             // 
             // CodProveedor
@@ -291,10 +291,10 @@
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.lblTotal);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(16, 393);
+            this.panel2.Location = new System.Drawing.Point(16, 465);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(811, 37);
+            this.panel2.Size = new System.Drawing.Size(877, 37);
             this.panel2.TabIndex = 13;
             // 
             // lblTotal
@@ -326,7 +326,7 @@
             this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
             this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(553, 464);
+            this.btnFinalizar.Location = new System.Drawing.Point(766, 513);
             this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(127, 36);
@@ -334,30 +334,15 @@
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Gray;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(701, 464);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightYellow;
-            this.button1.Location = new System.Drawing.Point(468, 38);
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(351, 54);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 57);
+            this.button1.Size = new System.Drawing.Size(219, 39);
             this.button1.TabIndex = 14;
             this.button1.Text = "Generar orden de compra";
             this.button1.UseVisualStyleBackColor = false;
@@ -368,10 +353,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(843, 512);
+            this.ClientSize = new System.Drawing.Size(909, 562);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFinalizar);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listaDetalle);
             this.Controls.Add(this.panel3);
@@ -408,7 +392,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnFinalizar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodProveedor;

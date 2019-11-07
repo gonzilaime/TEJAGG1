@@ -121,14 +121,14 @@ namespace CU
             panelInicio.Visible = false;
             btnArt.Visible = true;
             btnArticulos.Visible = false;
-            btnProv.Visible = false;
             btnProveedores.Visible = true;
+            btnProv.Visible = false;
             btnClientes.Visible = true;
             btnCli.Visible = false;
             btnCompras.Visible = true;
             btnCom.Visible = false;
-            btnInicio.Visible = false;
             btnIni.Visible = true;
+            btnInicio.Visible = false;
 
         }
 
@@ -186,15 +186,15 @@ namespace CU
             panelProveedores.Visible = false;
             panelInicio.Visible = false;
             panelCompras.Visible = true;
-            btnProv.Visible = false;
             btnProveedores.Visible = true;
+            btnProv.Visible = false;
             btnClientes.Visible = true;
             btnCli.Visible = false;
             btnArticulos.Visible = true;
             btnArt.Visible = false;
             btnCom.Visible = true;
-            btnInicio.Visible = false;
             btnIni.Visible = true;
+            btnInicio.Visible = false;
 
 
         }

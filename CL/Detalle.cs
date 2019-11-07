@@ -39,7 +39,7 @@ namespace CL
                     parametros.Add(new SqlParameter("@IdArticulo", detalle.IdArticulo));
                     parametros.Add(new SqlParameter("@Cantidad", detalle.Cantidad));
                     parametros.Add(new SqlParameter("@Bonificacion", detalle.Bonificacion));
-
+                    parametros.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                     rta = ejecutarSP.ExecuteNonQuery("InsertarDetalle_SP", parametros);
                 
 

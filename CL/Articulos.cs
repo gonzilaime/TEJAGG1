@@ -43,11 +43,16 @@ namespace CL
             {
                 conexion = TEJAGG.Abrir();
                 query.Connection = conexion;
+                query.CommandType = CommandType.StoredProcedure;
 
                 if (ejecutar == "ALTA")
                 {
-                    query.CommandText = "INSERT INTO Articulo "
-                        + "VALUES " + "('" + articulo.NombreArticulo + "'," + articulo.Bonificacion + "," + articulo.PrecioEntero + "." + articulo.PrecioDecimal + "," + articulo.proveedor.IdProveedor + ")";
+                    query.CommandText = "prc_AltaArticulo";
+                    query.Parameters.Add(new SqlParameter("@NombreArticulo", articulo.NombreArticulo));
+                    query.Parameters.Add(new SqlParameter("@Bonificacion", articulo.Bonificacion));
+                    query.Parameters.Add(new SqlParameter("@Precio", articulo.PrecioEntero + "." + articulo.PrecioDecimal));
+                    query.Parameters.Add(new SqlParameter("@IdProveedor", articulo.proveedor.IdProveedor));
+                    query.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
 
                 }//IF
 
@@ -57,13 +62,15 @@ namespace CL
 
                 else if (ejecutar == "MODIFICAR")
                 {
-                    query.CommandText = "UPDATE Articulo "
-                        + "SET NombreArticulo = '" + articulo.NombreArticulo + "',"
-                        + " Bonificacion = " + articulo.Bonificacion + ","
-                        + " Precio = " + articulo.PrecioEntero + "." + articulo.PrecioDecimal + ","
-                        + " IdProveedor = " + articulo.proveedor.IdProveedor
-                        + " WHERE IdArticulo = " + articulo.IdArticulo;
+                    query.CommandText = "prc_ModificarArticulo";
+                    query.Parameters.Add(new SqlParameter("@IdArticulo", articulo.IdArticulo));
+                    query.Parameters.Add(new SqlParameter("@NombreArticulo", articulo.NombreArticulo));
+                    query.Parameters.Add(new SqlParameter("@Bonificacion", articulo.Bonificacion));
+                    query.Parameters.Add(new SqlParameter("@Precio", articulo.PrecioEntero + "." + articulo.PrecioDecimal));
+                    query.Parameters.Add(new SqlParameter("@IdProveedor", articulo.proveedor.IdProveedor));
+                    query.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
 
+                        
                 }
 
                 query.ExecuteNonQuery();

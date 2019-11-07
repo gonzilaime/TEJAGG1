@@ -42,7 +42,7 @@ namespace CL
                 if(ejecutar == "ALTA")
                 {
                     parametros.Add(new SqlParameter("@IdProveedor", orden.proveedor.IdProveedor));
-
+                    parametros.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                     rta = ejecutarSP.ExecuteNonQuery("GenerarOrdenDeCompra_SP", parametros);
                 }else
                 {
