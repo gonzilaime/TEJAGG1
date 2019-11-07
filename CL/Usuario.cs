@@ -36,7 +36,6 @@ namespace CL
 
             try
             {
-                //string cadenaEncriptada = encriptar.GetMD5(Contraseña);
                 conn = baseDatos.Abrir();
                 comando.Connection = conn;
                 SqlCommand cmd = new SqlCommand("SELECT Nick, Contraseña, IdPerfil FROM Usuario WHERE Nick = @Nick AND Contraseña = @Contraseña", conn);
@@ -92,6 +91,45 @@ namespace CL
         {
             public static string Nick { get; set; } 
             public static string IdPerfil { get; set; }
+        }
+
+        public bool AgregarUsuario(Usuario Usuario)
+        {
+            //string cadenaEncriptada = encriptar.GetMD5(Contraseña);
+
+            var conn = new SqlConnection();
+            var cmd = new SqlCommand();
+            var basedeDatos = new Conectar();
+            bool rta;
+
+            try
+            {
+                conn = basedeDatos.Abrir();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "prc_AltaUsuario";
+                cmd.Parameters.Add(new SqlParameter("@Nick", Usuario.Nick));
+                cmd.Parameters.Add(new SqlParameter("@Contraseña", Usuario.Contraseña));
+                cmd.Parameters.Add(new SqlParameter("@IdPerfil", Usuario.perfil.IdPerfil));
+                cmd.ExecuteNonQuery();
+                rta = true;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(string.Concat(e.Message, e.StackTrace), "");
+                rta = false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+
+            }
+            return rta;
         }
     }
 }
