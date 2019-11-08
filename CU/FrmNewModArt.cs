@@ -96,6 +96,7 @@ namespace CU
             //    if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion
+
         public FrmNewModArt(Articulos articulos)
         {
             InitializeComponent();
@@ -134,8 +135,13 @@ namespace CU
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            bool rta = false;
             if (AccionArticulo == "ALTA")
             {
+                if (CamposObligatorios() == rta)
+                {
+                    return;
+                }
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
                 articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
                 articulo.PrecioEntero = Convert.ToInt32(txtEntero.Text.ToString());
@@ -149,11 +155,69 @@ namespace CU
 
             }
         }
+        #region CAMPOS OBLIGATORIOS
+        public bool CamposObligatorios()
+        {
+            if (txtNombreProd.Text == "" && txtBonificacion.Text == "" && txtEntero.Text == "")
+            {
+                lblProductoObligatorio.Visible = true;
+                lblBonificacionObligatorio.Visible = true;
+                lblPrecioObligatorio.Visible = true;
 
+                return false;
+            }
+            else if (txtNombreProd.Text == "" && txtBonificacion.Text == "")
+            {
+                lblProductoObligatorio.Visible = true;
+                lblBonificacionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtNombreProd.Text == "" && txtEntero.Text == "")
+            {
+                lblProductoObligatorio.Visible = true;
+                lblPrecioObligatorio.Visible = true;
+
+                return false;
+
+            }
+            else if (txtBonificacion.Text == "" && txtEntero.Text == "")
+            {
+                lblPrecioObligatorio.Visible = true;
+                lblBonificacionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtNombreProd.Text == "")
+            {
+                lblProductoObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtBonificacion.Text == "")
+            {
+                lblBonificacionObligatorio.Visible = true;
+
+                return false;
+            }
+            else if (txtEntero.Text == "")
+            {
+                lblPrecioObligatorio.Visible = true;
+              
+                return false;
+            }
+            return true;
+        }
+        #endregion
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            bool rta = false;
             if (AccionArticulo == "MODIFICAR")
             {
+                if (CamposObligatorios() == rta)
+                {
+                    return;
+                }
                 articulo.IdArticulo = Convert.ToInt32(txtIdArticulo.Text.ToString());
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
                 articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
@@ -204,7 +268,7 @@ namespace CU
 
         private void TxtEntero_TextChanged(object sender, EventArgs e)
         {
-
+            lblPrecioObligatorio.Visible = false;
         }
 
         private void TxtPrecio_TextChanged(object sender, EventArgs e)
@@ -233,5 +297,15 @@ namespace CU
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
+
+        private void txtBonificacion_TextChanged(object sender, EventArgs e)
+        {
+            lblBonificacionObligatorio.Visible = false;
+        }
+
+        private void txtNombreProd_TextChanged(object sender, EventArgs e)
+        {
+            lblProductoObligatorio.Visible = false;
+        }
     }
 }

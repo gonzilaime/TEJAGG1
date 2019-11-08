@@ -509,6 +509,12 @@ namespace CU
                 {
                     return;
                 }
+                else if (!validar.IsValidEmail(TxtEmail.Text.ToString()))
+                {
+                    MessageBox.Show("Introduzca un correo válido", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+
+                }
 
                 _proveedor.IdProveedor = Convert.ToInt32(txtCodigoProveedor.Text.ToString());
                 _proveedor.CuitCuil = txtCuit.Text;

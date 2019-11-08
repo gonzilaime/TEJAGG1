@@ -4,24 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using CL;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Windows.Forms;
 
 namespace CU
 {
-    public partial class Login : Form
+    public partial class NuevoUsuario : Form
     {
-
-        public Usuario usuario;
-        public FrmMenu menu;
-        public FormMenu formMenu;
-        public Menu _menu;
-        
-
-        //Sombra en el panel y efecto ShowDialog
-        #region
+        #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -99,116 +90,54 @@ namespace CU
             //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         #endregion
-        public Login()
+        public NuevoUsuario()
         {
             InitializeComponent();
-            usuario = new Usuario();
         }
-
-
-        private void TxtUser_Enter(object sender, EventArgs e)
+        #region CAMPOS OBLIGATORIOS
+        public bool CamposObligatorios()
         {
-            if(txtUser.Text == "USUARIO")
+            if (txtNick.Text == "" && txtContraseña.Text == "")
             {
-                txtUser.Text = "";
-                txtUser.ForeColor = Color.Black;
+                lblNickObligatorio.Visible = true;
+                lblContraseñaObligatorio.Visible = true;
 
-            }
-        }
-
-        private void TxtUser_Leave(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "")
-            {
-                txtUser.Text = "USUARIO";
-                txtUser.ForeColor = Color.Black;
-
-            }
-        }
-
-        private void TxtPass_Enter(object sender, EventArgs e)
-        {
-            if (txtPass.Text == "CONTRASEÑA")
-            {
-                txtPass.Text = "";
-                txtPass.ForeColor = Color.Black;
-                txtPass.UseSystemPasswordChar = true;
-
-            }
-        }
-
-        private void TxtPass_Leave(object sender, EventArgs e)
-        {
-            if (txtPass.Text == "")
-            {
-                txtPass.Text = "CONTRASEÑA";
-                txtPass.ForeColor = Color.Black;
-                txtPass.UseSystemPasswordChar = false;
+                return false;
             }
 
-            }
-
-       
-
-        private void TxtUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnIniciar_Click(object sender, EventArgs e)
-        {
-            if(txtPass.Text == "" || txtUser.Text == "")
+            else if(txtNick.Text == "")
             {
-                MessageBox.Show("Ingresar usuario y contraeseña", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-            }else
-            {
-                if (usuario.login(this.txtUser.Text, this.txtPass.Text))
-                {
-                    this.Hide();
-                    //FrmMenu menu = new FrmMenu(usuario.NroPerfil);
-                    //menu.Show();
-                    FormMenu formMenu = new FormMenu(usuario.NroPerfil, usuario.Nick);
-                    formMenu.Show();
-
-                }
-                
-                else
-                {
-                    txtUser.Text = "USUARIO";
-                    txtPass.Text = "CONTRASEÑA";
-                    return;
-                }
-
-                 
+                lblNickObligatorio.Visible = true;
+                return false;
             }
+            else if (txtContraseña.Text == "")
+            {
+                lblContraseñaObligatorio.Visible = true;
+                return false;
+            }
+            return true;
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
 
         [DllImport("User32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int msg, int wparam, int lparam);
 
-        private void Login_MouseDown(object sender, MouseEventArgs e)
+
+        private void txtNick_TextChanged(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            lblNickObligatorio.Visible = false;
         }
 
-        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            lblContraseñaObligatorio.Visible = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -216,11 +145,25 @@ namespace CU
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txtPass_TextChanged(object sender, EventArgs e)
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            bool rta = false;
+            if (CamposObligatorios() == rta)
+            {
+                return;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
         {
 
         }
     }
 
-       
 }

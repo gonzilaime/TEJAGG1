@@ -146,27 +146,23 @@ namespace CU
             listarArticulos();
         }
 
+        public bool CamposObligatorios()
+        {
+            if(txtCantidad.Text == "")
+            {
+                lblCantidadObligatorio.Visible = true;
+
+                return false;
+            }
+
+            return true;
+        }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("¿Desea cancelar la operación?" +
-            " Se perderán los datos ingresados.",
-               "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            else
-            {
-
-            }
-        }
 
         private void ListaArticulos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -180,13 +176,38 @@ namespace CU
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+
             foreach (DataGridViewRow row in listaArticulos.Rows)
             {
-                detalle.IdArticulo = Convert.ToInt32(txtCodProv.Text);
-                detalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
-                detalle.Bonificacion = Convert.ToInt32(txtBonificacion.Text);
+                bool rta = false;
+                if (txtArticulos.Text == "" && txtCodProv.Text == "" && txtCantidad.Text == "" &&
+                    txtPrecio.Text == "" && txtBonificacion.Text == "")
+                {
+                    MessageBox.Show("Primero debe seleccionar un artículo", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (CamposObligatorios() == rta)
 
-                detalle.Alta(detalle);
+                {
+                    return;
+                }
+                else
+                {
+                    detalle.IdArticulo = Convert.ToInt32(txtCodProv.Text);
+                    detalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    detalle.Bonificacion = Convert.ToInt32(txtBonificacion.Text);
+
+                    detalle.Alta(detalle);
+
+                    txtArticulos.Clear();
+                    txtBonificacion.Clear();
+                    txtCantidad.Clear();
+                    txtCodProv.Clear();
+                    txtPrecio.Clear();
+
+                    break;
+                }
+
             }
         }
     }

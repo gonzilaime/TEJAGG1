@@ -58,6 +58,7 @@
             this.txtCodProv = new System.Windows.Forms.TextBox();
             this.lblCodProv = new System.Windows.Forms.Label();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.lblCantidadObligatorio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,9 +73,8 @@
             this.panel1.Controls.Add(this.buttonCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1021, 31);
+            this.panel1.Size = new System.Drawing.Size(766, 25);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -87,10 +87,9 @@
             this.buttonMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.buttonMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimizar.Location = new System.Drawing.Point(951, 0);
-            this.buttonMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMinimizar.Location = new System.Drawing.Point(713, 0);
             this.buttonMinimizar.Name = "buttonMinimizar";
-            this.buttonMinimizar.Size = new System.Drawing.Size(35, 32);
+            this.buttonMinimizar.Size = new System.Drawing.Size(26, 26);
             this.buttonMinimizar.TabIndex = 87;
             this.buttonMinimizar.UseVisualStyleBackColor = false;
             this.buttonMinimizar.Click += new System.EventHandler(this.buttonMinimizar_Click);
@@ -104,10 +103,9 @@
             this.buttonCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCerrar.Location = new System.Drawing.Point(987, 0);
-            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCerrar.Location = new System.Drawing.Point(740, 0);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(35, 32);
+            this.buttonCerrar.Size = new System.Drawing.Size(26, 26);
             this.buttonCerrar.TabIndex = 86;
             this.buttonCerrar.UseVisualStyleBackColor = false;
             this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
@@ -116,21 +114,19 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(613, 254);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Location = new System.Drawing.Point(460, 206);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(87, 23);
+            this.lblCantidad.Size = new System.Drawing.Size(81, 19);
             this.lblCantidad.TabIndex = 89;
-            this.lblCantidad.Text = "Cantidad";
+            this.lblCantidad.Text = "Cantidad *";
             // 
             // LblArticulo
             // 
             this.LblArticulo.AutoSize = true;
             this.LblArticulo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblArticulo.Location = new System.Drawing.Point(613, 174);
-            this.LblArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblArticulo.Location = new System.Drawing.Point(460, 141);
             this.LblArticulo.Name = "LblArticulo";
-            this.LblArticulo.Size = new System.Drawing.Size(79, 23);
+            this.LblArticulo.Size = new System.Drawing.Size(64, 19);
             this.LblArticulo.TabIndex = 90;
             this.LblArticulo.Text = "Artículo";
             // 
@@ -138,10 +134,9 @@
             // 
             this.lblBon.AutoSize = true;
             this.lblBon.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBon.Location = new System.Drawing.Point(613, 334);
-            this.lblBon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBon.Location = new System.Drawing.Point(460, 271);
             this.lblBon.Name = "lblBon";
-            this.lblBon.Size = new System.Drawing.Size(118, 23);
+            this.lblBon.Size = new System.Drawing.Size(94, 19);
             this.lblBon.TabIndex = 91;
             this.lblBon.Text = "Bonificación";
             // 
@@ -149,30 +144,27 @@
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCantidad.Location = new System.Drawing.Point(715, 252);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCantidad.Location = new System.Drawing.Point(547, 205);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(290, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(207, 20);
             this.txtCantidad.TabIndex = 92;
             // 
             // txtBonificacion
             // 
             this.txtBonificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtBonificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBonificacion.Location = new System.Drawing.Point(747, 332);
-            this.txtBonificacion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBonificacion.Location = new System.Drawing.Point(560, 270);
             this.txtBonificacion.Name = "txtBonificacion";
-            this.txtBonificacion.Size = new System.Drawing.Size(219, 22);
+            this.txtBonificacion.Size = new System.Drawing.Size(165, 20);
             this.txtBonificacion.TabIndex = 93;
             // 
             // lblPorcentaje
             // 
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorcentaje.Location = new System.Drawing.Point(975, 332);
-            this.lblPorcentaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPorcentaje.Location = new System.Drawing.Point(731, 270);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(28, 23);
+            this.lblPorcentaje.Size = new System.Drawing.Size(23, 19);
             this.lblPorcentaje.TabIndex = 94;
             this.lblPorcentaje.Text = "%";
             // 
@@ -185,10 +177,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(796, 463);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(597, 376);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(97, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(73, 29);
             this.btnAgregar.TabIndex = 95;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -201,20 +192,18 @@
             this.panelBuscar.BackColor = System.Drawing.Color.LightGray;
             this.panelBuscar.Controls.Add(this.pictureBox1);
             this.panelBuscar.Controls.Add(this.txtBuscar);
-            this.panelBuscar.Location = new System.Drawing.Point(3, 2);
-            this.panelBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBuscar.Location = new System.Drawing.Point(2, 2);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(587, 46);
+            this.panelBuscar.Size = new System.Drawing.Size(440, 37);
             this.panelBuscar.TabIndex = 98;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -224,10 +213,9 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(49, 10);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(37, 8);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(394, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
             this.txtBuscar.TabIndex = 5;
             // 
             // listaArticulos
@@ -269,8 +257,7 @@
             this.listaArticulos.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaArticulos.EnableHeadersVisualStyles = false;
             this.listaArticulos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaArticulos.Location = new System.Drawing.Point(20, 85);
-            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.listaArticulos.Location = new System.Drawing.Point(15, 69);
             this.listaArticulos.Name = "listaArticulos";
             this.listaArticulos.ReadOnly = true;
             this.listaArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -285,7 +272,7 @@
             this.listaArticulos.RowHeadersWidth = 51;
             this.listaArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaArticulos.Size = new System.Drawing.Size(587, 409);
+            this.listaArticulos.Size = new System.Drawing.Size(440, 332);
             this.listaArticulos.TabIndex = 97;
             this.listaArticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellContentDoubleClick);
             // 
@@ -339,10 +326,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel4.Controls.Add(this.panelBuscar);
-            this.panel4.Location = new System.Drawing.Point(17, 38);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(13, 31);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(592, 458);
+            this.panel4.Size = new System.Drawing.Size(444, 372);
             this.panel4.TabIndex = 99;
             // 
             // txtPrecio
@@ -350,20 +336,18 @@
             this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(771, 412);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.Location = new System.Drawing.Point(578, 335);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(234, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(176, 20);
             this.txtPrecio.TabIndex = 101;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(613, 414);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Location = new System.Drawing.Point(460, 336);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(139, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(112, 19);
             this.lblPrecio.TabIndex = 100;
             this.lblPrecio.Text = "Precio unitario";
             // 
@@ -372,10 +356,9 @@
             this.txtArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtArticulos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtArticulos.Enabled = false;
-            this.txtArticulos.Location = new System.Drawing.Point(707, 172);
-            this.txtArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtArticulos.Location = new System.Drawing.Point(530, 140);
             this.txtArticulos.Name = "txtArticulos";
-            this.txtArticulos.Size = new System.Drawing.Size(298, 22);
+            this.txtArticulos.Size = new System.Drawing.Size(224, 20);
             this.txtArticulos.TabIndex = 102;
             // 
             // txtCodProv
@@ -383,20 +366,18 @@
             this.txtCodProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.txtCodProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodProv.Enabled = false;
-            this.txtCodProv.Location = new System.Drawing.Point(771, 92);
-            this.txtCodProv.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodProv.Location = new System.Drawing.Point(578, 75);
             this.txtCodProv.Name = "txtCodProv";
-            this.txtCodProv.Size = new System.Drawing.Size(234, 22);
+            this.txtCodProv.Size = new System.Drawing.Size(176, 20);
             this.txtCodProv.TabIndex = 104;
             // 
             // lblCodProv
             // 
             this.lblCodProv.AutoSize = true;
             this.lblCodProv.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProv.Location = new System.Drawing.Point(613, 94);
-            this.lblCodProv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodProv.Location = new System.Drawing.Point(460, 76);
             this.lblCodProv.Name = "lblCodProv";
-            this.lblCodProv.Size = new System.Drawing.Size(137, 23);
+            this.lblCodProv.Size = new System.Drawing.Size(114, 19);
             this.lblCodProv.TabIndex = 103;
             this.lblCodProv.Text = "Cod Proveedor";
             // 
@@ -409,20 +390,33 @@
             this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
             this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(908, 463);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFinalizar.Location = new System.Drawing.Point(681, 376);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(97, 36);
+            this.btnFinalizar.Size = new System.Drawing.Size(73, 29);
             this.btnFinalizar.TabIndex = 105;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
             // 
+            // lblCantidadObligatorio
+            // 
+            this.lblCantidadObligatorio.AutoSize = true;
+            this.lblCantidadObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblCantidadObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblCantidadObligatorio.Location = new System.Drawing.Point(577, 228);
+            this.lblCantidadObligatorio.Name = "lblCantidadObligatorio";
+            this.lblCantidadObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblCantidadObligatorio.TabIndex = 106;
+            this.lblCantidadObligatorio.Text = "Este campo es obligatorio.";
+            this.lblCantidadObligatorio.Visible = false;
+            // 
             // SubFrmCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1021, 512);
+            this.ClientSize = new System.Drawing.Size(766, 416);
+            this.Controls.Add(this.lblCantidadObligatorio);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.txtCodProv);
             this.Controls.Add(this.lblCodProv);
@@ -440,7 +434,6 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtBonificacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "SubFrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -486,5 +479,6 @@
         private System.Windows.Forms.TextBox txtCodProv;
         private System.Windows.Forms.Label lblCodProv;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Label lblCantidadObligatorio;
     }
 }

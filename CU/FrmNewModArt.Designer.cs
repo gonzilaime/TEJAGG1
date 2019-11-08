@@ -47,9 +47,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.lblTel1Obligatorio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblProductoObligatorio = new System.Windows.Forms.Label();
+            this.lblBonificacionObligatorio = new System.Windows.Forms.Label();
+            this.lblPrecioObligatorio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +133,7 @@
             this.txtNombreProd.Name = "txtNombreProd";
             this.txtNombreProd.Size = new System.Drawing.Size(260, 23);
             this.txtNombreProd.TabIndex = 2;
+            this.txtNombreProd.TextChanged += new System.EventHandler(this.txtNombreProd_TextChanged);
             // 
             // lblProducto
             // 
@@ -160,9 +161,9 @@
             this.lblIdArt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdArt.Location = new System.Drawing.Point(17, 216);
             this.lblIdArt.Name = "lblIdArt";
-            this.lblIdArt.Size = new System.Drawing.Size(91, 19);
+            this.lblIdArt.Size = new System.Drawing.Size(84, 19);
             this.lblIdArt.TabIndex = 91;
-            this.lblIdArt.Text = "ID Artículo*";
+            this.lblIdArt.Text = "ID Artículo";
             // 
             // txtPrecio
             // 
@@ -194,6 +195,7 @@
             this.txtBonificacion.Name = "txtBonificacion";
             this.txtBonificacion.Size = new System.Drawing.Size(239, 23);
             this.txtBonificacion.TabIndex = 3;
+            this.txtBonificacion.TextChanged += new System.EventHandler(this.txtBonificacion_TextChanged);
             // 
             // label4
             // 
@@ -288,44 +290,44 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
-            // lblTel1Obligatorio
+            // lblProductoObligatorio
             // 
-            this.lblTel1Obligatorio.AutoSize = true;
-            this.lblTel1Obligatorio.BackColor = System.Drawing.Color.Transparent;
-            this.lblTel1Obligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel1Obligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblTel1Obligatorio.Location = new System.Drawing.Point(172, 103);
-            this.lblTel1Obligatorio.Name = "lblTel1Obligatorio";
-            this.lblTel1Obligatorio.Size = new System.Drawing.Size(148, 16);
-            this.lblTel1Obligatorio.TabIndex = 104;
-            this.lblTel1Obligatorio.Text = "Este campo es obligatorio.";
-            this.lblTel1Obligatorio.Visible = false;
+            this.lblProductoObligatorio.AutoSize = true;
+            this.lblProductoObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblProductoObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductoObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblProductoObligatorio.Location = new System.Drawing.Point(172, 103);
+            this.lblProductoObligatorio.Name = "lblProductoObligatorio";
+            this.lblProductoObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblProductoObligatorio.TabIndex = 104;
+            this.lblProductoObligatorio.Text = "Este campo es obligatorio.";
+            this.lblProductoObligatorio.Visible = false;
             // 
-            // label1
+            // lblBonificacionObligatorio
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(172, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 16);
-            this.label1.TabIndex = 105;
-            this.label1.Text = "Este campo es obligatorio.";
-            this.label1.Visible = false;
+            this.lblBonificacionObligatorio.AutoSize = true;
+            this.lblBonificacionObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblBonificacionObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBonificacionObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblBonificacionObligatorio.Location = new System.Drawing.Point(172, 148);
+            this.lblBonificacionObligatorio.Name = "lblBonificacionObligatorio";
+            this.lblBonificacionObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblBonificacionObligatorio.TabIndex = 105;
+            this.lblBonificacionObligatorio.Text = "Este campo es obligatorio.";
+            this.lblBonificacionObligatorio.Visible = false;
             // 
-            // label2
+            // lblPrecioObligatorio
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(172, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 16);
-            this.label2.TabIndex = 106;
-            this.label2.Text = "Este campo es obligatorio.";
-            this.label2.Visible = false;
+            this.lblPrecioObligatorio.AutoSize = true;
+            this.lblPrecioObligatorio.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecioObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioObligatorio.ForeColor = System.Drawing.Color.Red;
+            this.lblPrecioObligatorio.Location = new System.Drawing.Point(172, 193);
+            this.lblPrecioObligatorio.Name = "lblPrecioObligatorio";
+            this.lblPrecioObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblPrecioObligatorio.TabIndex = 106;
+            this.lblPrecioObligatorio.Text = "Este campo es obligatorio.";
+            this.lblPrecioObligatorio.Visible = false;
             // 
             // FrmNewModArt
             // 
@@ -333,9 +335,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(383, 306);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTel1Obligatorio);
+            this.Controls.Add(this.lblPrecioObligatorio);
+            this.Controls.Add(this.lblBonificacionObligatorio);
+            this.Controls.Add(this.lblProductoObligatorio);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDecimal);
             this.Controls.Add(this.label5);
@@ -385,8 +387,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Label lblTel1Obligatorio;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblProductoObligatorio;
+        private System.Windows.Forms.Label lblBonificacionObligatorio;
+        private System.Windows.Forms.Label lblPrecioObligatorio;
     }
 }

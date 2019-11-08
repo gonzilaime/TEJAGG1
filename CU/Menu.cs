@@ -389,7 +389,11 @@ namespace CU
         {
             this.WindowState = FormWindowState.Minimized;
         }
-  
 
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario Usuario = new NuevoUsuario();
+            Usuario.ShowDialog();
+        }
     }
 }

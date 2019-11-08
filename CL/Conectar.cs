@@ -24,14 +24,14 @@ namespace CL
                 //databaseName = "TEJAGG";
                 //usuario = "EQUIPO-01\\Usuario";
 
-                //servidor = "DESKTOP-EUK7NSA";
-                //databaseName = "TEJAGG";
-                //usuario = "DESKTOP-EUK7NSA\\Agustin";
-
-
-                servidor = "LAPTOP-Q30BBLN9";
+                servidor = "DESKTOP-EUK7NSA";
                 databaseName = "TEJAGG";
-                usuario = "LAPTOP-Q30BBLN9\\tomas";
+                usuario = "DESKTOP-EUK7NSA\\Agustin";
+
+
+                //servidor = "LAPTOP-Q30BBLN9";
+                //databaseName = "TEJAGG";
+                //usuario = "LAPTOP-Q30BBLN9\\tomas";
 
             }
             catch (Exception e)
