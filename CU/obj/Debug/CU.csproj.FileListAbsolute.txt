@@ -311,3 +311,4 @@ C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.csproj.Cop
 C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.exe
 C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.pdb
 C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.NuevoUsuario.resources
+D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.NuevoUsuario.resources

@@ -95,13 +95,15 @@ namespace CU
         #endregion Movilidad y sombra movilidad y sombra movilidad y sombra
         public Articulos articulos_;
         public Detalle detalle;
+        public int id;
 
-        public SubFrmCompras(int IdProveedor)
+        public SubFrmCompras(int IdProveedor, int IdOrdenCompra)
         {
             InitializeComponent();
             articulos_ = new Articulos();
             detalle = new Detalle();
             articulos_.IdProveedor = IdProveedor;
+            id = IdOrdenCompra;
 
         }
         #region movilidad para panel
@@ -191,13 +193,32 @@ namespace CU
                 {
                     return;
                 }
+                else if (id != 0)
+                {
+                    detalle.IdArticulo = Convert.ToInt32(txtCodProv.Text);
+                    detalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    detalle.Bonificacion = Convert.ToInt32(txtBonificacion.Text);
+                    detalle.PrecioUnitario = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
+                    detalle.IdOrdenDeCompra = id;
+
+                    detalle.Alta(detalle, "MODIFICAR");
+
+                    txtArticulos.Clear();
+                    txtBonificacion.Clear();
+                    txtCantidad.Clear();
+                    txtCodProv.Clear();
+                    txtPrecio.Clear();
+
+                    break;
+                }
                 else
                 {
                     detalle.IdArticulo = Convert.ToInt32(txtCodProv.Text);
                     detalle.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     detalle.Bonificacion = Convert.ToInt32(txtBonificacion.Text);
+                    detalle.PrecioUnitario = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
 
-                    detalle.Alta(detalle);
+                    detalle.Alta(detalle,"ALTA");
 
                     txtArticulos.Clear();
                     txtBonificacion.Clear();
@@ -209,6 +230,14 @@ namespace CU
                 }
 
             }
+        }
+
+        private void ListaArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodProv.Text = listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtArticulos.Text = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtBonificacion.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }

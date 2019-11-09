@@ -37,7 +37,8 @@ namespace CU
 
             
                 FrmNewModClientes formulario = new FrmNewModClientes(_cliente=null);
-            formulario.ShowDialog();
+                formulario.ShowDialog();
+                listar();
             }
             else
             {
@@ -74,6 +75,7 @@ namespace CU
 
                 FrmNewModClientes formulario = new FrmNewModClientes(_cliente);
                 formulario.ShowDialog();
+                listar();
             }
             else
             {

@@ -17,6 +17,8 @@ namespace CU
         public Proveedor _proveedor;
         public OrdenDeCompra _ordenDecompra;
         public Detalle detalle_;
+        public decimal total;
+
         #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -102,17 +104,22 @@ namespace CU
             _ordenDecompra = new OrdenDeCompra();
             detalle_ = new Detalle();
             Validacion.combo2campos(cboProveedor, "RazonSocial", "IdProveedor", "Proveedores");
+            Validacion.combo2campos(cboEstado, "DescripcionOrdenCompra", "IdEstadoOrdenCompra", "EstadoOrdenCompra");
 
             if (detalle != null)
             {
-                detalle_.IdOrdenDeCompra = detalle.IdOrdenDeCompra;
+                button1.Enabled = false;
+                button1.Visible = false;
+                detalle_.ordenCompra.IdOrdenDeCompra = detalle.ordenCompra.IdOrdenDeCompra;
+                detalle_.proveedor.IdProveedor = detalle.proveedor.IdProveedor;
                 cboProveedor.Enabled = false;
                 listarDetalles();
 
             }
             else
             {
-                
+                btnModificar.Enabled = false;
+                btnModificar.Visible = false;
                
             }
         }
@@ -134,12 +141,12 @@ namespace CU
         public void listarDetalles()
         {
             listaDetalle.Rows.Clear();
-            var detalleObtenido = detalle_.obtenerDetalleByOrdenDeCompra(detalle_.IdOrdenDeCompra);
+            var detalleObtenido = detalle_.obtenerDetalleByOrdenDeCompra(detalle_.ordenCompra.IdOrdenDeCompra);
 
             foreach (var detalles in detalleObtenido)
             {
-                listaDetalle.Rows.Add(detalles.proveedor.IdProveedor, detalles.articulos.NombreArticulo,
-                    detalles.Cantidad, detalles.Bonificacion, detalles.articulos.Precio, detalles.Subtotal);
+                listaDetalle.Rows.Add(detalles.IdDetalle,detalles.proveedor.IdProveedor, detalles.articulos.NombreArticulo,
+                    detalles.Cantidad, detalles.Bonificacion, detalles.PrecioUnitario, detalles.Subtotal);
 
             }//foreach
 
@@ -159,10 +166,22 @@ namespace CU
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
-            int IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
-            SubFrmCompras SubCompras = new SubFrmCompras(IdProveedor);
-            SubCompras.ShowDialog();
+            if (cboProveedor.Enabled == false)
+            {
+                SubFrmCompras SubCompras = new SubFrmCompras(detalle_.proveedor.IdProveedor, detalle_.ordenCompra.IdOrdenDeCompra);
+                SubCompras.ShowDialog();
+                listarDetalles();
+            }
+            else
+            { 
+                int IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
+                SubFrmCompras SubCompras = new SubFrmCompras(IdProveedor,0);
+                SubCompras.ShowDialog();
+                listarDetalles();
+            }
+
+            listarDetalles();
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -186,13 +205,54 @@ namespace CU
         private void Button1_Click(object sender, EventArgs e)
         {
             _ordenDecompra.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
+            _ordenDecompra._estado.IdEstadoOrdenCompra = Convert.ToInt32(((DataRowView)cboEstado.SelectedItem)["IdEstadoOrdenCompra"]);
             _ordenDecompra.Accion(_ordenDecompra, "ALTA");
             MessageBox.Show("Se generó la orden de compra exitosamente, agregue los artículos en la siguiente lista");
+            listarDetalles();
         }
 
         private void FrmNewModCompras_Load(object sender, EventArgs e)
         {
+            listarDetalles();
+            
+        }
 
+        private void FrmNewModCompras_Activated(object sender, EventArgs e)
+        {
+            listarDetalles();
+        }
+
+        
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            _ordenDecompra.IdOrdenDeCompra = detalle_.IdOrdenDeCompra;
+            _ordenDecompra._estado.IdEstadoOrdenCompra = Convert.ToInt32(((DataRowView)cboEstado.SelectedItem)["IdEstadoOrdenCompra"]);
+            _ordenDecompra.Accion(_ordenDecompra, "MODIFICAR");
+            MessageBox.Show("Se modificó la orden de compra exitosamente");
+            listarDetalles();
+        }
+
+        private void BtnCalcular_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in listaDetalle.Rows)
+            {
+                total += Convert.ToDecimal(row.Cells["SubTotal"].Value);
+            }
+            textBox1.Text = Convert.ToString(total);
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea borrar el registro?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
+            {
+            detalle_.IdDetalle = Convert.ToInt32(listaDetalle.CurrentRow.Cells[0].Value.ToString());
+                detalle_.Alta(detalle_, "BAJA");
+            }else
+            {
+                
+            }
+            listarDetalles();
         }
     }
 }

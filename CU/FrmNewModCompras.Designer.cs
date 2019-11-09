@@ -41,17 +41,21 @@
             this.btnEliminar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.PictureBox();
             this.listaDetalle = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Articulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -169,6 +173,7 @@
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.TabStop = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -207,6 +212,7 @@
             this.listaDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.listaDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdDetalle,
             this.CodProveedor,
             this.Articulo,
             this.Cantidad,
@@ -241,6 +247,118 @@
             this.listaDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaDetalle.Size = new System.Drawing.Size(877, 315);
             this.listaDetalle.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.btnCalcular);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(16, 465);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(877, 37);
+            this.panel2.TabIndex = 13;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(613, 6);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(53, 23);
+            this.lblTotal.TabIndex = 1;
+            this.lblTotal.Text = "Total";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(692, 9);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(165, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.Gray;
+            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalizar.Location = new System.Drawing.Point(766, 513);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(127, 36);
+            this.btnFinalizar.TabIndex = 3;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(351, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(219, 39);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Generar orden de compra";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(643, 62);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(185, 24);
+            this.cboEstado.TabIndex = 15;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Gray;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Location = new System.Drawing.Point(351, 54);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(219, 39);
+            this.btnModificar.TabIndex = 16;
+            this.btnModificar.Text = "Modificar orden de compra";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.Gray;
+            this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
+            this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalcular.Location = new System.Drawing.Point(497, 2);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(98, 33);
+            this.btnCalcular.TabIndex = 17;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
+            // 
+            // IdDetalle
+            // 
+            this.IdDetalle.HeaderText = "N";
+            this.IdDetalle.MinimumWidth = 6;
+            this.IdDetalle.Name = "IdDetalle";
+            this.IdDetalle.ReadOnly = true;
             // 
             // CodProveedor
             // 
@@ -284,76 +402,14 @@
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Controls.Add(this.lblTotal);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(16, 465);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(877, 37);
-            this.panel2.TabIndex = 13;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(575, 6);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(53, 23);
-            this.lblTotal.TabIndex = 1;
-            this.lblTotal.Text = "Total";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(636, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.Gray;
-            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
-            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(766, 513);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(127, 36);
-            this.btnFinalizar.TabIndex = 3;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(351, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 39);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Generar orden de compra";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // FrmNewModCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(909, 562);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.panel2);
@@ -366,6 +422,7 @@
             this.Name = "FrmNewModCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNewModCompras";
+            this.Activated += new System.EventHandler(this.FrmNewModCompras_Activated);
             this.Load += new System.EventHandler(this.FrmNewModCompras_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -394,14 +451,18 @@
         private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Articulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bonificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioU;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Button btnMinimizar;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button button1;
     }
 }

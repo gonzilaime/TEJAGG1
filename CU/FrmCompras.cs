@@ -34,6 +34,7 @@ namespace CU
 
                 FrmNewModCompras formularioOrden = new FrmNewModCompras(_detalle=null);
                 formularioOrden.ShowDialog();
+                listar(txtBuscar.Text,"t2.RazonSocial");
             }//if
             else
             {
@@ -42,45 +43,43 @@ namespace CU
             }//end-if
         }//btnAgregar
 
-        public void listar()
+        public void listar(string cadena,string condicion)
         {
             OrdenDeCompra compra = new OrdenDeCompra();
             listaOrdenes.Rows.Clear();
-            var cadena = txtBuscar.Text.ToString();
-            var ordenObtenida = compra.obtenerCompras(cadena);
+            var ordenObtenida = compra.obtenerCompras(cadena, condicion);
 
             foreach (var orden in ordenObtenida)
             {
-                listaOrdenes.Rows.Add(orden.IdOrdenDeCompra, orden.Fecha, orden.proveedor.RazonSocial,
-                    orden._estado.DescripcionEstadoOrdenCompra);
+                listaOrdenes.Rows.Add(orden.IdOrdenDeCompra, orden.Fecha, orden.proveedor.RazonSocial,orden.proveedor.IdProveedor,
+                    orden._estado.DescripcionEstadoOrdenCompra,orden.Monto);
             }//foreach
 
         }//listar
 
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-            listar();
+
+            chequear();
+            
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
-            listar();
+            listar(txtBuscar.Text, "t2.RazonSocial");
         }//txtChanged
 
         private void ListaOrdenes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tipoPerfil.IdPerfil == 1)
             {
+                Detalle detail = new Detalle();
+                detail.ordenCompra.IdOrdenDeCompra = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[0].Value.ToString());
+                detail.proveedor.IdProveedor = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[3].Value.ToString());
 
-                _detalle.IdOrdenDeCompra = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[0].Value.ToString());
-                //_detalle.proveedor.IdProveedor = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[4].Value.ToString());
-                //articulo.Bonificacion = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
-                //articulo.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
-                //articulo.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString());
-                //articulo.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[5].Value.ToString();
-
-                FrmNewModCompras formularioOrden = new FrmNewModCompras(_detalle);
+                FrmNewModCompras formularioOrden = new FrmNewModCompras(detail);
                 formularioOrden.ShowDialog();
+                listar(txtBuscar.Text, "t2.RazonSocial");
             }//if
             else
             {
@@ -88,6 +87,93 @@ namespace CU
                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }//end-if
         }
+
+        public void chequear()
+        {
+            if(radioBtnPendiente.Checked == true)
+            {
+                listar("PENDIENTE", "t3.DescripcionOrdenCompra");
+            }
+            else if (radioBtnAnuladas.Checked == true)
+            {
+                listar("ANULADA", "t3.DescripcionOrdenCompra");
+            }
+            else if (radioBtnEntregada.Checked == true)
+            {
+                listar("ENTREGADA", "t3.DescripcionOrdenCompra");
+            }
+            else if(RadioBtnOC.Checked == true)
+            { 
+                listar(txtBuscar.Text, "t2.RazonSocial");
+            }
+            else
+            {
+                listar(txtBuscar.Text, "t2.RazonSocial");
+            }
+        }
+        private void FrmCompras_Activated(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (tipoPerfil.IdPerfil == 1)
+            {
+                Detalle deta = new Detalle();
+                deta.ordenCompra.IdOrdenDeCompra = Convert.ToInt32(listaOrdenes.CurrentRow.Cells[0].Value.ToString());
+                deta.proveedor.IdProveedor = Convert.ToInt32(listaOrdenes.CurrentRow.Cells[3].Value.ToString());
+                FrmNewModCompras formularioOrden = new FrmNewModCompras(deta);
+                formularioOrden.ShowDialog();
+                listar(txtBuscar.Text,"t2.RazonSocial");
+            }
+            else
+            {
+                MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #region RadioBtn
+        private void RadioBtnPendiente_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnAnuladas_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnEntregada_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnPendiente_Click(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnAnuladas_Click(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnEntregada_Click(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void BtnOC_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnOC_Click(object sender, EventArgs e)
+        {
+            chequear();
+        }
     }//FrmCompras
-    
+    #endregion
+
 }//CU

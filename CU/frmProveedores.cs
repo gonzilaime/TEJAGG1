@@ -34,10 +34,12 @@ namespace CU
 
         private void BtnNewProveedor_Click(object sender, EventArgs e)
         {
-            if (_tipoPerfil.IdPerfil == 1) { 
-            FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
-            formulario.ShowDialog();
-                
+            if (_tipoPerfil.IdPerfil == 1)
+            { 
+                FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
+                formulario.ShowDialog();
+
+                listar();
             }
             else
             {
@@ -76,20 +78,22 @@ namespace CU
         {
             if (_tipoPerfil.IdPerfil == 1)
             {
-                _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.CurrentRow.Cells[0].Value.ToString());
-                _proveedor.CuitCuil = listaProveedor.CurrentRow.Cells[1].Value.ToString();
-                _proveedor.RazonSocial = listaProveedor.CurrentRow.Cells[2].Value.ToString();
-                _proveedor.Direccion = listaProveedor.CurrentRow.Cells[3].Value.ToString();
-                _proveedor.Localidad = listaProveedor.CurrentRow.Cells[4].Value.ToString();
-                _proveedor.provincia.DescripcionProvincia = listaProveedor.CurrentRow.Cells[5].Value.ToString();
-                _proveedor.Tel1 = listaProveedor.CurrentRow.Cells[6].Value.ToString();
-                _proveedor.Tel2 = listaProveedor.CurrentRow.Cells[7].Value.ToString();
-                _proveedor.Email = listaProveedor.CurrentRow.Cells[8].Value.ToString();
-                _proveedor.Estado.DescripcionEstado = listaProveedor.CurrentRow.Cells[9].Value.ToString();
+                Proveedor prov = new Proveedor();
+                prov.IdProveedor = Convert.ToInt32(listaProveedor.CurrentRow.Cells[0].Value.ToString());
+                prov.CuitCuil = listaProveedor.CurrentRow.Cells[1].Value.ToString();
+                prov.RazonSocial = listaProveedor.CurrentRow.Cells[2].Value.ToString();
+                prov.Direccion = listaProveedor.CurrentRow.Cells[3].Value.ToString();
+                prov.Localidad = listaProveedor.CurrentRow.Cells[4].Value.ToString();
+                prov.provincia.DescripcionProvincia = listaProveedor.CurrentRow.Cells[5].Value.ToString();
+                prov.Tel1 = listaProveedor.CurrentRow.Cells[6].Value.ToString();
+                prov.Tel2 = listaProveedor.CurrentRow.Cells[7].Value.ToString();
+                prov.Email = listaProveedor.CurrentRow.Cells[8].Value.ToString();
+                prov.Estado.DescripcionEstado = listaProveedor.CurrentRow.Cells[9].Value.ToString();
 
 
-                Form formProveedor = new FrmNewProvCli(_proveedor);
+                Form formProveedor = new FrmNewProvCli(prov);
                 formProveedor.ShowDialog();
+                listar();
             }
             else
             {
@@ -102,20 +106,19 @@ namespace CU
         {
             if (_tipoPerfil.IdPerfil == 1)
             {
-                _proveedor.IdProveedor = Convert.ToInt32(listaProveedor.Rows[e.RowIndex].Cells[0].Value.ToString());
-                _proveedor.CuitCuil = listaProveedor.Rows[e.RowIndex].Cells[1].Value.ToString();
-                _proveedor.RazonSocial = listaProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
-                _proveedor.Direccion = listaProveedor.Rows[e.RowIndex].Cells[3].Value.ToString();
-                _proveedor.Localidad = listaProveedor.Rows[e.RowIndex].Cells[4].Value.ToString();
-                _proveedor.provincia.DescripcionProvincia = listaProveedor.Rows[e.RowIndex].Cells[5].Value.ToString();
-                _proveedor.Tel1 = listaProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
-                _proveedor.Tel2 = listaProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
-                _proveedor.Email = listaProveedor.Rows[e.RowIndex].Cells[8].Value.ToString();
-                _proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
+                Proveedor proveedor = new Proveedor();
+                proveedor.IdProveedor = Convert.ToInt32(listaProveedor.Rows[e.RowIndex].Cells[0].Value.ToString());
+                proveedor.CuitCuil = listaProveedor.Rows[e.RowIndex].Cells[1].Value.ToString();
+                proveedor.RazonSocial = listaProveedor.Rows[e.RowIndex].Cells[2].Value.ToString();
+                proveedor.Direccion = listaProveedor.Rows[e.RowIndex].Cells[3].Value.ToString();
+                proveedor.Localidad = listaProveedor.Rows[e.RowIndex].Cells[4].Value.ToString();
+                proveedor.provincia.DescripcionProvincia = listaProveedor.Rows[e.RowIndex].Cells[5].Value.ToString();
+                proveedor.Tel1 = listaProveedor.Rows[e.RowIndex].Cells[6].Value.ToString();
+                proveedor.Tel2 = listaProveedor.Rows[e.RowIndex].Cells[7].Value.ToString();
+                proveedor.Email = listaProveedor.Rows[e.RowIndex].Cells[8].Value.ToString();
+                proveedor.Estado.DescripcionEstado = listaProveedor.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-
-
-                FrmNewProvCli formProveedor = new FrmNewProvCli(_proveedor);
+                FrmNewProvCli formProveedor = new FrmNewProvCli(proveedor);
                 formProveedor.ShowDialog();
                 listar();
             }

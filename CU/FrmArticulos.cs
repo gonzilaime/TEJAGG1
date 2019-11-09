@@ -52,6 +52,7 @@ namespace CU
             {
                 FrmNewModArt formulario = new FrmNewModArt(articulo = null);
                 formulario.ShowDialog();
+                listarArticulos();
             }//IF
             else
             {
@@ -66,17 +67,18 @@ namespace CU
         {
             if (tipoPerfil.IdPerfil == 1)
             {
+                Articulos art = new Articulos();
+                art.IdArticulo = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                art.NombreArticulo = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                art.Bonificacion = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
+                art.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
+                art.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString());
+                art.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-                articulo.IdArticulo = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString());
-                articulo.NombreArticulo = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
-                articulo.Bonificacion = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
-                articulo.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
-                articulo.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString());
-                articulo.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-
-                FrmNewModArt formulario = new FrmNewModArt(articulo);
+                FrmNewModArt formulario = new FrmNewModArt(art);
                 formulario.ShowDialog();
+                listarArticulos();
             }//IF
             else
             {
@@ -92,8 +94,7 @@ namespace CU
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
-            articulo = new Articulos();
-            proveedor = new Proveedor();
+
             listarArticulos();
         }
 
@@ -114,23 +115,29 @@ namespace CU
 
             if (tipoPerfil.IdPerfil == 1)
             {
+                Articulos artic = new Articulos();
+                artic.IdArticulo = Convert.ToInt32(listaArticulos.CurrentRow.Cells[0].Value.ToString());
+                artic.NombreArticulo = listaArticulos.CurrentRow.Cells[1].Value.ToString();
+                artic.Bonificacion = Convert.ToInt32(listaArticulos.CurrentRow.Cells[2].Value.ToString());
+                artic.Precio = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
+                artic.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.CurrentRow.Cells[4].Value.ToString());
+                artic.proveedor.RazonSocial = listaArticulos.CurrentRow.Cells[5].Value.ToString();
 
-                articulo.IdArticulo = Convert.ToInt32(listaArticulos.CurrentRow.Cells[0].Value.ToString());
-                articulo.NombreArticulo = listaArticulos.CurrentRow.Cells[1].Value.ToString();
-                articulo.Bonificacion = Convert.ToInt32(listaArticulos.CurrentRow.Cells[2].Value.ToString());
-                articulo.Precio = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
-                articulo.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.CurrentRow.Cells[4].Value.ToString());
-                articulo.proveedor.RazonSocial = listaArticulos.CurrentRow.Cells[5].Value.ToString();
 
-
-                FrmNewModArt formulario = new FrmNewModArt(articulo);
+                FrmNewModArt formulario = new FrmNewModArt(artic);
                 formulario.ShowDialog();
+                listarArticulos();
             }//IF
             else
             {
                 MessageBox.Show("No posee permisos para realizar esta acción, comuníquese con el Administrador",
                     "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }//END-IF
+        }
+
+        private void FrmArticulos_Activated(object sender, EventArgs e)
+        {
+            listarArticulos();
         }
     }
 }

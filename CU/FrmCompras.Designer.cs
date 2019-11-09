@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -51,12 +51,15 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.listaOrdenes = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.IdOrdenDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionEstadoOrdenCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.RadioBtnOC = new System.Windows.Forms.RadioButton();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -108,6 +111,7 @@
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -189,6 +193,8 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.panel9);
+            this.panel3.Controls.Add(this.RadioBtnOC);
             this.panel3.Controls.Add(this.radioBtnPendiente);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.radioBtnAnuladas);
@@ -217,6 +223,8 @@
             this.radioBtnPendiente.TabStop = true;
             this.radioBtnPendiente.Text = "Pendientes";
             this.radioBtnPendiente.UseVisualStyleBackColor = true;
+            this.radioBtnPendiente.CheckedChanged += new System.EventHandler(this.RadioBtnPendiente_CheckedChanged);
+            this.radioBtnPendiente.Click += new System.EventHandler(this.RadioBtnPendiente_Click);
             // 
             // panel8
             // 
@@ -240,6 +248,8 @@
             this.radioBtnAnuladas.TabStop = true;
             this.radioBtnAnuladas.Text = "Anuladas";
             this.radioBtnAnuladas.UseVisualStyleBackColor = true;
+            this.radioBtnAnuladas.CheckedChanged += new System.EventHandler(this.RadioBtnAnuladas_CheckedChanged);
+            this.radioBtnAnuladas.Click += new System.EventHandler(this.RadioBtnAnuladas_Click);
             // 
             // radioBtnEntregada
             // 
@@ -255,6 +265,8 @@
             this.radioBtnEntregada.TabStop = true;
             this.radioBtnEntregada.Text = "Entregadas";
             this.radioBtnEntregada.UseVisualStyleBackColor = true;
+            this.radioBtnEntregada.CheckedChanged += new System.EventHandler(this.RadioBtnEntregada_CheckedChanged);
+            this.radioBtnEntregada.Click += new System.EventHandler(this.RadioBtnEntregada_Click);
             // 
             // pictureBox1
             // 
@@ -285,7 +297,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(49, 6);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(394, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(274, 26);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
@@ -311,29 +323,30 @@
             this.listaOrdenes.BackgroundColor = System.Drawing.Color.LightGray;
             this.listaOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.listaOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdOrdenDeCompra,
             this.Fecha,
             this.RazonSocial,
+            this.IdProveedor,
             this.DescripcionEstadoOrdenCompra,
             this.Monto});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaOrdenes.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaOrdenes.DefaultCellStyle = dataGridViewCellStyle5;
             this.listaOrdenes.EnableHeadersVisualStyles = false;
             this.listaOrdenes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaOrdenes.Location = new System.Drawing.Point(3, 42);
@@ -341,55 +354,20 @@
             this.listaOrdenes.Name = "listaOrdenes";
             this.listaOrdenes.ReadOnly = true;
             this.listaOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.listaOrdenes.RowHeadersWidth = 51;
             this.listaOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.listaOrdenes.Size = new System.Drawing.Size(981, 480);
             this.listaOrdenes.TabIndex = 13;
             this.listaOrdenes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaOrdenes_CellContentDoubleClick);
-            // 
-            // IdOrdenDeCompra
-            // 
-            this.IdOrdenDeCompra.HeaderText = "Numero orden de compra";
-            this.IdOrdenDeCompra.MinimumWidth = 6;
-            this.IdOrdenDeCompra.Name = "IdOrdenDeCompra";
-            this.IdOrdenDeCompra.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.MinimumWidth = 6;
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // DescripcionEstadoOrdenCompra
-            // 
-            this.DescripcionEstadoOrdenCompra.HeaderText = "Estado";
-            this.DescripcionEstadoOrdenCompra.MinimumWidth = 6;
-            this.DescripcionEstadoOrdenCompra.Name = "DescripcionEstadoOrdenCompra";
-            this.DescripcionEstadoOrdenCompra.ReadOnly = true;
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.MinimumWidth = 6;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
             // 
             // panel4
             // 
@@ -402,6 +380,87 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(987, 524);
             this.panel4.TabIndex = 15;
+            // 
+            // IdOrdenDeCompra
+            // 
+            this.IdOrdenDeCompra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.IdOrdenDeCompra.Frozen = true;
+            this.IdOrdenDeCompra.HeaderText = "Numero orden de compra";
+            this.IdOrdenDeCompra.MinimumWidth = 6;
+            this.IdOrdenDeCompra.Name = "IdOrdenDeCompra";
+            this.IdOrdenDeCompra.ReadOnly = true;
+            this.IdOrdenDeCompra.Width = 186;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Fecha.Frozen = true;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 186;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.RazonSocial.Frozen = true;
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.MinimumWidth = 6;
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 186;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.IdProveedor.Frozen = true;
+            this.IdProveedor.HeaderText = "Cod proveedor";
+            this.IdProveedor.MinimumWidth = 6;
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            this.IdProveedor.Width = 125;
+            // 
+            // DescripcionEstadoOrdenCompra
+            // 
+            this.DescripcionEstadoOrdenCompra.HeaderText = "Estado";
+            this.DescripcionEstadoOrdenCompra.MinimumWidth = 6;
+            this.DescripcionEstadoOrdenCompra.Name = "DescripcionEstadoOrdenCompra";
+            this.DescripcionEstadoOrdenCompra.ReadOnly = true;
+            this.DescripcionEstadoOrdenCompra.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.MinimumWidth = 6;
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            // 
+            // RadioBtnOC
+            // 
+            this.RadioBtnOC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RadioBtnOC.AutoSize = true;
+            this.RadioBtnOC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RadioBtnOC.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioBtnOC.Location = new System.Drawing.Point(352, 3);
+            this.RadioBtnOC.Margin = new System.Windows.Forms.Padding(4);
+            this.RadioBtnOC.Name = "RadioBtnOC";
+            this.RadioBtnOC.Size = new System.Drawing.Size(85, 32);
+            this.RadioBtnOC.TabIndex = 21;
+            this.RadioBtnOC.TabStop = true;
+            this.RadioBtnOC.Text = "Todas";
+            this.RadioBtnOC.UseVisualStyleBackColor = true;
+            this.RadioBtnOC.CheckedChanged += new System.EventHandler(this.BtnOC_CheckedChanged);
+            this.RadioBtnOC.Click += new System.EventHandler(this.RadioBtnOC_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(330, 1);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(4, 39);
+            this.panel9.TabIndex = 22;
             // 
             // FrmCompras
             // 
@@ -417,6 +476,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCompras";
             this.Text = "FrmCompras";
+            this.Activated += new System.EventHandler(this.FrmCompras_Activated);
             this.Load += new System.EventHandler(this.FrmCompras_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -455,7 +515,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdOrdenDeCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionEstadoOrdenCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.RadioButton RadioBtnOC;
     }
 }

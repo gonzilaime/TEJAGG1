@@ -66,9 +66,10 @@
             this.panel2.Controls.Add(this.btnNewArticulo);
             this.panel2.Controls.Add(this.shapeContainer3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 37);
+            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(768, 28);
+            this.panel2.Size = new System.Drawing.Size(1024, 34);
             this.panel2.TabIndex = 4;
             // 
             // panel5
@@ -76,9 +77,10 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.Location = new System.Drawing.Point(266, 2);
+            this.panel5.Location = new System.Drawing.Point(355, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(502, 24);
+            this.panel5.Size = new System.Drawing.Size(669, 30);
             this.panel5.TabIndex = 11;
             // 
             // btnModificar
@@ -92,9 +94,10 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(134, 2);
+            this.btnModificar.Location = new System.Drawing.Point(179, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(130, 24);
+            this.btnModificar.Size = new System.Drawing.Size(173, 30);
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar Proveedor";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -111,9 +114,10 @@
             this.btnNewArticulo.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewArticulo.ForeColor = System.Drawing.Color.Black;
             this.btnNewArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewArticulo.Location = new System.Drawing.Point(2, 2);
+            this.btnNewArticulo.Location = new System.Drawing.Point(3, 2);
+            this.btnNewArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNewArticulo.Name = "btnNewArticulo";
-            this.btnNewArticulo.Size = new System.Drawing.Size(130, 24);
+            this.btnNewArticulo.Size = new System.Drawing.Size(173, 30);
             this.btnNewArticulo.TabIndex = 5;
             this.btnNewArticulo.Text = "Agregar";
             this.btnNewArticulo.UseVisualStyleBackColor = false;
@@ -127,7 +131,7 @@
             this.shapeContainer3.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape4,
             this.lineShape2});
-            this.shapeContainer3.Size = new System.Drawing.Size(768, 28);
+            this.shapeContainer3.Size = new System.Drawing.Size(1024, 34);
             this.shapeContainer3.TabIndex = 6;
             this.shapeContainer3.TabStop = false;
             // 
@@ -157,17 +161,19 @@
             this.panel1.Controls.Add(this.lblProveedores);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 37);
+            this.panel1.Size = new System.Drawing.Size(1024, 46);
             this.panel1.TabIndex = 3;
             // 
             // lblProveedores
             // 
             this.lblProveedores.AutoSize = true;
             this.lblProveedores.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedores.Location = new System.Drawing.Point(12, 5);
+            this.lblProveedores.Location = new System.Drawing.Point(16, 6);
+            this.lblProveedores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProveedores.Name = "lblProveedores";
-            this.lblProveedores.Size = new System.Drawing.Size(87, 26);
+            this.lblProveedores.Size = new System.Drawing.Size(111, 33);
             this.lblProveedores.TabIndex = 0;
             this.lblProveedores.Text = "Artículos";
             // 
@@ -178,18 +184,20 @@
             this.panel3.BackColor = System.Drawing.Color.LightGray;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.txtBuscar);
-            this.panel3.Location = new System.Drawing.Point(17, 109);
+            this.panel3.Location = new System.Drawing.Point(23, 134);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(736, 32);
+            this.panel3.Size = new System.Drawing.Size(981, 39);
             this.panel3.TabIndex = 9;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -199,9 +207,10 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(37, 5);
+            this.txtBuscar.Location = new System.Drawing.Point(49, 6);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(296, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(394, 26);
             this.txtBuscar.TabIndex = 5;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
@@ -244,7 +253,8 @@
             this.listaArticulos.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaArticulos.EnableHeadersVisualStyles = false;
             this.listaArticulos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaArticulos.Location = new System.Drawing.Point(17, 141);
+            this.listaArticulos.Location = new System.Drawing.Point(23, 174);
+            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listaArticulos.Name = "listaArticulos";
             this.listaArticulos.ReadOnly = true;
             this.listaArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -259,7 +269,7 @@
             this.listaArticulos.RowHeadersWidth = 51;
             this.listaArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaArticulos.Size = new System.Drawing.Size(736, 390);
+            this.listaArticulos.Size = new System.Drawing.Size(981, 480);
             this.listaArticulos.TabIndex = 8;
             this.listaArticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellContentDoubleClick);
             this.listaArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellDoubleClick);
@@ -295,6 +305,7 @@
             // IdProveedor
             // 
             this.IdProveedor.HeaderText = "Codigo de Proveedor";
+            this.IdProveedor.MinimumWidth = 6;
             this.IdProveedor.Name = "IdProveedor";
             this.IdProveedor.ReadOnly = true;
             // 
@@ -311,25 +322,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(15, 107);
+            this.panel4.Location = new System.Drawing.Point(20, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 426);
+            this.panel4.Size = new System.Drawing.Size(987, 524);
             this.panel4.TabIndex = 10;
             // 
             // FrmArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(768, 557);
+            this.ClientSize = new System.Drawing.Size(1024, 686);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.listaArticulos);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmArticulos";
             this.Text = "FrmArticulos";
+            this.Activated += new System.EventHandler(this.FrmArticulos_Activated);
             this.Load += new System.EventHandler(this.FrmArticulos_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

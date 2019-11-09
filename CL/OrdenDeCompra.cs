@@ -14,15 +14,18 @@ namespace CL
         public int IdProveedor { get; set; }
         public DateTime Fecha { get; set; }
         public int IdEstadoCompra { get; set; }
+        public decimal Monto { get; set; }
 
         public Proveedor proveedor;
         public EstadoOrdenCompra _estado;
-       
+
+
 
         public OrdenDeCompra()
         {
             _estado = new EstadoOrdenCompra();
             proveedor = new Proveedor();
+
 
         }//constructor
 
@@ -42,13 +45,14 @@ namespace CL
                 if(ejecutar == "ALTA")
                 {
                     parametros.Add(new SqlParameter("@IdProveedor", orden.proveedor.IdProveedor));
+                    parametros.Add(new SqlParameter("@IdEstadoOrdenCompra", orden._estado.IdEstadoOrdenCompra));
                     parametros.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                     rta = ejecutarSP.ExecuteNonQuery("GenerarOrdenDeCompra_SP", parametros);
                 }else
                 {
                     parametros.Add(new SqlParameter("@IdOrdenDeCompra", orden.IdOrdenDeCompra));
                     parametros.Add(new SqlParameter("@IdEstadoOrdenCompra", orden._estado.IdEstadoOrdenCompra));
-
+                    parametros.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                     rta = ejecutarSP.ExecuteNonQuery("ActualizarOrdenDeCompra_SP", parametros);
                 }
 
@@ -67,7 +71,7 @@ namespace CL
          * Método para listar Ordenes de de compra**
          *******************************************/
 
-        public List<OrdenDeCompra> obtenerCompras(string cadena)
+        public List<OrdenDeCompra> obtenerCompras(string cadena,string condicion)
         {
             var conn = new SqlConnection();
             var cmd = new SqlCommand();
@@ -78,13 +82,19 @@ namespace CL
             {
                 conn = baseDatos.Abrir();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT t1.IdOrdenDeCompra,t1.Fecha,t1.IdProveedor,t2.RazonSocial,t1.IdEstadoOrdenCompra,t3.DescripcionOrdenCompra"
-                                + " FROM OrdenDeCompra as t1"
-                                + " INNER JOIN Proveedores as t2"
-                                + " ON t1.IdProveedor=t2.IdProveedor"
-                                + " INNER JOIN EstadoOrdenCompra as t3"
-                                + " ON t1.IdEstadoOrdenCompra = t3.IdEstadoOrdenCompra WHERE t2.RazonSocial like '%" + cadena + "%'"
-                                + "ORDER BY t1.IdOrdenDeCompra ";
+                cmd.CommandText = "SELECT t1.IdOrdenDeCompra, t1.Fecha, t1.IdProveedor, t2.RazonSocial,t1.IdEstadoOrdenCompra, "
+                                 +  "t3.DescripcionOrdenCompra, SUM(t4.Cantidad * t4.PrecioUnitario) Monto "
+                                 + "FROM OrdenDeCompra as t1 "
+                                 + "INNER JOIN Proveedores as t2 "
+                                 + "ON t1.IdProveedor = t2.IdProveedor "
+                                 + "INNER JOIN EstadoOrdenCompra as t3 "
+                                 + "ON t1.IdEstadoOrdenCompra = t3.IdEstadoOrdenCompra "
+                                 + "INNER JOIN Detalle as t4 "
+                                 + "ON t1.IdOrdenDeCompra = t4.IdOrdenDeCompra "
+                                 + "WHERE " + condicion + " like '%" + cadena +"%' "
+                                 + "GROUP BY t1.IdOrdenDeCompra, t1.Fecha, t1.IdProveedor," 
+                                 + "t2.RazonSocial, t1.IdEstadoOrdenCompra, t3.DescripcionOrdenCompra "
+                                 + "ORDER BY t1.IdOrdenDeCompra";
 
                 var registroObtenido = cmd.ExecuteReader();
                 while (registroObtenido != null && registroObtenido.Read())
@@ -97,7 +107,7 @@ namespace CL
                     ordenDeCompra.proveedor.RazonSocial = (string)registroObtenido["RazonSocial"];
                     ordenDeCompra._estado.IdEstadoOrdenCompra = (int)registroObtenido["IdEstadoOrdenCompra"];
                     ordenDeCompra._estado.DescripcionEstadoOrdenCompra = (string)registroObtenido["DescripcionOrdenCompra"];
-
+                    ordenDeCompra.Monto = (decimal)registroObtenido["Monto"];
                     listaCompras.Add(ordenDeCompra);
 
                 }//while

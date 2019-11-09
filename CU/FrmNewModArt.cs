@@ -149,7 +149,7 @@ namespace CU
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
 
                 articulo.AccionArticulo(articulo, "ALTA");
-                this.Hide();
+                this.Close();
                 MessageBox.Show("El articulo " + articulo.NombreArticulo + " ha sido ingresado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
@@ -226,7 +226,7 @@ namespace CU
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
 
                 articulo.AccionArticulo(articulo, "MODIFICAR");
-                this.Hide();
+                this.Close();
                 MessageBox.Show("El articulo " + articulo.NombreArticulo + " ha sido modificado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
