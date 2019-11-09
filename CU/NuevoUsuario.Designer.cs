@@ -36,10 +36,11 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.lblPerfil = new System.Windows.Forms.Label();
-            this.cboProv = new System.Windows.Forms.ComboBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.cboTipoPerfil = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblNickObligatorio = new System.Windows.Forms.Label();
             this.lblContraseñaObligatorio = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,31 +140,31 @@
             this.lblPerfil.TabIndex = 40;
             this.lblPerfil.Text = "Tipo de perfil ";
             // 
-            // cboProv
+            // cboTipoPerfil
             // 
-            this.cboProv.BackColor = System.Drawing.Color.White;
-            this.cboProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboProv.FormattingEnabled = true;
-            this.cboProv.Location = new System.Drawing.Point(124, 171);
-            this.cboProv.Name = "cboProv";
-            this.cboProv.Size = new System.Drawing.Size(227, 24);
-            this.cboProv.TabIndex = 41;
+            this.cboTipoPerfil.BackColor = System.Drawing.Color.White;
+            this.cboTipoPerfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoPerfil.FormattingEnabled = true;
+            this.cboTipoPerfil.Location = new System.Drawing.Point(124, 171);
+            this.cboTipoPerfil.Name = "cboTipoPerfil";
+            this.cboTipoPerfil.Size = new System.Drawing.Size(227, 24);
+            this.cboTipoPerfil.TabIndex = 41;
             // 
-            // btnFinalizar
+            // btnCancelar
             // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.Color.Black;
-            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.Location = new System.Drawing.Point(257, 227);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(94, 29);
-            this.btnFinalizar.TabIndex = 42;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            this.btnCancelar.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(257, 227);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // lblNickObligatorio
             // 
@@ -191,16 +192,32 @@
             this.lblContraseñaObligatorio.Text = "Este campo es obligatorio.";
             this.lblContraseñaObligatorio.Visible = false;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(157, 227);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(94, 29);
+            this.btnGuardar.TabIndex = 58;
+            this.btnGuardar.Text = "Guardar ";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
             // NuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(369, 268);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblContraseñaObligatorio);
             this.Controls.Add(this.lblNickObligatorio);
-            this.Controls.Add(this.btnFinalizar);
-            this.Controls.Add(this.cboProv);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.cboTipoPerfil);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.lblContraseña);
@@ -228,9 +245,10 @@
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label lblPerfil;
-        private System.Windows.Forms.ComboBox cboProv;
-        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.ComboBox cboTipoPerfil;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblNickObligatorio;
         private System.Windows.Forms.Label lblContraseñaObligatorio;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

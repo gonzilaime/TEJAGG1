@@ -7,11 +7,15 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using CL;
 
 namespace CU
 {
     public partial class NuevoUsuario : Form
     {
+        public Usuario _usuario;
+        public Encriptar _encriptar;
+
         #region sombra y movilidad.
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
@@ -92,7 +96,11 @@ namespace CU
         #endregion
         public NuevoUsuario()
         {
+            _usuario = new Usuario();
+            _encriptar = new Encriptar(); 
+
             InitializeComponent();
+            Validacion.combo2campos(cboTipoPerfil, "DescripcionPerfil", "IdPerfil", "TipoPerfil");
         }
         #region CAMPOS OBLIGATORIOS
         public bool CamposObligatorios()
@@ -164,6 +172,18 @@ namespace CU
         {
 
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            _usuario.NickUsu = txtNick.Text;
+            // string cadenaEncriptada = _encriptar.GetMD5(txtContraseña.Text); 
+            _usuario.Contraseña = txtContraseña.Text; // cadenaEncriptada
+            _usuario.perfil.IdPerfil = Convert.ToInt32(((DataRowView)cboTipoPerfil.SelectedItem)["IdPerfil"]);
+            _usuario.AgregarUsuario(_usuario);
+            txtNick.Clear();
+            txtContraseña.Clear();
+            MessageBox.Show("El usuario " + _usuario.NickUsu + " ha sido ingresado ", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        } 
     }
 
 }

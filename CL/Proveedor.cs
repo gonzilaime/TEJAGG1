@@ -118,7 +118,7 @@ namespace CL
         //====================================================
         //Método para llenar ListBox con registros de la BBDD
         //====================================================
-        public List<Proveedor> obtenerProveedores(string cadena)
+        public List<Proveedor> obtenerProveedores(string cadena, string condicion)
         {
             var conn = new SqlConnection();
             var cmd = new SqlCommand();
@@ -134,7 +134,7 @@ namespace CL
                                 + "ON t1.IdProvincia=t2.IdProvincia "
                                 + " INNER JOIN Estado as t3 "
                                 + " ON t1.IdEstado = t3.IdEstado "
-                                + " WHERE t1.RazonSocial like '%" + cadena + "%'"
+                                + " WHERE " + condicion + " = '" + cadena + "' "
                                 + "ORDER BY t1.IdProveedor ";
                 var registroObtenido = cmd.ExecuteReader();
                 while(registroObtenido != null && registroObtenido.Read())

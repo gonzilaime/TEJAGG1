@@ -112,7 +112,7 @@ namespace CL
             return rta;
 
         }//Accion
-        public List<Clientes> obtenerCliente(string cadenacliente)
+        public List<Clientes> obtenerCliente(string cadenacliente, string condicion)
         {
             var conn = new SqlConnection();
             var cmd = new SqlCommand();
@@ -128,7 +128,7 @@ namespace CL
                                 + "ON t1.IdProvincia=t2.IdProvincia "
                                 + " INNER JOIN Estado as t3 "
                                 + " ON t1.IdEstado = t3.IdEstado "
-                                + " WHERE t1.RazonSocial like '%" + cadenacliente + "%'"
+                                + " WHERE " + condicion + " = '" + cadenacliente + "' "
                                 + "ORDER BY t1.RazonSocial";
                 var clientesObtenido = cmd.ExecuteReader();
                 while (clientesObtenido != null && clientesObtenido.Read())

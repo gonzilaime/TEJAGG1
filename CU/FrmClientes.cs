@@ -38,7 +38,8 @@ namespace CU
             
                 FrmNewModClientes formulario = new FrmNewModClientes(_cliente=null);
                 formulario.ShowDialog();
-                listar();
+                listar(txtBuscar.Text, "t1.RazonSocial");
+                chequear();
             }
             else
             {
@@ -46,15 +47,25 @@ namespace CU
                    "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void listar()
+        private void listar(string cadena, string condicion)
         {
             listaCliente.Rows.Clear();
-            var cadena = txtBuscar.Text.ToString();
-            var clienteObtenido = _cliente.obtenerCliente(cadena);
+            var clienteObtenido = _cliente.obtenerCliente(cadena, condicion);
 
             foreach (var reg in clienteObtenido)
             {
                 listaCliente.Rows.Add(reg.IdCliente, reg.CuitCuil, reg.RazonSocial, reg.Direccion, reg.Localidad, reg.provincia.DescripcionProvincia, reg.Tel1, reg.Tel2, reg.Email, reg.estado.DescripcionEstado);
+            }
+        }
+        public void chequear()
+        {
+            if(radioBtnActivos.Checked == true)
+            {
+                listar("Activo", "t3.DescripcionEstado");
+            }    
+            else if (radioBtnInactivos.Checked == true)
+            {
+                listar("Inactivo", "t3.DescripcionEstado");
             }
         }
 
@@ -75,7 +86,8 @@ namespace CU
 
                 FrmNewModClientes formulario = new FrmNewModClientes(_cliente);
                 formulario.ShowDialog();
-                listar();
+                listar(txtBuscar.Text, "t1.RazonSocial" );
+                chequear();
             }
             else
             {
@@ -89,7 +101,8 @@ namespace CU
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            listar();
+            listar(txtBuscar.Text, "t1.RazonSocial" );
+            chequear();
         }
 
      
@@ -113,7 +126,8 @@ namespace CU
 
                 FrmNewModClientes formProveedor = new FrmNewModClientes(_cliente);
                 formProveedor.ShowDialog();
-                listar();
+                listar(txtBuscar.Text, "t1.RazonSocial");
+                chequear();
             }
             else
             {
@@ -124,12 +138,32 @@ namespace CU
 
         private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-            listar();
+            listar(txtBuscar.Text, "t1.RazonSocial");
         }
 
         private void FrmClientes_Activated(object sender, EventArgs e)
         {
-            listar();
+            listar(txtBuscar.Text, "t1.RazonSocial");
+        }
+
+        private void RadioBtnActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnInactivos_Click(object sender, EventArgs e)
+        {
+            chequear();
+        }
+
+        private void RadioBtnActivos_Click(object sender, EventArgs e)
+        {
+            chequear();
         }
     }
 }

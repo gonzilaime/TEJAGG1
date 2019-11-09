@@ -168,7 +168,7 @@ namespace CU
                     this.Hide();
                     //FrmMenu menu = new FrmMenu(usuario.NroPerfil);
                     //menu.Show();
-                    FormMenu formMenu = new FormMenu(usuario.NroPerfil, usuario.Nick);
+                    FormMenu formMenu = new FormMenu(usuario.NroPerfil, usuario.NickUsu);
                     formMenu.Show();
 
                 }

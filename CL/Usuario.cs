@@ -11,7 +11,7 @@ namespace CL
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        public string Nick { get; set; }
+        public string NickUsu { get; set; }
         public string Contraseña { get; set; }
 
         public int IdPerfil { get; set; }
@@ -26,7 +26,7 @@ namespace CL
             encriptar = new Encriptar();
         }
         
-        public bool login(string Nick, string Contraseña)
+        public bool login(string NickUsu, string Contraseña)
         {
             var conn = new SqlConnection();
             var comando = new SqlCommand();
@@ -38,18 +38,21 @@ namespace CL
             {
                 conn = baseDatos.Abrir();
                 comando.Connection = conn;
-                SqlCommand cmd = new SqlCommand("SELECT Nick, Contraseña, IdPerfil FROM Usuario WHERE Nick = @Nick AND Contraseña = @Contraseña", conn);
-                cmd.Parameters.AddWithValue("Nick", Nick);
+                SqlCommand cmd = new SqlCommand("SELECT NickUsu, Contraseña, IdPerfil FROM Usuario WHERE NickUsu = @NickUsu AND Contraseña = @Contraseña", conn);
+                cmd.Parameters.AddWithValue("NickUsu", NickUsu);
                 cmd.Parameters.AddWithValue("Contraseña", Contraseña);
+
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                
+
+
+
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 rta = true;
                
                 if (dt.Rows.Count == 1)
                 {
-                    string rowUser = dt.Rows[0]["Nick"].ToString();
+                    string rowUser = dt.Rows[0]["NickUsu"].ToString();
                     Usuario.CacheUser.Nick = rowUser;
                     UsuarioLogueado.Nick = rowUser;
 
@@ -108,9 +111,10 @@ namespace CL
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "prc_AltaUsuario";
-                cmd.Parameters.Add(new SqlParameter("@Nick", Usuario.Nick));
+                cmd.Parameters.Add(new SqlParameter("@NickUsu", Usuario.NickUsu));
                 cmd.Parameters.Add(new SqlParameter("@Contraseña", Usuario.Contraseña));
                 cmd.Parameters.Add(new SqlParameter("@IdPerfil", Usuario.perfil.IdPerfil));
+                cmd.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
                 cmd.ExecuteNonQuery();
                 rta = true;
 

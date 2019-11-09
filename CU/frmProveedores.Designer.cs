@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.listaProveedor = new System.Windows.Forms.DataGridView();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CuitCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +52,13 @@
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.radioBtnInactivos = new System.Windows.Forms.RadioButton();
             this.radioBtnActivos = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedor)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -80,14 +80,14 @@
             this.listaProveedor.BackgroundColor = System.Drawing.Color.LightGray;
             this.listaProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.listaProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProveedor,
@@ -100,28 +100,28 @@
             this.Tel2,
             this.Email,
             this.DescripcionEstado});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaProveedor.DefaultCellStyle = dataGridViewCellStyle11;
             this.listaProveedor.EnableHeadersVisualStyles = false;
             this.listaProveedor.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaProveedor.Location = new System.Drawing.Point(2, 34);
             this.listaProveedor.MultiSelect = false;
             this.listaProveedor.Name = "listaProveedor";
             this.listaProveedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.listaProveedor.RowHeadersWidth = 30;
             this.listaProveedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -325,6 +325,38 @@
             this.panel3.Size = new System.Drawing.Size(736, 32);
             this.panel3.TabIndex = 6;
             // 
+            // radioBtnInactivos
+            // 
+            this.radioBtnInactivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnInactivos.AutoSize = true;
+            this.radioBtnInactivos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnInactivos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnInactivos.Location = new System.Drawing.Point(598, 4);
+            this.radioBtnInactivos.Name = "radioBtnInactivos";
+            this.radioBtnInactivos.Size = new System.Drawing.Size(89, 25);
+            this.radioBtnInactivos.TabIndex = 19;
+            this.radioBtnInactivos.Text = "Inactivos";
+            this.radioBtnInactivos.UseVisualStyleBackColor = true;
+            this.radioBtnInactivos.CheckedChanged += new System.EventHandler(this.RadioBtnInactivos_CheckedChanged);
+            this.radioBtnInactivos.Click += new System.EventHandler(this.RadioBtnInactivos_Click);
+            // 
+            // radioBtnActivos
+            // 
+            this.radioBtnActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioBtnActivos.AutoSize = true;
+            this.radioBtnActivos.Checked = true;
+            this.radioBtnActivos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioBtnActivos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnActivos.Location = new System.Drawing.Point(409, 4);
+            this.radioBtnActivos.Name = "radioBtnActivos";
+            this.radioBtnActivos.Size = new System.Drawing.Size(78, 25);
+            this.radioBtnActivos.TabIndex = 18;
+            this.radioBtnActivos.TabStop = true;
+            this.radioBtnActivos.Text = "Activos";
+            this.radioBtnActivos.UseVisualStyleBackColor = true;
+            this.radioBtnActivos.CheckedChanged += new System.EventHandler(this.RadioBtnActivos_CheckedChanged);
+            this.radioBtnActivos.Click += new System.EventHandler(this.RadioBtnActivos_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -335,6 +367,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(353, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(3, 32);
+            this.panel7.TabIndex = 17;
             // 
             // txtBuscar
             // 
@@ -347,6 +388,15 @@
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged_1);
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(545, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(3, 32);
+            this.panel6.TabIndex = 16;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -358,52 +408,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(740, 426);
             this.panel4.TabIndex = 7;
-            // 
-            // radioBtnInactivos
-            // 
-            this.radioBtnInactivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioBtnInactivos.AutoSize = true;
-            this.radioBtnInactivos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioBtnInactivos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnInactivos.Location = new System.Drawing.Point(598, 4);
-            this.radioBtnInactivos.Name = "radioBtnInactivos";
-            this.radioBtnInactivos.Size = new System.Drawing.Size(89, 25);
-            this.radioBtnInactivos.TabIndex = 19;
-            this.radioBtnInactivos.TabStop = true;
-            this.radioBtnInactivos.Text = "Inactivos";
-            this.radioBtnInactivos.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnActivos
-            // 
-            this.radioBtnActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioBtnActivos.AutoSize = true;
-            this.radioBtnActivos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioBtnActivos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnActivos.Location = new System.Drawing.Point(409, 4);
-            this.radioBtnActivos.Name = "radioBtnActivos";
-            this.radioBtnActivos.Size = new System.Drawing.Size(78, 25);
-            this.radioBtnActivos.TabIndex = 18;
-            this.radioBtnActivos.TabStop = true;
-            this.radioBtnActivos.Text = "Activos";
-            this.radioBtnActivos.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(353, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(3, 32);
-            this.panel7.TabIndex = 17;
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(545, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3, 32);
-            this.panel6.TabIndex = 16;
             // 
             // frmProveedores
             // 

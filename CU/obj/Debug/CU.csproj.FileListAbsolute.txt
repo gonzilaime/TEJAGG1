@@ -312,3 +312,28 @@ C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.exe
 C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.pdb
 C:\Users\Agustin\Desktop\Tejag (2)\git actual\TEJAGG1\CU\obj\Debug\CU.NuevoUsuario.resources
 D:\La Paz\Segundo año. Analista de sistemas\Programacion IV\git TEJAGG\TEJAGG1\CU\obj\Debug\CU.NuevoUsuario.resources
+C:\git TEJAGG8\TEJAGG1\CU\bin\Debug\CU.exe
+C:\git TEJAGG8\TEJAGG1\CU\bin\Debug\CU.pdb
+C:\git TEJAGG8\TEJAGG1\CU\bin\Debug\CL.dll
+C:\git TEJAGG8\TEJAGG1\CU\bin\Debug\CL.pdb
+C:\git TEJAGG8\TEJAGG1\CU\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.csprojAssemblyReference.cache
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmArticulos.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmClientes.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmCompras.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmMenu.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmNewModArt.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmNewModClientes.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmNewModCompras.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FrmNewProvCli.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.frmProveedores.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.Login.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.FormMenu.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.NuevoUsuario.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.Properties.Resources.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.SubFrmCompras.resources
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.csproj.GenerateResource.cache
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.csproj.CoreCompileInputs.cache
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.csproj.CopyComplete
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.exe
+C:\git TEJAGG8\TEJAGG1\CU\obj\Debug\CU.pdb
