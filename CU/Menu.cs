@@ -10,6 +10,7 @@ using CL;
 using System.Runtime.InteropServices;
 using System.Windows;
 using Application = System.Windows.Forms.Application;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace CU
 {
@@ -286,6 +287,7 @@ namespace CU
         }
         private void FormMenu_Load_1(object sender, EventArgs e)
         {
+            MessageBox.Show("Bienvenido/a al sistema", "TEJAGG", MessageBoxButtons.OK, MessageBoxIcon.Information);
             BtnIni_Click(null, e);
             CargaUser();
         

@@ -44,13 +44,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.listaArticulos = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bonificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,7 +66,7 @@
             this.panel2.Controls.Add(this.shapeContainer3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 34);
             this.panel2.TabIndex = 4;
@@ -78,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.LightGray;
             this.panel5.Location = new System.Drawing.Point(355, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(669, 30);
             this.panel5.TabIndex = 11;
@@ -95,7 +94,7 @@
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(179, 2);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(173, 30);
             this.btnModificar.TabIndex = 7;
@@ -115,7 +114,7 @@
             this.btnNewArticulo.ForeColor = System.Drawing.Color.Black;
             this.btnNewArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewArticulo.Location = new System.Drawing.Point(3, 2);
-            this.btnNewArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewArticulo.Name = "btnNewArticulo";
             this.btnNewArticulo.Size = new System.Drawing.Size(173, 30);
             this.btnNewArticulo.TabIndex = 5;
@@ -161,7 +160,7 @@
             this.panel1.Controls.Add(this.lblProveedores);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 46);
             this.panel1.TabIndex = 3;
@@ -185,7 +184,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.txtBuscar);
             this.panel3.Location = new System.Drawing.Point(23, 134);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(981, 39);
             this.panel3.TabIndex = 9;
@@ -195,7 +194,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CU.Properties.Resources.magnifying_glass;
             this.pictureBox1.Location = new System.Drawing.Point(20, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(21, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,7 +207,7 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(49, 6);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(394, 26);
             this.txtBuscar.TabIndex = 5;
@@ -239,7 +238,6 @@
             this.listaArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdArticulo,
             this.NombreArticulo,
-            this.Bonificacion,
             this.Precio,
             this.IdProveedor,
             this.RazonSocial});
@@ -254,7 +252,7 @@
             this.listaArticulos.EnableHeadersVisualStyles = false;
             this.listaArticulos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listaArticulos.Location = new System.Drawing.Point(23, 174);
-            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listaArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.listaArticulos.Name = "listaArticulos";
             this.listaArticulos.ReadOnly = true;
             this.listaArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -274,6 +272,18 @@
             this.listaArticulos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellContentDoubleClick);
             this.listaArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaArticulos_CellDoubleClick);
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Location = new System.Drawing.Point(20, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(987, 524);
+            this.panel4.TabIndex = 10;
+            // 
             // IdArticulo
             // 
             this.IdArticulo.HeaderText = "ID Artículo";
@@ -287,13 +297,6 @@
             this.NombreArticulo.MinimumWidth = 6;
             this.NombreArticulo.Name = "NombreArticulo";
             this.NombreArticulo.ReadOnly = true;
-            // 
-            // Bonificacion
-            // 
-            this.Bonificacion.HeaderText = "Bonificación";
-            this.Bonificacion.MinimumWidth = 6;
-            this.Bonificacion.Name = "Bonificacion";
-            this.Bonificacion.ReadOnly = true;
             // 
             // Precio
             // 
@@ -316,18 +319,6 @@
             this.RazonSocial.Name = "RazonSocial";
             this.RazonSocial.ReadOnly = true;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(20, 132);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(987, 524);
-            this.panel4.TabIndex = 10;
-            // 
             // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,7 +331,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmArticulos";
             this.Text = "FrmArticulos";
             this.Activated += new System.EventHandler(this.FrmArticulos_Activated);
@@ -371,12 +362,11 @@
         private System.Windows.Forms.DataGridView listaArticulos;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bonificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
-        private System.Windows.Forms.Panel panel5;
     }
 }

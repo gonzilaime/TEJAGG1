@@ -16,6 +16,7 @@ namespace CU
         public Articulos articulo;
         public Provincia _provincia;
         public Proveedor _proveedor;
+        public Validacion validar;
         public string AccionArticulo;
 
         #region SOMBRA FORMULARIO
@@ -103,6 +104,7 @@ namespace CU
             articulo = new Articulos();
             _provincia = new Provincia();
             _proveedor = new Proveedor();
+            validar = new Validacion();
             Validacion.combo2campos(cboProveedor, "RazonSocial", "IdProveedor", "Proveedores");
 
             if (articulos != null)
@@ -114,7 +116,6 @@ namespace CU
                 txtPrecio.Enabled = false;
                 txtIdArticulo.Text = Convert.ToInt32(articulos.IdArticulo.ToString()).ToString();
                 txtNombreProd.Text = articulos.NombreArticulo;
-                txtBonificacion.Text = Convert.ToInt32(articulos.Bonificacion.ToString()).ToString();
                 txtPrecio.Text = Convert.ToDecimal(articulos.Precio.ToString()).ToString();
                 cboProveedor.Text = articulos.proveedor.RazonSocial;
 
@@ -143,7 +144,6 @@ namespace CU
                     return;
                 }
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
-                articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
                 articulo.PrecioEntero = Convert.ToInt32(txtEntero.Text.ToString());
                 articulo.PrecioDecimal = Convert.ToInt32(txtDecimal.Text.ToString());
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
@@ -158,18 +158,16 @@ namespace CU
         #region CAMPOS OBLIGATORIOS
         public bool CamposObligatorios()
         {
-            if (txtNombreProd.Text == "" && txtBonificacion.Text == "" && txtEntero.Text == "")
+            if (txtNombreProd.Text == "" && txtEntero.Text == "")
             {
                 lblProductoObligatorio.Visible = true;
-                lblBonificacionObligatorio.Visible = true;
                 lblPrecioObligatorio.Visible = true;
 
                 return false;
             }
-            else if (txtNombreProd.Text == "" && txtBonificacion.Text == "")
+            else if (txtNombreProd.Text == "")
             {
                 lblProductoObligatorio.Visible = true;
-                lblBonificacionObligatorio.Visible = true;
 
                 return false;
             }
@@ -181,22 +179,15 @@ namespace CU
                 return false;
 
             }
-            else if (txtBonificacion.Text == "" && txtEntero.Text == "")
+            else if (txtEntero.Text == "")
             {
                 lblPrecioObligatorio.Visible = true;
-                lblBonificacionObligatorio.Visible = true;
 
                 return false;
             }
             else if (txtNombreProd.Text == "")
             {
                 lblProductoObligatorio.Visible = true;
-
-                return false;
-            }
-            else if (txtBonificacion.Text == "")
-            {
-                lblBonificacionObligatorio.Visible = true;
 
                 return false;
             }
@@ -220,7 +211,6 @@ namespace CU
                 }
                 articulo.IdArticulo = Convert.ToInt32(txtIdArticulo.Text.ToString());
                 articulo.NombreArticulo = txtNombreProd.Text.ToString();
-                articulo.Bonificacion = Convert.ToInt32(txtBonificacion.Text.ToString());
                 articulo.PrecioEntero = Convert.ToInt32(txtEntero.Text.ToString());
                 articulo.PrecioDecimal = Convert.ToInt32(txtDecimal.Text.ToString());
                 articulo.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
@@ -298,14 +288,20 @@ namespace CU
         }
         #endregion
 
-        private void txtBonificacion_TextChanged(object sender, EventArgs e)
-        {
-            lblBonificacionObligatorio.Visible = false;
-        }
 
         private void txtNombreProd_TextChanged(object sender, EventArgs e)
         {
             lblProductoObligatorio.Visible = false;
+        }
+
+        private void TxtEntero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtDecimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
         }
     }
 }

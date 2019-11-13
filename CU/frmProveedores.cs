@@ -39,7 +39,7 @@ namespace CU
                 FrmNewProvCli formulario = new FrmNewProvCli(_proveedor=null);
                 formulario.ShowDialog();
 
-                listar(txtBuscar.Text, "t1.RazonSocial ");
+                chequear();
             }
             else
             {
@@ -54,18 +54,30 @@ namespace CU
 
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
-
-            listar(txtBuscar.Text, "t1.RazonSocial ");
             chequear();
-           
+
         }
 
-        public void listar(string cadena, string condicion)
-        
+        public void listar(string cadena)
         {
-
+            Proveedor pr = new Proveedor();
             listaProveedor.Rows.Clear();
-            var proveedorObtenido = _proveedor.obtenerProveedores(cadena, condicion);
+            var proveedorObtenido = pr.obtenerProveedores(cadena);
+
+            foreach (var reg in proveedorObtenido)
+            {
+                listaProveedor.Rows.Add(reg.IdProveedor, reg.CuitCuil, reg.RazonSocial, reg.Direccion,
+                    reg.Localidad, reg.provincia.DescripcionProvincia, reg.Tel1, reg.Tel2, reg.Email,
+                    reg.Estado.DescripcionEstado);
+            }
+        }
+
+        public void listarProv()
+        {
+            Proveedor pr = new Proveedor();
+            listaProveedor.Rows.Clear();
+            var cadena = txtBuscar.Text.ToString();
+            var proveedorObtenido = pr.obtenerProveedoresPorRazon(cadena);
 
             foreach (var reg in proveedorObtenido)
             {
@@ -94,7 +106,6 @@ namespace CU
 
                 Form formProveedor = new FrmNewProvCli(prov);
                 formProveedor.ShowDialog();
-                listar(txtBuscar.Text, "t1.RazonSocial ");
                 chequear();
             }
             else
@@ -122,7 +133,6 @@ namespace CU
 
                 FrmNewProvCli formProveedor = new FrmNewProvCli(proveedor);
                 formProveedor.ShowDialog();
-                listar(txtBuscar.Text, "t1.RazonSocial ");
                 chequear();
             }
             else
@@ -138,21 +148,22 @@ namespace CU
             if (radioBtnActivos.Checked == true)
 
             {
-                listar("Activo", "t3.DescripcionEstado ");
+                listar("Activo");
             }
             else if (radioBtnInactivos.Checked == true)
             {
-                listar("Inactivo", "t3.DescripcionEstado ");
+                listar("Inactivo");
+            }
+            else
+            {
+                listarProv();
             }
         }
-            private void TxtBuscar_TextChanged_1(object sender, EventArgs e)
-        {
-            listar(txtBuscar.Text, "t1.RazonSocial ");
-        }
+
 
         private void frmProveedores_Activated(object sender, EventArgs e)
         {
-            listar(txtBuscar.Text, "t1.RazonSocial ");
+            chequear();
         }
 
         private void RadioBtnActivos_CheckedChanged(object sender, EventArgs e)
@@ -173,6 +184,11 @@ namespace CU
         private void RadioBtnActivos_Click(object sender, EventArgs e)
         {
             chequear();
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            listarProv();
         }
     }
 }

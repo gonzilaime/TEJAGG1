@@ -70,8 +70,9 @@
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(666, 25);
+            this.panel1.Size = new System.Drawing.Size(888, 31);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
@@ -84,9 +85,10 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(614, -1);
+            this.btnMinimizar.Location = new System.Drawing.Point(819, -1);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(26, 26);
+            this.btnMinimizar.Size = new System.Drawing.Size(35, 32);
             this.btnMinimizar.TabIndex = 17;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -100,9 +102,10 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(640, -1);
+            this.btnCerrar.Location = new System.Drawing.Point(853, -1);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(26, 26);
+            this.btnCerrar.Size = new System.Drawing.Size(35, 32);
             this.btnCerrar.TabIndex = 16;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
@@ -116,9 +119,10 @@
             this.btnGuardar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(440, 289);
+            this.btnGuardar.Location = new System.Drawing.Point(587, 356);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 29);
+            this.btnGuardar.Size = new System.Drawing.Size(127, 36);
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -131,9 +135,10 @@
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(553, 289);
+            this.btnCancelar.Location = new System.Drawing.Point(737, 356);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -148,9 +153,10 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(440, 289);
+            this.btnModificar.Location = new System.Drawing.Point(587, 356);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(95, 29);
+            this.btnModificar.Size = new System.Drawing.Size(127, 36);
             this.btnModificar.TabIndex = 11;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -161,18 +167,20 @@
             this.TxtEmail.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(389, 203);
+            this.TxtEmail.Location = new System.Drawing.Point(519, 250);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(265, 23);
+            this.TxtEmail.Size = new System.Drawing.Size(353, 27);
             this.TxtEmail.TabIndex = 9;
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
             this.lblCuit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuit.Location = new System.Drawing.Point(12, 107);
+            this.lblCuit.Location = new System.Drawing.Point(16, 132);
+            this.lblCuit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCuit.Name = "lblCuit";
-            this.lblCuit.Size = new System.Drawing.Size(94, 19);
+            this.lblCuit.Size = new System.Drawing.Size(117, 23);
             this.lblCuit.TabIndex = 0;
             this.lblCuit.Text = "CUIT/CUIT *";
             // 
@@ -181,9 +189,10 @@
             this.txtDireccion.BackColor = System.Drawing.Color.Gainsboro;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(431, 53);
+            this.txtDireccion.Location = new System.Drawing.Point(575, 65);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(223, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(297, 27);
             this.txtDireccion.TabIndex = 6;
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
@@ -191,9 +200,10 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(336, 207);
+            this.lblEmail.Location = new System.Drawing.Point(448, 255);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(47, 19);
+            this.lblEmail.Size = new System.Drawing.Size(60, 23);
             this.lblEmail.TabIndex = 50;
             this.lblEmail.Text = "Email";
             // 
@@ -202,9 +212,10 @@
             this.cboEstadoProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstadoProv.FormattingEnabled = true;
-            this.cboEstadoProv.Location = new System.Drawing.Point(178, 53);
+            this.cboEstadoProv.Location = new System.Drawing.Point(237, 65);
+            this.cboEstadoProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboEstadoProv.Name = "cboEstadoProv";
-            this.cboEstadoProv.Size = new System.Drawing.Size(146, 24);
+            this.cboEstadoProv.Size = new System.Drawing.Size(193, 28);
             this.cboEstadoProv.TabIndex = 1;
             // 
             // cboProv
@@ -213,9 +224,10 @@
             this.cboProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProv.FormattingEnabled = true;
-            this.cboProv.Location = new System.Drawing.Point(103, 203);
+            this.cboProv.Location = new System.Drawing.Point(137, 250);
+            this.cboProv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboProv.Name = "cboProv";
-            this.cboProv.Size = new System.Drawing.Size(221, 24);
+            this.cboProv.Size = new System.Drawing.Size(293, 28);
             this.cboProv.TabIndex = 4;
             this.cboProv.TextChanged += new System.EventHandler(this.cboProv_TextChanged);
             // 
@@ -223,9 +235,10 @@
             // 
             this.lblProvincia.AutoSize = true;
             this.lblProvincia.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvincia.Location = new System.Drawing.Point(12, 207);
+            this.lblProvincia.Location = new System.Drawing.Point(16, 255);
+            this.lblProvincia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(85, 19);
+            this.lblProvincia.Size = new System.Drawing.Size(105, 23);
             this.lblProvincia.TabIndex = 47;
             this.lblProvincia.Text = "Provincia *";
             // 
@@ -234,41 +247,49 @@
             this.txtTel2.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTel2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel2.Location = new System.Drawing.Point(424, 153);
+            this.txtTel2.Location = new System.Drawing.Point(565, 188);
+            this.txtTel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel2.Name = "txtTel2";
-            this.txtTel2.Size = new System.Drawing.Size(230, 23);
+            this.txtTel2.Size = new System.Drawing.Size(306, 27);
             this.txtTel2.TabIndex = 8;
+            this.txtTel2.TextChanged += new System.EventHandler(this.TxtTel2_TextChanged);
+            this.txtTel2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTel2_KeyPress);
             // 
             // txtRazonSocial
             // 
             this.txtRazonSocial.BackColor = System.Drawing.Color.Gainsboro;
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRazonSocial.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(125, 153);
+            this.txtRazonSocial.Location = new System.Drawing.Point(167, 188);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(199, 23);
+            this.txtRazonSocial.Size = new System.Drawing.Size(265, 27);
             this.txtRazonSocial.TabIndex = 3;
             this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
+            this.txtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRazonSocial_KeyPress);
             // 
             // txtTel1
             // 
             this.txtTel1.BackColor = System.Drawing.Color.Gainsboro;
             this.txtTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTel1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel1.Location = new System.Drawing.Point(435, 103);
+            this.txtTel1.Location = new System.Drawing.Point(580, 127);
+            this.txtTel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel1.Name = "txtTel1";
-            this.txtTel1.Size = new System.Drawing.Size(219, 23);
+            this.txtTel1.Size = new System.Drawing.Size(291, 27);
             this.txtTel1.TabIndex = 7;
             this.txtTel1.TextChanged += new System.EventHandler(this.txtTel1_TextChanged);
+            this.txtTel1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTel1_KeyPress);
             // 
             // txtLocalidad
             // 
             this.txtLocalidad.BackColor = System.Drawing.Color.Gainsboro;
             this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLocalidad.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalidad.Location = new System.Drawing.Point(105, 253);
+            this.txtLocalidad.Location = new System.Drawing.Point(140, 311);
+            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(219, 23);
+            this.txtLocalidad.Size = new System.Drawing.Size(291, 27);
             this.txtLocalidad.TabIndex = 5;
             this.txtLocalidad.TextChanged += new System.EventHandler(this.txtLocalidad_TextChanged);
             // 
@@ -277,19 +298,22 @@
             this.txtCuit.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCuit.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuit.Location = new System.Drawing.Point(112, 103);
+            this.txtCuit.Location = new System.Drawing.Point(149, 127);
+            this.txtCuit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(212, 23);
+            this.txtCuit.Size = new System.Drawing.Size(282, 27);
             this.txtCuit.TabIndex = 2;
             this.txtCuit.TextChanged += new System.EventHandler(this.txtCuit_TextChanged);
+            this.txtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCuit_KeyPress);
             // 
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
             this.lblLocalidad.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(12, 257);
+            this.lblLocalidad.Location = new System.Drawing.Point(16, 316);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(87, 19);
+            this.lblLocalidad.Size = new System.Drawing.Size(107, 23);
             this.lblLocalidad.TabIndex = 41;
             this.lblLocalidad.Text = "Localidad *";
             // 
@@ -297,9 +321,10 @@
             // 
             this.lblDomicilio.AutoSize = true;
             this.lblDomicilio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDomicilio.Location = new System.Drawing.Point(339, 57);
+            this.lblDomicilio.Location = new System.Drawing.Point(452, 70);
+            this.lblDomicilio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(86, 19);
+            this.lblDomicilio.Size = new System.Drawing.Size(106, 23);
             this.lblDomicilio.TabIndex = 40;
             this.lblDomicilio.Text = "Direccion *";
             // 
@@ -307,9 +332,10 @@
             // 
             this.lblTelefono2.AutoSize = true;
             this.lblTelefono2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono2.Location = new System.Drawing.Point(336, 157);
+            this.lblTelefono2.Location = new System.Drawing.Point(448, 193);
+            this.lblTelefono2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono2.Name = "lblTelefono2";
-            this.lblTelefono2.Size = new System.Drawing.Size(82, 19);
+            this.lblTelefono2.Size = new System.Drawing.Size(99, 23);
             this.lblTelefono2.TabIndex = 39;
             this.lblTelefono2.Text = "Teléfono 2";
             // 
@@ -317,9 +343,10 @@
             // 
             this.lblTelefono1.AutoSize = true;
             this.lblTelefono1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono1.Location = new System.Drawing.Point(336, 107);
+            this.lblTelefono1.Location = new System.Drawing.Point(448, 132);
+            this.lblTelefono1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono1.Name = "lblTelefono1";
-            this.lblTelefono1.Size = new System.Drawing.Size(93, 19);
+            this.lblTelefono1.Size = new System.Drawing.Size(112, 23);
             this.lblTelefono1.TabIndex = 38;
             this.lblTelefono1.Text = "Teléfono 1 *";
             // 
@@ -327,9 +354,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(12, 157);
+            this.lblNombre.Location = new System.Drawing.Point(16, 193);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(107, 19);
+            this.lblNombre.Size = new System.Drawing.Size(131, 23);
             this.lblNombre.TabIndex = 37;
             this.lblNombre.Text = "Razón Social *";
             // 
@@ -337,9 +365,10 @@
             // 
             this.lblEstadoProveedor.AutoSize = true;
             this.lblEstadoProveedor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoProveedor.Location = new System.Drawing.Point(12, 57);
+            this.lblEstadoProveedor.Location = new System.Drawing.Point(16, 70);
+            this.lblEstadoProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstadoProveedor.Name = "lblEstadoProveedor";
-            this.lblEstadoProveedor.Size = new System.Drawing.Size(166, 19);
+            this.lblEstadoProveedor.Size = new System.Drawing.Size(202, 23);
             this.lblEstadoProveedor.TabIndex = 36;
             this.lblEstadoProveedor.Text = "Estado de proveedor *";
             // 
@@ -347,9 +376,10 @@
             // 
             this.lblCodigoProveedor.AutoSize = true;
             this.lblCodigoProveedor.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoProveedor.Location = new System.Drawing.Point(335, 257);
+            this.lblCodigoProveedor.Location = new System.Drawing.Point(447, 316);
+            this.lblCodigoProveedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoProveedor.Name = "lblCodigoProveedor";
-            this.lblCodigoProveedor.Size = new System.Drawing.Size(156, 19);
+            this.lblCodigoProveedor.Size = new System.Drawing.Size(189, 23);
             this.lblCodigoProveedor.TabIndex = 54;
             this.lblCodigoProveedor.Text = "Código de proveedor";
             // 
@@ -358,9 +388,10 @@
             this.txtCodigoProveedor.BackColor = System.Drawing.Color.Gainsboro;
             this.txtCodigoProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigoProveedor.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProveedor.Location = new System.Drawing.Point(497, 253);
+            this.txtCodigoProveedor.Location = new System.Drawing.Point(663, 311);
+            this.txtCodigoProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigoProveedor.Name = "txtCodigoProveedor";
-            this.txtCodigoProveedor.Size = new System.Drawing.Size(157, 23);
+            this.txtCodigoProveedor.Size = new System.Drawing.Size(209, 27);
             this.txtCodigoProveedor.TabIndex = 9;
             // 
             // lblCuitObligatorio
@@ -369,9 +400,10 @@
             this.lblCuitObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblCuitObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuitObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblCuitObligatorio.Location = new System.Drawing.Point(138, 129);
+            this.lblCuitObligatorio.Location = new System.Drawing.Point(184, 159);
+            this.lblCuitObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCuitObligatorio.Name = "lblCuitObligatorio";
-            this.lblCuitObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblCuitObligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblCuitObligatorio.TabIndex = 55;
             this.lblCuitObligatorio.Text = "Este campo es obligatorio.";
             this.lblCuitObligatorio.Visible = false;
@@ -382,9 +414,10 @@
             this.lblRazonSocialObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblRazonSocialObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazonSocialObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblRazonSocialObligatorio.Location = new System.Drawing.Point(138, 179);
+            this.lblRazonSocialObligatorio.Location = new System.Drawing.Point(184, 220);
+            this.lblRazonSocialObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRazonSocialObligatorio.Name = "lblRazonSocialObligatorio";
-            this.lblRazonSocialObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblRazonSocialObligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblRazonSocialObligatorio.TabIndex = 56;
             this.lblRazonSocialObligatorio.Text = "Este campo es obligatorio.";
             this.lblRazonSocialObligatorio.Visible = false;
@@ -395,9 +428,10 @@
             this.lblProvinciaObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblProvinciaObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvinciaObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblProvinciaObligatorio.Location = new System.Drawing.Point(138, 34);
+            this.lblProvinciaObligatorio.Location = new System.Drawing.Point(184, 42);
+            this.lblProvinciaObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProvinciaObligatorio.Name = "lblProvinciaObligatorio";
-            this.lblProvinciaObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblProvinciaObligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblProvinciaObligatorio.TabIndex = 57;
             this.lblProvinciaObligatorio.Text = "Este campo es obligatorio.";
             this.lblProvinciaObligatorio.Visible = false;
@@ -408,9 +442,10 @@
             this.lblLocalidadObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblLocalidadObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidadObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblLocalidadObligatorio.Location = new System.Drawing.Point(138, 279);
+            this.lblLocalidadObligatorio.Location = new System.Drawing.Point(184, 343);
+            this.lblLocalidadObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalidadObligatorio.Name = "lblLocalidadObligatorio";
-            this.lblLocalidadObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblLocalidadObligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblLocalidadObligatorio.TabIndex = 58;
             this.lblLocalidadObligatorio.Text = "Este campo es obligatorio.";
             this.lblLocalidadObligatorio.Visible = false;
@@ -421,9 +456,10 @@
             this.lblDireccionObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccionObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccionObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblDireccionObligatorio.Location = new System.Drawing.Point(447, 79);
+            this.lblDireccionObligatorio.Location = new System.Drawing.Point(596, 97);
+            this.lblDireccionObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccionObligatorio.Name = "lblDireccionObligatorio";
-            this.lblDireccionObligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblDireccionObligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblDireccionObligatorio.TabIndex = 59;
             this.lblDireccionObligatorio.Text = "Este campo es obligatorio.";
             this.lblDireccionObligatorio.Visible = false;
@@ -434,19 +470,20 @@
             this.lblTel1Obligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblTel1Obligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTel1Obligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblTel1Obligatorio.Location = new System.Drawing.Point(447, 129);
+            this.lblTel1Obligatorio.Location = new System.Drawing.Point(596, 159);
+            this.lblTel1Obligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTel1Obligatorio.Name = "lblTel1Obligatorio";
-            this.lblTel1Obligatorio.Size = new System.Drawing.Size(148, 16);
+            this.lblTel1Obligatorio.Size = new System.Drawing.Size(194, 22);
             this.lblTel1Obligatorio.TabIndex = 60;
             this.lblTel1Obligatorio.Text = "Este campo es obligatorio.";
             this.lblTel1Obligatorio.Visible = false;
             // 
             // FrmNewProvCli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(666, 329);
+            this.ClientSize = new System.Drawing.Size(888, 405);
             this.Controls.Add(this.lblTel1Obligatorio);
             this.Controls.Add(this.lblDireccionObligatorio);
             this.Controls.Add(this.lblLocalidadObligatorio);
@@ -478,6 +515,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNewProvCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2";

@@ -118,7 +118,7 @@ namespace CL
         //====================================================
         //Método para llenar ListBox con registros de la BBDD
         //====================================================
-        public List<Proveedor> obtenerProveedores(string cadena, string condicion)
+        public List<Proveedor> obtenerProveedores(string condicion)
         {
             var conn = new SqlConnection();
             var cmd = new SqlCommand();
@@ -134,7 +134,7 @@ namespace CL
                                 + "ON t1.IdProvincia=t2.IdProvincia "
                                 + " INNER JOIN Estado as t3 "
                                 + " ON t1.IdEstado = t3.IdEstado "
-                                + " WHERE " + condicion + " = '" + cadena + "' "
+                                + " WHERE t3.DescripcionEstado= '" + condicion + "' "
                                 + "ORDER BY t1.IdProveedor ";
                 var registroObtenido = cmd.ExecuteReader();
                 while(registroObtenido != null && registroObtenido.Read())
@@ -174,6 +174,63 @@ namespace CL
 
             return listaProveedores;
         }//obtenerProveedores
-       
+
+        public List<Proveedor> obtenerProveedoresPorRazon(string cadena)
+        {
+            var conn = new SqlConnection();
+            var cmd = new SqlCommand();
+            var baseDatos = new Conectar();
+            var listaProveedores = new List<Proveedor>();
+
+            try
+            {
+                conn = baseDatos.Abrir();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT t1.*,t2.DescripcionProvincia, t3.DescripcionEstado FROM Proveedores as t1"
+                                + " INNER JOIN Provincia as t2"
+                                + " ON t1.IdProvincia=t2.IdProvincia"
+                                + " INNER JOIN Estado as t3"
+                                + " ON t1.IdEstado = t3.IdEstado"
+                                + " WHERE t1.RazonSocial like '%" + cadena + "%'"
+                                + " ORDER BY t1.IdProveedor";
+                var registroObtenido = cmd.ExecuteReader();
+                while (registroObtenido != null && registroObtenido.Read())
+                {
+                    var proveedor = new Proveedor();
+                    proveedor.IdProveedor = (int)registroObtenido["IdProveedor"];
+                    proveedor.CuitCuil = (string)registroObtenido["CuitCuil"];
+                    proveedor.RazonSocial = (string)registroObtenido["RazonSocial"];
+                    proveedor.Direccion = (string)registroObtenido["Direccion"];
+                    proveedor.Localidad = (string)registroObtenido["Localidad"];
+                    proveedor.provincia.IdProvincia = (int)registroObtenido["IdProvincia"];
+                    proveedor.provincia.DescripcionProvincia = (string)registroObtenido["DescripcionProvincia"];
+                    proveedor.Tel1 = (string)registroObtenido["Tel1"];
+                    proveedor.Tel2 = (string)registroObtenido["Tel2"];
+                    proveedor.Email = (string)registroObtenido["Email"];
+                    proveedor.Estado.IdEstado = (int)registroObtenido["IdEstado"];
+                    proveedor.Estado.DescripcionEstado = (string)registroObtenido["DescripcionEstado"];
+
+                    listaProveedores.Add(proveedor);
+
+                }//while
+
+            }//try
+            catch (Exception e)
+            {
+                MessageBox.Show(string.Concat(e.Message, e.StackTrace), "");
+                MessageBox.Show("Falla al cargar lista");
+            }//catch
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Dispose();
+                    conn.Close();
+                }
+            }//finally
+
+            return listaProveedores;
+        }//obtenerProveedores
+
     }
 }

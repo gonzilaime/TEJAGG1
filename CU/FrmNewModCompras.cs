@@ -108,10 +108,11 @@ namespace CU
 
             if (detalle != null)
             {
-                button1.Enabled = false;
-                button1.Visible = false;
+                BtnGenerar.Enabled = false;
+                BtnGenerar.Visible = false;
                 detalle_.ordenCompra.IdOrdenDeCompra = detalle.ordenCompra.IdOrdenDeCompra;
                 detalle_.proveedor.IdProveedor = detalle.proveedor.IdProveedor;
+                cboProveedor.Text = detalle.proveedor.RazonSocial.ToString();
                 cboProveedor.Enabled = false;
                 listarDetalles();
 
@@ -170,14 +171,12 @@ namespace CU
             {
                 SubFrmCompras SubCompras = new SubFrmCompras(detalle_.proveedor.IdProveedor, detalle_.ordenCompra.IdOrdenDeCompra);
                 SubCompras.ShowDialog();
-                listarDetalles();
             }
             else
             { 
                 int IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
                 SubFrmCompras SubCompras = new SubFrmCompras(IdProveedor,0);
                 SubCompras.ShowDialog();
-                listarDetalles();
             }
 
             listarDetalles();
@@ -202,14 +201,6 @@ namespace CU
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            _ordenDecompra.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
-            _ordenDecompra._estado.IdEstadoOrdenCompra = Convert.ToInt32(((DataRowView)cboEstado.SelectedItem)["IdEstadoOrdenCompra"]);
-            _ordenDecompra.Accion(_ordenDecompra, "ALTA");
-            MessageBox.Show("Se generó la orden de compra exitosamente, agregue los artículos en la siguiente lista");
-            listarDetalles();
-        }
 
         private void FrmNewModCompras_Load(object sender, EventArgs e)
         {
@@ -225,10 +216,10 @@ namespace CU
         
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            _ordenDecompra.IdOrdenDeCompra = detalle_.IdOrdenDeCompra;
+            _ordenDecompra.IdOrdenDeCompra = detalle_.ordenCompra.IdOrdenDeCompra;
             _ordenDecompra._estado.IdEstadoOrdenCompra = Convert.ToInt32(((DataRowView)cboEstado.SelectedItem)["IdEstadoOrdenCompra"]);
             _ordenDecompra.Accion(_ordenDecompra, "MODIFICAR");
-            MessageBox.Show("Se modificó la orden de compra exitosamente");
+            MessageBox.Show("Se modificó la orden de compra número " + _ordenDecompra.IdOrdenDeCompra +" exitosamente.");
             listarDetalles();
         }
 
@@ -252,6 +243,20 @@ namespace CU
             {
                 
             }
+            listarDetalles();
+        }
+
+        private void BtnFinalizar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnGenerar_Click(object sender, EventArgs e)
+        {
+            _ordenDecompra.proveedor.IdProveedor = Convert.ToInt32(((DataRowView)cboProveedor.SelectedItem)["IdProveedor"]);
+            _ordenDecompra._estado.IdEstadoOrdenCompra = Convert.ToInt32(((DataRowView)cboEstado.SelectedItem)["IdEstadoOrdenCompra"]);
+            _ordenDecompra.Accion(_ordenDecompra, "ALTA");
+            MessageBox.Show("Se generó la orden de compra exitosamente, agregue los artículos en la siguiente lista:", "MENSAJE DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listarDetalles();
         }
     }

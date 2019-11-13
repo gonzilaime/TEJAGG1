@@ -96,6 +96,7 @@ namespace CU
         public Articulos articulos_;
         public Detalle detalle;
         public int id;
+        Validacion validar;
 
         public SubFrmCompras(int IdProveedor, int IdOrdenCompra)
         {
@@ -104,6 +105,7 @@ namespace CU
             detalle = new Detalle();
             articulos_.IdProveedor = IdProveedor;
             id = IdOrdenCompra;
+            validar = new Validacion();
 
         }
         #region movilidad para panel
@@ -131,7 +133,7 @@ namespace CU
 
             foreach (var articulo in articuloObtenido)
             {
-                listaArticulos.Rows.Add(articulo.IdArticulo, articulo.NombreArticulo, articulo.Bonificacion,
+                listaArticulos.Rows.Add(articulo.IdArticulo, articulo.NombreArticulo,
                     articulo.Precio, articulo.proveedor.IdProveedor, articulo.proveedor.RazonSocial);
 
             }//foreach
@@ -156,6 +158,12 @@ namespace CU
 
                 return false;
             }
+            else if(txtBonificacion.Text == "")
+            {
+                lblBonificacionObligatoria.Visible = true;
+
+                return false;
+            }
 
             return true;
         }
@@ -171,8 +179,7 @@ namespace CU
 
             txtCodProv.Text = listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtArticulos.Text = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtBonificacion.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
             
         }
 
@@ -236,8 +243,22 @@ namespace CU
         {
             txtCodProv.Text = listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtArticulos.Text = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtBonificacion.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtPrecio.Text = listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void BtnFinalizar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtBonificacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
         }
     }
 }

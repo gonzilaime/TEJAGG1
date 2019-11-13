@@ -550,7 +550,7 @@ namespace CU
 
         private void FrmNewProvCli_Activated(object sender, EventArgs e)
         {
-            
+          
         }
 
         #region TEXTCHANGED // Borra el label campo obligatorio al llenar el texbox
@@ -583,5 +583,30 @@ namespace CU
             lblCuitObligatorio.Visible = false;
         }
         #endregion
+
+        private void TxtCuit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtTel1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtTel2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TxtTel2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtRazonSocial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloLetras(e);
+        }
     }
 }

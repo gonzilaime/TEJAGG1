@@ -12,7 +12,6 @@ namespace CL
     {
         public int IdArticulo { get; set; }
         public string NombreArticulo { get; set; }
-        public int Bonificacion { get; set; }
         public int PrecioEntero { get; set; }
         public int PrecioDecimal { get; set; }
         public decimal Precio { get; set; }
@@ -49,7 +48,6 @@ namespace CL
                 {
                     query.CommandText = "prc_AltaArticulo";
                     query.Parameters.Add(new SqlParameter("@NombreArticulo", articulo.NombreArticulo));
-                    query.Parameters.Add(new SqlParameter("@Bonificacion", articulo.Bonificacion));
                     query.Parameters.Add(new SqlParameter("@Precio", articulo.PrecioEntero + "." + articulo.PrecioDecimal));
                     query.Parameters.Add(new SqlParameter("@IdProveedor", articulo.proveedor.IdProveedor));
                     query.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
@@ -65,7 +63,6 @@ namespace CL
                     query.CommandText = "prc_ModificarArticulo";
                     query.Parameters.Add(new SqlParameter("@IdArticulo", articulo.IdArticulo));
                     query.Parameters.Add(new SqlParameter("@NombreArticulo", articulo.NombreArticulo));
-                    query.Parameters.Add(new SqlParameter("@Bonificacion", articulo.Bonificacion));
                     query.Parameters.Add(new SqlParameter("@Precio", articulo.PrecioEntero + "." + articulo.PrecioDecimal));
                     query.Parameters.Add(new SqlParameter("@IdProveedor", articulo.proveedor.IdProveedor));
                     query.Parameters.Add(new SqlParameter("@Nick", UsuarioLogueado.Nick));
@@ -122,7 +119,6 @@ namespace CL
                     var articulo = new Articulos();
                     articulo.IdArticulo = (int)articulosObtenidos["IdArticulo"];
                     articulo.NombreArticulo = (string)articulosObtenidos["NombreArticulo"];
-                    articulo.Bonificacion = (int)articulosObtenidos["Bonificacion"];
                     articulo.Precio = (decimal)articulosObtenidos["Precio"];
                     articulo.proveedor.IdProveedor = (int)articulosObtenidos["IdProveedor"];
                     articulo.proveedor.RazonSocial = (string)articulosObtenidos["RazonSocial"];
@@ -161,7 +157,7 @@ namespace CL
             {
                 conn = baseDatos.Abrir();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT t1.IdArticulo,t1.NombreArticulo,t1.Bonificacion,t1.Precio,t2.IdProveedor,t2.RazonSocial"
+                cmd.CommandText = "SELECT t1.IdArticulo,t1.NombreArticulo,t1.Precio,t2.IdProveedor,t2.RazonSocial"
                                 + " FROM Articulo as t1 "
                                 + "INNER JOIN Proveedores as t2 "
                                 + " ON t1.IdProveedor = t2.IdProveedor "
@@ -175,7 +171,6 @@ namespace CL
 
                     articulo.IdArticulo = (int)registroObtenido["IdArticulo"];
                     articulo.NombreArticulo = (string)registroObtenido["NombreArticulo"];
-                    articulo.Bonificacion = (int)registroObtenido["Bonificacion"];
                     articulo.Precio = (decimal)registroObtenido["Precio"];
                     articulo.proveedor.IdProveedor = (int)registroObtenido["IdProveedor"];
                     articulo.proveedor.RazonSocial = (string)registroObtenido["RazonSocial"];

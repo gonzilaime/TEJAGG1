@@ -49,8 +49,9 @@ namespace CU
         }
         private void listar(string cadena, string condicion)
         {
+            Clientes cli = new Clientes();
             listaCliente.Rows.Clear();
-            var clienteObtenido = _cliente.obtenerCliente(cadena, condicion);
+            var clienteObtenido = cli.obtenerCliente(cadena, condicion);
 
             foreach (var reg in clienteObtenido)
             {
@@ -73,18 +74,19 @@ namespace CU
         {
             if (tipoPerfil.IdPerfil == 1)
             {
-                _cliente.IdCliente = Convert.ToInt32(listaCliente.CurrentRow.Cells[0].Value.ToString());
-                _cliente.CuitCuil = listaCliente.CurrentRow.Cells[1].Value.ToString();
-                _cliente.RazonSocial = listaCliente.CurrentRow.Cells[2].Value.ToString();
-                _cliente.Direccion = listaCliente.CurrentRow.Cells[3].Value.ToString();
-                _cliente.Localidad = listaCliente.CurrentRow.Cells[4].Value.ToString();
-                _cliente.provincia.DescripcionProvincia = listaCliente.CurrentRow.Cells[5].Value.ToString();
-                _cliente.Tel1 = listaCliente.CurrentRow.Cells[6].Value.ToString();
-                _cliente.Tel2 = listaCliente.CurrentRow.Cells[7].Value.ToString();
-                _cliente.Email = listaCliente.CurrentRow.Cells[8].Value.ToString();
-                _cliente.estado.DescripcionEstado = listaCliente.CurrentRow.Cells[9].Value.ToString();
+                Clientes cliente = new Clientes();
+                cliente.IdCliente = Convert.ToInt32(listaCliente.CurrentRow.Cells[0].Value.ToString());
+                cliente.CuitCuil = listaCliente.CurrentRow.Cells[1].Value.ToString();
+                cliente.RazonSocial = listaCliente.CurrentRow.Cells[2].Value.ToString();
+                cliente.Direccion = listaCliente.CurrentRow.Cells[3].Value.ToString();
+                cliente.Localidad = listaCliente.CurrentRow.Cells[4].Value.ToString();
+                cliente.provincia.DescripcionProvincia = listaCliente.CurrentRow.Cells[5].Value.ToString();
+                cliente.Tel1 = listaCliente.CurrentRow.Cells[6].Value.ToString();
+                cliente.Tel2 = listaCliente.CurrentRow.Cells[7].Value.ToString();
+                cliente.Email = listaCliente.CurrentRow.Cells[8].Value.ToString();
+                cliente.estado.DescripcionEstado = listaCliente.CurrentRow.Cells[9].Value.ToString();
 
-                FrmNewModClientes formulario = new FrmNewModClientes(_cliente);
+                FrmNewModClientes formulario = new FrmNewModClientes(cliente);
                 formulario.ShowDialog();
                 listar(txtBuscar.Text, "t1.RazonSocial" );
                 chequear();
@@ -111,20 +113,20 @@ namespace CU
         {
             if (tipoPerfil.IdPerfil == 1)
             {
+                Clientes clientes = new Clientes();
+                clientes.IdCliente = Convert.ToInt32(listaCliente.Rows[e.RowIndex].Cells[0].Value.ToString());
+                clientes.CuitCuil = listaCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
+                clientes.RazonSocial = listaCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
+                clientes.Direccion = listaCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
+                clientes.Localidad = listaCliente.Rows[e.RowIndex].Cells[4].Value.ToString();
+                clientes.provincia.DescripcionProvincia = listaCliente.Rows[e.RowIndex].Cells[5].Value.ToString();
+                clientes.Tel1 = listaCliente.Rows[e.RowIndex].Cells[6].Value.ToString();
+                clientes.Tel2 = listaCliente.Rows[e.RowIndex].Cells[7].Value.ToString();
+                clientes.Email = listaCliente.Rows[e.RowIndex].Cells[8].Value.ToString();
+                clientes.estado.DescripcionEstado = listaCliente.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-                _cliente.IdCliente = Convert.ToInt32(listaCliente.Rows[e.RowIndex].Cells[0].Value.ToString());
-                _cliente.CuitCuil = listaCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
-                _cliente.RazonSocial = listaCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
-                _cliente.Direccion = listaCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
-                _cliente.Localidad = listaCliente.Rows[e.RowIndex].Cells[4].Value.ToString();
-                _cliente.provincia.DescripcionProvincia = listaCliente.Rows[e.RowIndex].Cells[5].Value.ToString();
-                _cliente.Tel1 = listaCliente.Rows[e.RowIndex].Cells[6].Value.ToString();
-                _cliente.Tel2 = listaCliente.Rows[e.RowIndex].Cells[7].Value.ToString();
-                _cliente.Email = listaCliente.Rows[e.RowIndex].Cells[8].Value.ToString();
-                _cliente.estado.DescripcionEstado = listaCliente.Rows[e.RowIndex].Cells[9].Value.ToString();
 
-
-                FrmNewModClientes formProveedor = new FrmNewModClientes(_cliente);
+                FrmNewModClientes formProveedor = new FrmNewModClientes(clientes);
                 formProveedor.ShowDialog();
                 listar(txtBuscar.Text, "t1.RazonSocial");
                 chequear();

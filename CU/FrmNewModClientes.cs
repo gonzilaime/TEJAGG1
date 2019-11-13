@@ -545,6 +545,26 @@ namespace CU
             lblTel1Obligatorio.Visible = false;
         }
 
+        private void TxtCuit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtRazonSocial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloLetras(e);
+        }
+
+        private void TxtTel1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
+        private void TxtTel2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.soloNumeros(e);
+        }
+
 
 
         // Generar sombra en el formulario

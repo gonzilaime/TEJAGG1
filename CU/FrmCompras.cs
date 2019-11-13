@@ -75,8 +75,8 @@ namespace CU
             {
                 Detalle detail = new Detalle();
                 detail.ordenCompra.IdOrdenDeCompra = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[0].Value.ToString());
+                detail.proveedor.RazonSocial = listaOrdenes.Rows[e.RowIndex].Cells[2].Value.ToString();
                 detail.proveedor.IdProveedor = Convert.ToInt32(listaOrdenes.Rows[e.RowIndex].Cells[3].Value.ToString());
-
                 FrmNewModCompras formularioOrden = new FrmNewModCompras(detail);
                 formularioOrden.ShowDialog();
                 listar(txtBuscar.Text, "t2.RazonSocial");
@@ -122,6 +122,7 @@ namespace CU
             {
                 Detalle deta = new Detalle();
                 deta.ordenCompra.IdOrdenDeCompra = Convert.ToInt32(listaOrdenes.CurrentRow.Cells[0].Value.ToString());
+                deta.proveedor.RazonSocial = listaOrdenes.CurrentRow.Cells[2].Value.ToString();
                 deta.proveedor.IdProveedor = Convert.ToInt32(listaOrdenes.CurrentRow.Cells[3].Value.ToString());
                 FrmNewModCompras formularioOrden = new FrmNewModCompras(deta);
                 formularioOrden.ShowDialog();

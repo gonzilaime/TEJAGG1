@@ -20,18 +20,18 @@ namespace CL
             try
             {
 
-                //servidor = "EQUIPO-01";
-                //databaseName = "TEJAGG";
-                //usuario = "EQUIPO-01\\Usuario";
+                servidor = "EQUIPO-01";
+                databaseName = "TEJAGG";
+                usuario = "EQUIPO-01\\Usuario";
 
                 //servidor = "DESKTOP-EUK7NSA";
                 //databaseName = "TEJAGG";
                 //usuario = "DESKTOP-EUK7NSA\\Agustin";
 
 
-                servidor = "LAPTOP-Q30BBLN9";
-                databaseName = "TEJAGG";
-                usuario = "LAPTOP-Q30BBLN9\\tomas";
+                //servidor = "LAPTOP-Q30BBLN9";
+                //databaseName = "TEJAGG";
+                //usuario = "LAPTOP-Q30BBLN9\\tomas";
 
             }
             catch (Exception e)

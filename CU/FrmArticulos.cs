@@ -32,13 +32,14 @@ namespace CU
         *******************************************************/
         public void listarArticulos()
         {
+            Articulos art = new Articulos();
             listaArticulos.Rows.Clear();
             var filtro = txtBuscar.Text;
-            var articuloObtenido = articulo.obtenerArticulos(filtro);
+            var articuloObtenido = art.obtenerArticulos(filtro);
 
             foreach(var articulo in articuloObtenido)
             {
-                listaArticulos.Rows.Add(articulo.IdArticulo, articulo.NombreArticulo, articulo.Bonificacion,
+                listaArticulos.Rows.Add(articulo.IdArticulo, articulo.NombreArticulo,
                     articulo.Precio, articulo.proveedor.IdProveedor, articulo.proveedor.RazonSocial);
 
             }//foreach
@@ -70,10 +71,9 @@ namespace CU
                 Articulos art = new Articulos();
                 art.IdArticulo = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[0].Value.ToString());
                 art.NombreArticulo = listaArticulos.Rows[e.RowIndex].Cells[1].Value.ToString();
-                art.Bonificacion = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
-                art.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
-                art.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString());
-                art.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[5].Value.ToString();
+                art.Precio = Convert.ToDecimal(listaArticulos.Rows[e.RowIndex].Cells[2].Value.ToString());
+                art.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.Rows[e.RowIndex].Cells[3].Value.ToString());
+                art.proveedor.RazonSocial = listaArticulos.Rows[e.RowIndex].Cells[4].Value.ToString();
 
 
                 FrmNewModArt formulario = new FrmNewModArt(art);
@@ -118,10 +118,9 @@ namespace CU
                 Articulos artic = new Articulos();
                 artic.IdArticulo = Convert.ToInt32(listaArticulos.CurrentRow.Cells[0].Value.ToString());
                 artic.NombreArticulo = listaArticulos.CurrentRow.Cells[1].Value.ToString();
-                artic.Bonificacion = Convert.ToInt32(listaArticulos.CurrentRow.Cells[2].Value.ToString());
-                artic.Precio = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[3].Value.ToString());
-                artic.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.CurrentRow.Cells[4].Value.ToString());
-                artic.proveedor.RazonSocial = listaArticulos.CurrentRow.Cells[5].Value.ToString();
+                artic.Precio = Convert.ToDecimal(listaArticulos.CurrentRow.Cells[2].Value.ToString());
+                artic.proveedor.IdProveedor = Convert.ToInt32(listaArticulos.CurrentRow.Cells[3].Value.ToString());
+                artic.proveedor.RazonSocial = listaArticulos.CurrentRow.Cells[4].Value.ToString();
 
 
                 FrmNewModArt formulario = new FrmNewModArt(artic);

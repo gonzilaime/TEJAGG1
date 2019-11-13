@@ -83,7 +83,7 @@ namespace CL
                 conn = baseDatos.Abrir();
                 cmd.Connection = conn;
                 cmd.CommandText = "SELECT t1.IdOrdenDeCompra, t1.Fecha, t1.IdProveedor, t2.RazonSocial,t1.IdEstadoOrdenCompra, "
-                                 +  "t3.DescripcionOrdenCompra, SUM(t4.Cantidad * t4.PrecioUnitario) Monto "
+                                 + "t3.DescripcionOrdenCompra, SUM(t4.Cantidad * t4.PrecioUnitario - t4.Cantidad * t4.PrecioUnitario * t4.Bonificacion / 100) Monto "
                                  + "FROM OrdenDeCompra as t1 "
                                  + "INNER JOIN Proveedores as t2 "
                                  + "ON t1.IdProveedor = t2.IdProveedor "
