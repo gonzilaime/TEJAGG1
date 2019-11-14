@@ -39,14 +39,14 @@
             this.lblIdArt = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtEntero = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDecimal = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblProductoObligatorio = new System.Windows.Forms.Label();
             this.lblPrecioObligatorio = new System.Windows.Forms.Label();
+            this.txtEntero = new System.Windows.Forms.TextBox();
+            this.txtDecimal = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,10 +59,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(213, 326);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Location = new System.Drawing.Point(160, 226);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(127, 36);
+            this.btnModificar.Size = new System.Drawing.Size(95, 29);
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -77,10 +76,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(364, 326);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(273, 226);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 29);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -95,10 +93,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(213, 326);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(160, 226);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(127, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(95, 29);
             this.btnGuardar.TabIndex = 78;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -109,20 +106,18 @@
             this.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(156, 41);
-            this.cboProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProveedor.Location = new System.Drawing.Point(117, 39);
             this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(332, 28);
+            this.cboProveedor.Size = new System.Drawing.Size(250, 24);
             this.cboProveedor.TabIndex = 1;
             // 
             // lblEstadoArt
             // 
             this.lblEstadoArt.AutoSize = true;
             this.lblEstadoArt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoArt.Location = new System.Drawing.Point(23, 46);
-            this.lblEstadoArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstadoArt.Location = new System.Drawing.Point(17, 43);
             this.lblEstadoArt.Name = "lblEstadoArt";
-            this.lblEstadoArt.Size = new System.Drawing.Size(104, 23);
+            this.lblEstadoArt.Size = new System.Drawing.Size(87, 19);
             this.lblEstadoArt.TabIndex = 80;
             this.lblEstadoArt.Text = "Proveedor ";
             // 
@@ -131,10 +126,9 @@
             this.txtNombreProd.BackColor = System.Drawing.Color.Gainsboro;
             this.txtNombreProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreProd.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProd.Location = new System.Drawing.Point(143, 95);
-            this.txtNombreProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreProd.Location = new System.Drawing.Point(107, 83);
             this.txtNombreProd.Name = "txtNombreProd";
-            this.txtNombreProd.Size = new System.Drawing.Size(346, 27);
+            this.txtNombreProd.Size = new System.Drawing.Size(260, 23);
             this.txtNombreProd.TabIndex = 2;
             this.txtNombreProd.TextChanged += new System.EventHandler(this.txtNombreProd_TextChanged);
             // 
@@ -142,10 +136,9 @@
             // 
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.Location = new System.Drawing.Point(23, 100);
-            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProducto.Location = new System.Drawing.Point(17, 87);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(102, 23);
+            this.lblProducto.Size = new System.Drawing.Size(84, 19);
             this.lblProducto.TabIndex = 88;
             this.lblProducto.Text = "Producto *";
             // 
@@ -154,20 +147,18 @@
             this.txtIdArticulo.BackColor = System.Drawing.Color.Gainsboro;
             this.txtIdArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdArticulo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdArticulo.Location = new System.Drawing.Point(167, 266);
-            this.txtIdArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdArticulo.Location = new System.Drawing.Point(125, 177);
             this.txtIdArticulo.Name = "txtIdArticulo";
-            this.txtIdArticulo.Size = new System.Drawing.Size(322, 27);
+            this.txtIdArticulo.Size = new System.Drawing.Size(242, 23);
             this.txtIdArticulo.TabIndex = 90;
             // 
             // lblIdArt
             // 
             this.lblIdArt.AutoSize = true;
             this.lblIdArt.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdArt.Location = new System.Drawing.Point(23, 266);
-            this.lblIdArt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdArt.Location = new System.Drawing.Point(17, 177);
             this.lblIdArt.Name = "lblIdArt";
-            this.lblIdArt.Size = new System.Drawing.Size(102, 23);
+            this.lblIdArt.Size = new System.Drawing.Size(84, 19);
             this.lblIdArt.TabIndex = 91;
             this.lblIdArt.Text = "ID Artículo";
             // 
@@ -176,10 +167,9 @@
             this.txtPrecio.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(337, 206);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecio.Location = new System.Drawing.Point(226, 128);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(127, 27);
+            this.txtPrecio.Size = new System.Drawing.Size(141, 23);
             this.txtPrecio.TabIndex = 93;
             this.txtPrecio.TextChanged += new System.EventHandler(this.TxtPrecio_TextChanged);
             // 
@@ -187,52 +177,24 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(23, 208);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Location = new System.Drawing.Point(17, 130);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(78, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(64, 19);
             this.lblPrecio.TabIndex = 94;
             this.lblPrecio.Text = "Precio *";
-            // 
-            // txtEntero
-            // 
-            this.txtEntero.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEntero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntero.Location = new System.Drawing.Point(156, 209);
-            this.txtEntero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEntero.Multiline = true;
-            this.txtEntero.Name = "txtEntero";
-            this.txtEntero.Size = new System.Drawing.Size(65, 23);
-            this.txtEntero.TabIndex = 4;
-            this.txtEntero.TextChanged += new System.EventHandler(this.TxtEntero_TextChanged);
-            this.txtEntero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEntero_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(229, 210);
+            this.label5.Location = new System.Drawing.Point(156, 132);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 20);
+            this.label5.Size = new System.Drawing.Size(11, 16);
             this.label5.TabIndex = 101;
             this.label5.Text = ",";
             this.label5.Click += new System.EventHandler(this.Label5_Click);
-            // 
-            // txtDecimal
-            // 
-            this.txtDecimal.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtDecimal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDecimal.Location = new System.Drawing.Point(247, 208);
-            this.txtDecimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDecimal.Multiline = true;
-            this.txtDecimal.Name = "txtDecimal";
-            this.txtDecimal.Size = new System.Drawing.Size(71, 23);
-            this.txtDecimal.TabIndex = 5;
-            this.txtDecimal.TextChanged += new System.EventHandler(this.TxtDecimal_TextChanged);
-            this.txtDecimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDecimal_KeyPress);
             // 
             // panel1
             // 
@@ -241,9 +203,8 @@
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 25);
+            this.panel1.Size = new System.Drawing.Size(383, 23);
             this.panel1.TabIndex = 103;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -256,10 +217,9 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(451, 0);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimizar.Location = new System.Drawing.Point(338, 0);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(31, 25);
+            this.btnMinimizar.Size = new System.Drawing.Size(23, 20);
             this.btnMinimizar.TabIndex = 15;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
@@ -273,10 +233,9 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(481, 0);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(361, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(31, 25);
+            this.btnCerrar.Size = new System.Drawing.Size(23, 20);
             this.btnCerrar.TabIndex = 14;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
@@ -287,10 +246,9 @@
             this.lblProductoObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblProductoObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductoObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblProductoObligatorio.Location = new System.Drawing.Point(229, 127);
-            this.lblProductoObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductoObligatorio.Location = new System.Drawing.Point(172, 109);
             this.lblProductoObligatorio.Name = "lblProductoObligatorio";
-            this.lblProductoObligatorio.Size = new System.Drawing.Size(194, 22);
+            this.lblProductoObligatorio.Size = new System.Drawing.Size(148, 16);
             this.lblProductoObligatorio.TabIndex = 104;
             this.lblProductoObligatorio.Text = "Este campo es obligatorio.";
             this.lblProductoObligatorio.Visible = false;
@@ -301,26 +259,46 @@
             this.lblPrecioObligatorio.BackColor = System.Drawing.Color.Transparent;
             this.lblPrecioObligatorio.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioObligatorio.ForeColor = System.Drawing.Color.Red;
-            this.lblPrecioObligatorio.Location = new System.Drawing.Point(229, 238);
-            this.lblPrecioObligatorio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecioObligatorio.Location = new System.Drawing.Point(172, 154);
             this.lblPrecioObligatorio.Name = "lblPrecioObligatorio";
-            this.lblPrecioObligatorio.Size = new System.Drawing.Size(194, 22);
+            this.lblPrecioObligatorio.Size = new System.Drawing.Size(148, 16);
             this.lblPrecioObligatorio.TabIndex = 106;
             this.lblPrecioObligatorio.Text = "Este campo es obligatorio.";
             this.lblPrecioObligatorio.Visible = false;
             // 
+            // txtEntero
+            // 
+            this.txtEntero.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEntero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntero.Location = new System.Drawing.Point(107, 128);
+            this.txtEntero.Name = "txtEntero";
+            this.txtEntero.Size = new System.Drawing.Size(48, 23);
+            this.txtEntero.TabIndex = 107;
+            this.txtEntero.TextChanged += new System.EventHandler(this.txtEntero_TextChanged);
+            // 
+            // txtDecimal
+            // 
+            this.txtDecimal.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtDecimal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDecimal.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDecimal.Location = new System.Drawing.Point(166, 128);
+            this.txtDecimal.Name = "txtDecimal";
+            this.txtDecimal.Size = new System.Drawing.Size(48, 23);
+            this.txtDecimal.TabIndex = 108;
+            // 
             // FrmNewModArt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(511, 377);
+            this.ClientSize = new System.Drawing.Size(383, 277);
+            this.Controls.Add(this.txtDecimal);
+            this.Controls.Add(this.txtEntero);
             this.Controls.Add(this.lblPrecioObligatorio);
             this.Controls.Add(this.lblProductoObligatorio);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtDecimal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtEntero);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtIdArticulo);
@@ -333,7 +311,6 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmNewModArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNewModArt";
@@ -357,13 +334,13 @@
         private System.Windows.Forms.Label lblIdArt;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtEntero;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDecimal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label lblProductoObligatorio;
         private System.Windows.Forms.Label lblPrecioObligatorio;
+        private System.Windows.Forms.TextBox txtEntero;
+        private System.Windows.Forms.TextBox txtDecimal;
     }
 }

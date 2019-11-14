@@ -256,10 +256,7 @@ namespace CU
 
         }
 
-        private void TxtEntero_TextChanged(object sender, EventArgs e)
-        {
-            lblPrecioObligatorio.Visible = false;
-        }
+   
 
         private void TxtPrecio_TextChanged(object sender, EventArgs e)
         {
@@ -302,6 +299,11 @@ namespace CU
         private void TxtDecimal_KeyPress(object sender, KeyPressEventArgs e)
         {
             validar.soloNumeros(e);
+        }
+
+        private void txtEntero_TextChanged(object sender, EventArgs e)
+        {
+            lblPrecioObligatorio.Visible = false;
         }
     }
 }

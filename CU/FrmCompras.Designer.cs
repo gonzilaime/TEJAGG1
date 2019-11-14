@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -42,6 +42,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblProveedores = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.RadioBtnOC = new System.Windows.Forms.RadioButton();
             this.radioBtnPendiente = new System.Windows.Forms.RadioButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.radioBtnAnuladas = new System.Windows.Forms.RadioButton();
@@ -51,15 +53,13 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.listaOrdenes = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.IdOrdenDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionEstadoOrdenCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RadioBtnOC = new System.Windows.Forms.RadioButton();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,10 +76,9 @@
             this.panel2.Controls.Add(this.btnAgregar);
             this.panel2.Controls.Add(this.shapeContainer3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1024, 34);
+            this.panel2.Size = new System.Drawing.Size(768, 28);
             this.panel2.TabIndex = 12;
             // 
             // panel5
@@ -87,10 +86,9 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.Location = new System.Drawing.Point(355, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(266, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(669, 30);
+            this.panel5.Size = new System.Drawing.Size(502, 24);
             this.panel5.TabIndex = 11;
             // 
             // btnModificar
@@ -104,10 +102,9 @@
             this.btnModificar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(179, 2);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(134, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(173, 30);
+            this.btnModificar.Size = new System.Drawing.Size(130, 24);
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -124,10 +121,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(3, 2);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(173, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(130, 24);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -141,7 +137,7 @@
             this.shapeContainer3.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape4,
             this.lineShape2});
-            this.shapeContainer3.Size = new System.Drawing.Size(1024, 34);
+            this.shapeContainer3.Size = new System.Drawing.Size(768, 28);
             this.shapeContainer3.TabIndex = 6;
             this.shapeContainer3.TabStop = false;
             // 
@@ -171,9 +167,8 @@
             this.panel1.Controls.Add(this.lblProveedores);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 46);
+            this.panel1.Size = new System.Drawing.Size(768, 37);
             this.panel1.TabIndex = 11;
             // 
             // lblProveedores
@@ -181,10 +176,9 @@
             this.lblProveedores.AutoSize = true;
             this.lblProveedores.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblProveedores.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedores.Location = new System.Drawing.Point(16, 6);
-            this.lblProveedores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProveedores.Location = new System.Drawing.Point(12, 5);
             this.lblProveedores.Name = "lblProveedores";
-            this.lblProveedores.Size = new System.Drawing.Size(204, 33);
+            this.lblProveedores.Size = new System.Drawing.Size(161, 26);
             this.lblProveedores.TabIndex = 0;
             this.lblProveedores.Text = "Orden de compra";
             // 
@@ -203,11 +197,36 @@
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.txtBuscar);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Location = new System.Drawing.Point(25, 120);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(19, 98);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(980, 39);
+            this.panel3.Size = new System.Drawing.Size(735, 32);
             this.panel3.TabIndex = 14;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(248, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(3, 32);
+            this.panel9.TabIndex = 22;
+            // 
+            // RadioBtnOC
+            // 
+            this.RadioBtnOC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RadioBtnOC.AutoSize = true;
+            this.RadioBtnOC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RadioBtnOC.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioBtnOC.Location = new System.Drawing.Point(259, 2);
+            this.RadioBtnOC.Name = "RadioBtnOC";
+            this.RadioBtnOC.Size = new System.Drawing.Size(69, 25);
+            this.RadioBtnOC.TabIndex = 21;
+            this.RadioBtnOC.TabStop = true;
+            this.RadioBtnOC.Text = "Todas";
+            this.RadioBtnOC.UseVisualStyleBackColor = true;
+            this.RadioBtnOC.CheckedChanged += new System.EventHandler(this.BtnOC_CheckedChanged);
+            this.RadioBtnOC.Click += new System.EventHandler(this.RadioBtnOC_Click);
             // 
             // radioBtnPendiente
             // 
@@ -215,10 +234,9 @@
             this.radioBtnPendiente.AutoSize = true;
             this.radioBtnPendiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioBtnPendiente.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnPendiente.Location = new System.Drawing.Point(489, 3);
-            this.radioBtnPendiente.Margin = new System.Windows.Forms.Padding(4);
+            this.radioBtnPendiente.Location = new System.Drawing.Point(359, 2);
             this.radioBtnPendiente.Name = "radioBtnPendiente";
-            this.radioBtnPendiente.Size = new System.Drawing.Size(128, 32);
+            this.radioBtnPendiente.Size = new System.Drawing.Size(104, 25);
             this.radioBtnPendiente.TabIndex = 20;
             this.radioBtnPendiente.TabStop = true;
             this.radioBtnPendiente.Text = "Pendientes";
@@ -230,9 +248,10 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(462, 0);
+            this.panel8.Location = new System.Drawing.Point(346, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 39);
+            this.panel8.Size = new System.Drawing.Size(3, 32);
             this.panel8.TabIndex = 18;
             // 
             // radioBtnAnuladas
@@ -241,9 +260,10 @@
             this.radioBtnAnuladas.AutoSize = true;
             this.radioBtnAnuladas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioBtnAnuladas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnAnuladas.Location = new System.Drawing.Point(672, 3);
+            this.radioBtnAnuladas.Location = new System.Drawing.Point(497, 2);
+            this.radioBtnAnuladas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioBtnAnuladas.Name = "radioBtnAnuladas";
-            this.radioBtnAnuladas.Size = new System.Drawing.Size(113, 32);
+            this.radioBtnAnuladas.Size = new System.Drawing.Size(92, 25);
             this.radioBtnAnuladas.TabIndex = 19;
             this.radioBtnAnuladas.TabStop = true;
             this.radioBtnAnuladas.Text = "Anuladas";
@@ -257,10 +277,9 @@
             this.radioBtnEntregada.AutoSize = true;
             this.radioBtnEntregada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioBtnEntregada.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnEntregada.Location = new System.Drawing.Point(831, 3);
-            this.radioBtnEntregada.Margin = new System.Windows.Forms.Padding(4);
+            this.radioBtnEntregada.Location = new System.Drawing.Point(616, 2);
             this.radioBtnEntregada.Name = "radioBtnEntregada";
-            this.radioBtnEntregada.Size = new System.Drawing.Size(130, 32);
+            this.radioBtnEntregada.Size = new System.Drawing.Size(105, 25);
             this.radioBtnEntregada.TabIndex = 18;
             this.radioBtnEntregada.TabStop = true;
             this.radioBtnEntregada.Text = "Entregadas";
@@ -272,10 +291,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -284,9 +302,10 @@
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(641, 0);
+            this.panel7.Location = new System.Drawing.Point(481, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(4, 39);
+            this.panel7.Size = new System.Drawing.Size(3, 32);
             this.panel7.TabIndex = 17;
             // 
             // txtBuscar
@@ -294,10 +313,9 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(49, 6);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(37, 5);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(274, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(206, 22);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
@@ -305,9 +323,10 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(808, 0);
+            this.panel6.Location = new System.Drawing.Point(606, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(4, 39);
+            this.panel6.Size = new System.Drawing.Size(3, 32);
             this.panel6.TabIndex = 16;
             // 
             // listaOrdenes
@@ -323,14 +342,14 @@
             this.listaOrdenes.BackgroundColor = System.Drawing.Color.LightGray;
             this.listaOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listaOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.listaOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdOrdenDeCompra,
@@ -339,47 +358,34 @@
             this.IdProveedor,
             this.DescripcionEstadoOrdenCompra,
             this.Monto});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.listaOrdenes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.listaOrdenes.DefaultCellStyle = dataGridViewCellStyle2;
             this.listaOrdenes.EnableHeadersVisualStyles = false;
             this.listaOrdenes.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.listaOrdenes.Location = new System.Drawing.Point(3, 42);
-            this.listaOrdenes.Margin = new System.Windows.Forms.Padding(4);
+            this.listaOrdenes.Location = new System.Drawing.Point(2, 34);
             this.listaOrdenes.Name = "listaOrdenes";
             this.listaOrdenes.ReadOnly = true;
             this.listaOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listaOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listaOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.listaOrdenes.RowHeadersWidth = 51;
             this.listaOrdenes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.listaOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.listaOrdenes.Size = new System.Drawing.Size(981, 480);
+            this.listaOrdenes.Size = new System.Drawing.Size(736, 390);
             this.listaOrdenes.TabIndex = 13;
             this.listaOrdenes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaOrdenes_CellContentDoubleClick);
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Controls.Add(this.listaOrdenes);
-            this.panel4.Location = new System.Drawing.Point(22, 118);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(987, 524);
-            this.panel4.TabIndex = 15;
             // 
             // IdOrdenDeCompra
             // 
@@ -436,44 +442,30 @@
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
             // 
-            // RadioBtnOC
+            // panel4
             // 
-            this.RadioBtnOC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RadioBtnOC.AutoSize = true;
-            this.RadioBtnOC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtnOC.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioBtnOC.Location = new System.Drawing.Point(352, 3);
-            this.RadioBtnOC.Margin = new System.Windows.Forms.Padding(4);
-            this.RadioBtnOC.Name = "RadioBtnOC";
-            this.RadioBtnOC.Size = new System.Drawing.Size(85, 32);
-            this.RadioBtnOC.TabIndex = 21;
-            this.RadioBtnOC.TabStop = true;
-            this.RadioBtnOC.Text = "Todas";
-            this.RadioBtnOC.UseVisualStyleBackColor = true;
-            this.RadioBtnOC.CheckedChanged += new System.EventHandler(this.BtnOC_CheckedChanged);
-            this.RadioBtnOC.Click += new System.EventHandler(this.RadioBtnOC_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(330, 1);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(4, 39);
-            this.panel9.TabIndex = 22;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel4.Controls.Add(this.listaOrdenes);
+            this.panel4.Location = new System.Drawing.Point(16, 96);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(740, 426);
+            this.panel4.TabIndex = 15;
             // 
             // FrmCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1024, 686);
+            this.ClientSize = new System.Drawing.Size(768, 557);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCompras";
             this.Text = "FrmCompras";
             this.Activated += new System.EventHandler(this.FrmCompras_Activated);
